@@ -10,7 +10,10 @@
             <el-table-column prop="consecutiveCount" label="连赢" width="100" />
             <el-table-column label="近期比赛">
               <template #default="{ row }">
-                <p class="game-item" v-for="(game, index) in row.matchDetails">{{ game }}</p>
+                <p class="game-item" v-for="(game, index) in row.matchDetails">
+                  <i class="icon icon-naozhong"></i>
+                  {{ game }}
+                </p>
               </template>
             </el-table-column>
           </el-table>
@@ -99,9 +102,19 @@ const tableData = [
       >div {
         padding: @botDivPadding;
 
+        p {
+          line-height: 30px;
+          position: relative;
+
+          .icon {
+            // position: absolute;
+            left: 0;
+            right: 0;
+          }
+        }
+
         p.game-item+p {
           border-top: @border;
-          line-height: 30px;
         }
       }
     }
