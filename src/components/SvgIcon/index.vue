@@ -3,7 +3,7 @@
     <use :xlink:href="iconName" />
   </svg>
 </template>
-<script setup name="SvgIcon">
+<script setup lang="ts" name="SvgIcon">
 import { defineProps, computed } from 'vue';
 const props = defineProps({
   name: {

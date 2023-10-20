@@ -1,5 +1,5 @@
 <template>
-	<v-header />
+	<!-- <v-header /> -->
 	<div class="main-bot">
 		<div class="main-content-box">
 			<router-view v-slot="{ Component }">
