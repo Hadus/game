@@ -5,22 +5,17 @@
       <div class="left">
         <h3>连赢</h3>
         <div>
-          <el-table class="match-table" :data="winList" border stripe style="width: 100%">
+          <el-table class="match-table" :data="winList" border style="width: 100%">
             <el-table-column prop="teamName" label="球队" width="160" />
             <el-table-column prop="consecutiveCount" label="连赢" width="100" />
             <el-table-column label="近期比赛">
-              <template #default="{ row }">
+              <template #default="{ row, $index }">
                 <p class="match-item" v-if="row.nextMatchTime">
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
-                  <i class="match-status" :class="nextMatchClass" v-if="!!handelNextMatchStatus(row.nextMatchTime)">{{
-                    handelNextMatchStatus(row.nextMatchTime)
-                  }}</i>
+                  <match-status :nextMatchTimeStr="row.nextMatchTime" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
-                  <sup class="badge" v-if="(row.matchDetails.length - index) >= 4"
-                    :class="`level${(row.matchDetails.length - index) <= 7 ? (row.matchDetails.length - index) : 7}`">
-                    {{ row.matchDetails.length - index }}
-                  </sup>
+                  <match-budge :budgeIndex="row.matchDetails.length - index" />
                   {{ match }}
                 </p>
               </template>
@@ -35,18 +30,13 @@
             <el-table-column prop="teamName" label="球队" width="160" />
             <el-table-column prop="consecutiveCount" label="连赢" width="100" />
             <el-table-column label="近期比赛">
-              <template #default="{ row }">
+              <template #default="{ row, $index }">
                 <p class="match-item" v-if="row.nextMatchTime">
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
-                  <i class="match-status" :class="nextMatchClass" v-if="!!handelNextMatchStatus(row.nextMatchTime)">{{
-                    handelNextMatchStatus(row.nextMatchTime)
-                  }}</i>
+                  <match-status :nextMatchTimeStr="row.nextMatchTime" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
-                  <sup class="badge" v-if="(row.matchDetails.length - index) >= 4"
-                    :class="`level${(row.matchDetails.length - index) <= 7 ? (row.matchDetails.length - index) : 7}`">
-                    {{ row.matchDetails.length - index }}
-                  </sup>
+                  <match-budge :budgeIndex="row.matchDetails.length - index" />
                   {{ match }}
                 </p>
               </template>
@@ -59,7 +49,10 @@
 </template>
 
 <script setup lang="ts" name="matchBlock">
-import { defineProps, ref } from 'vue';
+import { defineProps, defineEmits, ref, reactive } from 'vue';
+import MatchStatus from './MatchStatus.vue';
+import MatchBudge from './MatchBudge.vue';
+
 const { teamsData } = defineProps({
   teamsData: {
     type: Object,
@@ -68,23 +61,25 @@ const { teamsData } = defineProps({
 });
 
 const { matchesW: winList, matchesL: loseList } = teamsData;
+const emit_handelFocusMatch = defineEmits(['handelFocusMatch']);
 
 // handel next Match
-let nextMatchClass = ref('');
-const handelNextMatchStatus = (timeStr) => {
+let nextMatchClassList = reactive([]);
+const handelNextMatchStatus = (type: string, timeStr: string, index: number) => {
   if (!timeStr) return;
   const now = new Date().getTime();
   const nextMatchTime = new Date(timeStr).getTime();
   const gap = nextMatchTime - now;
   const gapHours = gap / 1000 / 60 / 60;
   if (gap <= 0) {
-    nextMatchClass.value = 'going';
+    nextMatchClassList.push('going');
+    // emit_handelFocusMatch('handelFocusMatch');
     return '进行中';
   } else if (gapHours <= 24) {
-    nextMatchClass.value = 'pending';
+    nextMatchClassList.push('pending');
     return '即将开赛';
   } else if (gapHours > 24) {
-    nextMatchClass.value = 'next';
+    nextMatchClassList.push('next');
     return '下场比赛';
   }
   return '';

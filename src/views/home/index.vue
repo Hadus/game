@@ -31,7 +31,8 @@
       </div>
     </div>
     <div class="table">
-      <match-block :teamsData="teams" v-for="(teams, index) in MatchData" :key="index"></match-block>
+      <match-block :teamsData="teams" @handelFocusMatch="handelFocusMatch()" v-for="(teams, index) in MatchData"
+        :key="index"></match-block>
     </div>
   </div>
 </template>
@@ -60,6 +61,13 @@ const options = [{
   value: '选项5',
   label: '北京烤鸭'
 }];
+
+// 需要关注的比赛场次
+let focusMatchNum = ref<number>(0);
+const handelFocusMatch = () => {
+  focusMatchNum.value++;
+  console.log(focusMatchNum.value)
+}
 </script>
 <style lang="less" scoped>
 // 变量
