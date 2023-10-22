@@ -88,7 +88,6 @@ const { matchesW: winList, matchesL: loseList } = teamsData;
     display: flex;
 
     >div {
-      // flex: 1;
       width: 50%;
 
       >h3 {

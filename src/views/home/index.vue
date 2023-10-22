@@ -37,10 +37,11 @@
 </template>
 
 <script setup lang="ts" name="home">
-import { ref, provide } from 'vue'
+import { onMounted, ref, provide } from 'vue'
 
 import MatchBlock from './MatchBlock';
 import MatchData from '@/mock/data.json';
+import { fetchData } from '../../api';
 
 const value = ref('');
 const options = [{
@@ -68,6 +69,10 @@ const handelFocusMatch = () => {
 }
 // provide 给 MatchStatus 调用
 provide('handelFocusMatch', handelFocusMatch);
+
+onMounted(() => {
+  fetchData();
+});
 </script>
 <style lang="less" scoped>
 // 变量
