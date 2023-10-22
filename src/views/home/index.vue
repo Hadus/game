@@ -1,16 +1,65 @@
 <template>
   <div class="main-content scroll">
     <h3>球队连赢连输分析</h3>
-    <div class="filter">filter</div>
+    <div class="filter">
+      <div>
+        类型选择：
+        <el-select v-model="value" placeholder="请选择">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"
+            :disabled="item.disabled">
+          </el-option>
+        </el-select>
+      </div>
+      <div>
+        球队选择：
+        <el-select v-model="value" placeholder="请选择">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"
+            :disabled="item.disabled">
+          </el-option>
+        </el-select>
+      </div>
+      <div>
+        场次选择：
+        <el-select v-model="value" placeholder="请选择">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"
+            :disabled="item.disabled">
+          </el-option>
+        </el-select>
+      </div>
+      <div>
+        <el-button type="primary">筛选</el-button>
+      </div>
+    </div>
     <div class="table">
-      <game-block :teamData="team" v-for="(team, index) in gameData" :key="index"></game-block>
+      <match-block :teamsData="teams" v-for="(teams, index) in MatchData" :key="index"></match-block>
     </div>
   </div>
 </template>
 
 <script setup lang="ts" name="home">
-import GameBlock from './GameBlock';
-import gameData from '@/mock/data.json';
+import { ref } from 'vue'
+
+import MatchBlock from './MatchBlock';
+import MatchData from '@/mock/data.json';
+
+const value = ref('');
+const options = [{
+  value: '选项1',
+  label: '黄金糕'
+}, {
+  value: '选项2',
+  label: '双皮奶',
+  disabled: true
+}, {
+  value: '选项3',
+  label: '蚵仔煎'
+}, {
+  value: '选项4',
+  label: '龙须面'
+}, {
+  value: '选项5',
+  label: '北京烤鸭'
+}];
 </script>
 <style lang="less" scoped>
 // 变量
@@ -20,15 +69,27 @@ import gameData from '@/mock/data.json';
   width: 100%;
   height: 100%;
   padding: @botPadding;
+  padding-top: 0;
 
   >h3 {
     text-align: center;
     line-height: 50px;
+    background-color: @mainBgc;
+    color: #fff;
+    font-size: 18px;
+    font-weight: blod;
   }
 
   >.filter {
     text-align: center;
-    height: 40px;
+    min-height: 40px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+
+    >div {
+      display: inline-block;
+      margin-right: 20px;
+    }
   }
 
   >.table {

@@ -377,3 +377,7 @@ template {
 [hidden] {
   display: none;
 }
+
+i {
+  font-style: normal;
+}
