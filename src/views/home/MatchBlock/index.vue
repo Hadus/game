@@ -5,7 +5,7 @@
       <div class="left">
         <h3>连赢</h3>
         <div>
-          <el-table :data="winList" border stripe style="width: 100%">
+          <el-table class="match-table" :data="winList" border stripe style="width: 100%">
             <el-table-column prop="teamName" label="球队" width="160" />
             <el-table-column prop="consecutiveCount" label="连赢" width="100" />
             <el-table-column label="近期比赛">
@@ -31,7 +31,7 @@
       <div class="right">
         <h3>连败</h3>
         <div>
-          <el-table :data="loseList" border stripe style="width: 100%">
+          <el-table class="match-table" :data="loseList" border stripe style="width: 100%">
             <el-table-column prop="teamName" label="球队" width="160" />
             <el-table-column prop="consecutiveCount" label="连赢" width="100" />
             <el-table-column label="近期比赛">
@@ -70,7 +70,6 @@ const { teamsData } = defineProps({
 const { matchesW: winList, matchesL: loseList } = teamsData;
 
 // handel next Match
-let hasNextMatch = true;
 let nextMatchClass = ref('');
 const handelNextMatchStatus = (timeStr) => {
   if (!timeStr) return;
@@ -88,7 +87,6 @@ const handelNextMatchStatus = (timeStr) => {
     nextMatchClass.value = 'next';
     return '下场比赛';
   }
-  hasNextMatch = false;
   return '';
 }
 
@@ -103,6 +101,7 @@ const handelNextMatchStatus = (timeStr) => {
   border-bottom: @border;
 
   >.top {
+    @bdr: 8px;
     width: 100%;
     line-height: 40px;
     background-color: @mainBgc;
@@ -110,6 +109,7 @@ const handelNextMatchStatus = (timeStr) => {
     text-align: center;
     border-bottom: @border;
     font-size: 16px;
+    border-radius: @bdr @bdr 0px 0px;
   }
 
   >.bot {
@@ -118,7 +118,8 @@ const handelNextMatchStatus = (timeStr) => {
     display: flex;
 
     >div {
-      flex: 1;
+      // flex: 1;
+      width: 50%;
 
       >h3 {
         background-color: @mainBgc;
@@ -158,9 +159,35 @@ const handelNextMatchStatus = (timeStr) => {
       border-left: @border;
     }
 
-    >.left {}
+    >.left {
+      background-color: #ecf5ff;
+    }
 
-    >.right {}
+    >.right {
+      background-color: #fef0f0;
+    }
+  }
+}
+
+.match-table {
+  border: 1px solid #606266;
+  width: 100%;
+}
+
+/deep/.el-table {
+  background-color: transparent !important;
+  border-color: #606266 !important;
+
+  tr,
+  td,
+  th {
+    background-color: transparent !important;
+    border-color: #606266 !important;
+  }
+
+  th>.cell {
+    color: #606266;
+    font-weight: bold;
   }
 }
 </style>

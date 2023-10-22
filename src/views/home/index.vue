@@ -1,6 +1,6 @@
 <template>
   <div class="main-content scroll">
-    <h3>球队连赢连输分析</h3>
+    <h3>球队连赢连输分析（需关注比赛：10场）</h3>
     <div class="filter">
       <div>
         类型选择：
