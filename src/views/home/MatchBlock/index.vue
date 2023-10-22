@@ -9,7 +9,7 @@
             <el-table-column prop="teamName" label="球队" width="160" />
             <el-table-column prop="consecutiveCount" label="连赢" width="100" />
             <el-table-column label="近期比赛">
-              <template #default="{ row, $index }">
+              <template #default="{ row }">
                 <p class="match-item" v-if="row.nextMatchTime">
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" />
@@ -49,7 +49,7 @@
 </template>
 
 <script setup lang="ts" name="matchBlock">
-import { defineProps, defineEmits, ref, reactive } from 'vue';
+import { defineProps, ref, reactive } from 'vue';
 import MatchStatus from './MatchStatus.vue';
 import MatchBudge from './MatchBudge.vue';
 
@@ -59,32 +59,7 @@ const { teamsData } = defineProps({
     required: true
   }
 });
-
 const { matchesW: winList, matchesL: loseList } = teamsData;
-const emit_handelFocusMatch = defineEmits(['handelFocusMatch']);
-
-// handel next Match
-let nextMatchClassList = reactive([]);
-const handelNextMatchStatus = (type: string, timeStr: string, index: number) => {
-  if (!timeStr) return;
-  const now = new Date().getTime();
-  const nextMatchTime = new Date(timeStr).getTime();
-  const gap = nextMatchTime - now;
-  const gapHours = gap / 1000 / 60 / 60;
-  if (gap <= 0) {
-    nextMatchClassList.push('going');
-    // emit_handelFocusMatch('handelFocusMatch');
-    return '进行中';
-  } else if (gapHours <= 24) {
-    nextMatchClassList.push('pending');
-    return '即将开赛';
-  } else if (gapHours > 24) {
-    nextMatchClassList.push('next');
-    return '下场比赛';
-  }
-  return '';
-}
-
 </script>
 <style lang="less" scoped>
 // 变量

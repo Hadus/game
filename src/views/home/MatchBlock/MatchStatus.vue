@@ -5,13 +5,15 @@
 </template>
 
 <script setup lang="ts" name="MatchStatus">
-import { defineProps, defineEmits, ref, reactive } from 'vue';
+import { defineProps, ref, inject } from 'vue';
 const { nextMatchTimeStr } = defineProps({
   nextMatchTimeStr: {
     type: String,
     required: true
   }
 });
+const handelFocusMatch = inject<Function>('handelFocusMatch');
+
 
 let className = ref('');
 let matchStatus = ref('');
@@ -23,7 +25,7 @@ const gapHours = gap / 1000 / 60 / 60;
 if (gap <= 0) {
   className.value = 'going';
   matchStatus.value = '进行中';
-  // emit_handelFocusMatch('handelFocusMatch');
+  handelFocusMatch();
 } else if (gapHours <= 24) {
   className.value = 'pending';
   matchStatus.value = '即将开赛';

@@ -1,6 +1,6 @@
 <template>
   <div class="main-content scroll">
-    <h3>球队连赢连输分析（需关注比赛：10场）</h3>
+    <h3>球队连赢连输分析（需关注的比赛：{{ focusMatchNum }} 场）</h3>
     <div class="filter">
       <div>
         类型选择：
@@ -31,14 +31,13 @@
       </div>
     </div>
     <div class="table">
-      <match-block :teamsData="teams" @handelFocusMatch="handelFocusMatch()" v-for="(teams, index) in MatchData"
-        :key="index"></match-block>
+      <match-block :teamsData="teams" v-for="(teams, index) in MatchData" :key="index"></match-block>
     </div>
   </div>
 </template>
 
 <script setup lang="ts" name="home">
-import { ref } from 'vue'
+import { ref, provide } from 'vue'
 
 import MatchBlock from './MatchBlock';
 import MatchData from '@/mock/data.json';
@@ -66,8 +65,9 @@ const options = [{
 let focusMatchNum = ref<number>(0);
 const handelFocusMatch = () => {
   focusMatchNum.value++;
-  console.log(focusMatchNum.value)
 }
+// provide 给 MatchStatus 调用
+provide('handelFocusMatch', handelFocusMatch);
 </script>
 <style lang="less" scoped>
 // 变量
