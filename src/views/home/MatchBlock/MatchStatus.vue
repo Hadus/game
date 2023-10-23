@@ -24,11 +24,15 @@ const gap = nextMatchTime - now;
 const gapHours = gap / 1000 / 60 / 60;
 if (gap <= 0) {
   className.value = 'going';
-  matchStatus.value = '进行中';
-  handelFocusMatch();
+  matchStatus.value = '比赛中';
+} else if (gapHours <= 1) {
+  className.value = 'pending warning';
+  matchStatus.value = '预警中';
+  handelFocusMatch(1);
 } else if (gapHours <= 24) {
   className.value = 'pending';
   matchStatus.value = '即将开赛';
+  handelFocusMatch(24);
 } else if (gapHours > 24) {
   className.value = 'next';
   matchStatus.value = '下场比赛';
@@ -51,12 +55,16 @@ i.match-status {
   }
 
   &.pending {
-    background-color: #E6A23C;
+    background-color: #F56C6C;
+  }
+
+  &.warning {
+    background-color: #F56C6C;
+    animation: alert 1.2s ease-in-out infinite;
   }
 
   &.going {
-    background-color: #F56C6C;
-    animation: alert 1.2s ease-in-out infinite;
+    background-color: #95d475;
   }
 }
 

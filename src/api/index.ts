@@ -1,8 +1,9 @@
 import request from './request';
 
-export const fetchData = () => {
+export const fetchData = (data: object = {}) => {
   return request({
     url: 'data',
-    method: 'get'
+    method: 'post',
+    data
   });
 };

@@ -13,6 +13,8 @@
                 <p class="match-item" v-if="row.nextMatchTime">
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" />
+                  <el-switch v-model="focusFlag" style="--el-switch-on-color: #13ce66; float:right"
+                    @change="() => { handelSwitch(row.teamId, focusFlag) }" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
                   <match-budge :budgeIndex="row.matchDetails.length - index" />
@@ -60,6 +62,10 @@ const { teamsData } = defineProps({
   }
 });
 const { matchesW: winList, matchesL: loseList } = teamsData;
+const focusFlag = ref(true);
+const handelSwitch = (teamId: number, focusFlag: boolean) => {
+  console.log(teamId);
+}
 </script>
 <style lang="less" scoped>
 // 变量
