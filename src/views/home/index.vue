@@ -25,14 +25,17 @@
         联赛类型选择：
         <el-select v-model="league" clearable class="select-type" @change="handleChangeLeagueName(league)"
           value-key="index">
-          <el-option v-for="item in  leagueOptions " :key="item.index" :label="item.leagueName" :value="item"
+          <el-option v-for="item in leagueOptions" :key="item.index" :label="item.leagueName" :value="item"
             :disabled="item.leagueName == league.leagueName">
           </el-option>
         </el-select>
       </el-affix>
     </div>
+    <div class="stat">
+      <MatchStat />
+    </div>
     <div class="table">
-      <match-block :teamsData="teams" v-for="( teams, index ) in  MatchData " :key="index"></match-block>
+      <match-block :teamsData="teams" v-for="( teams, index ) in  MatchData " :key="index" />
     </div>
   </div>
 </template>
@@ -41,6 +44,7 @@
 import { onBeforeMount, onMounted, ref, reactive, provide, computed } from 'vue';
 import { ElLoading } from 'element-plus';
 
+import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
 import MatchData from '@/mock/data.json';
 import { fetchAllData, fetchSync } from '@/api';
@@ -103,6 +107,14 @@ const handleChangeLeagueName = (league: object) => {
 }
 /* 筛选 end */
 
+/* 统计 start */
+const statList = [
+  {
+    "leagueId": 36,
+    "leagueName": "英超",
+  }
+];
+/* 统计 end */
 // 需要关注的比赛场次
 let focusMatchNum_24 = ref<number>(0);
 let focusMatchNum_1 = ref<number>(0);
