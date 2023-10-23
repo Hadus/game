@@ -9,7 +9,9 @@
         <el-option v-for="item in numOptions" :key="item" :label="item" :value="item" :disabled="item == num">
         </el-option>
       </el-select>
-      上次同步：{{ MatchData.lastReloadTime }}
+      <div>上次同步：{{ MatchData.lastReloadTime }}
+        <el-tag>2023-10-10 10:10:10</el-tag>
+      </div>
       <el-button type="primary" @click="handelSet({ type })">数据同步</el-button>
     </div>
     <div class="filter">
@@ -40,7 +42,7 @@ import { fetchData } from '../../api';
 
 /* 设置 start */
 const num = ref('4');
-const numOptions = ['4', '5'];
+const numOptions = ['4', '5', '6', '7', '8', '9', '10+'];
 const handelSet = (num) => {
   const loading = ElLoading.service({
     lock: true,
