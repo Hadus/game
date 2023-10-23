@@ -36,6 +36,8 @@
                 <p class="match-item" v-if="row.nextMatchTime">
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" />
+                  <el-switch v-model="focusFlag" style="--el-switch-on-color: #13ce66; float:right"
+                    @change="() => { handelSwitch(row.teamId, focusFlag) }" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
                   <match-budge :budgeIndex="row.matchDetails.length - index" />
@@ -55,6 +57,8 @@ import { defineProps, ref, reactive } from 'vue';
 import MatchStatus from './MatchStatus.vue';
 import MatchBudge from './MatchBudge.vue';
 
+import { fetchFocusMatch } from '@/api';
+
 const { teamsData } = defineProps({
   teamsData: {
     type: Object,
@@ -64,6 +68,12 @@ const { teamsData } = defineProps({
 const { matchesW: winList, matchesL: loseList } = teamsData;
 const focusFlag = ref(true);
 const handelSwitch = (teamId: number, focusFlag: boolean) => {
+  fetchFocusMatch({
+    teamId,
+    focusFlag
+  }).then((res) => {
+    focusFlag = !focusFlag;
+  });
   console.log(teamId);
 }
 </script>

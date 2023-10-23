@@ -1,14 +1,17 @@
 <template>
   <div class="main-content scroll">
     <h3>2023赛季 球队连赢连输分析
-      <span>（需关注的比赛：24小时内开始 {{ focusMatchNum_24 }} 场， 1小时内开始 {{ focusMatchNum_1 }} 场）</span>
+      <span>（需关注的比赛：24小时内将开始 {{ focusMatchNum_24 }} 场， 1小时内将开始 {{ focusMatchNum_1 }} 场）</span>
     </h3>
     <div class="set">
-      连赢连输场次基数选择：
+      连赢连输场次基数切换：
       <el-select v-model="num" class="select-num">
         <el-option v-for="item in numOptions" :key="item" :label="item" :value="item" :disabled="item == num">
         </el-option>
       </el-select>
+      <div>
+        <el-button type="primary" @click="handelSwitch({ num })">切换</el-button>
+      </div>
       <div>上次同步：{{ MatchData.lastReloadTime }}
         <el-tag>2023-10-10 10:10:10</el-tag>
       </div>
@@ -21,9 +24,6 @@
           <el-option v-for="item in typeOptions" :key="item" :label="item" :value="item" :disabled="item == type">
           </el-option>
         </el-select>
-      </div>
-      <div>
-        <el-button type="primary" @click="handelFilter({ type })">筛选</el-button>
       </div>
     </div>
     <div class="table">
@@ -38,7 +38,7 @@ import { ElLoading } from 'element-plus';
 
 import MatchBlock from './MatchBlock';
 import MatchData from '@/mock/data.json';
-import { fetchData } from '../../api';
+import { fetchAllData, fetchSync } from '@/api';
 
 /* 设置 start */
 const num = ref('4');
@@ -49,7 +49,11 @@ const handelSet = (num) => {
     text: '数据同步中，请稍后...',
     background: 'rgba(0, 0, 0, 0.7)',
     customClass: 'loading'
-  })
+  });
+  // 调用：数据同步
+  fetchSync().then((res) => {
+    loading.close();
+  });
   setTimeout(() => {
     loading.close();
   }, 10 * 1000)
@@ -58,10 +62,9 @@ const handelSet = (num) => {
 /* 筛选 start */
 const type = ref('');
 let typeOptions = ref([]);
-const handelFilter = (filterObj: object = { type: '' }) => {
-  console.log(filterObj);
-  fetchData({
-    type: filterObj,
+const handelSwitch = (num: string = '4') => {
+  fetchAllData({
+    num,
   });
 };
 /* 筛选 end */
@@ -90,7 +93,8 @@ const audioClose = () => {
 provide('handelFocusMatch', handelFocusMatch);
 
 onMounted(() => {
-  // fetchData({});
+  // 调用：获取所有数据
+  // fetchAllData({});
   const typeOptions_temp = computed(() => {
     return MatchData.map(ele => {
       return ele.leagueName;
@@ -119,7 +123,7 @@ onMounted(() => {
 
     >span {
       font-weight: normal;
-      font-size: 16px;
+      font-size: 15px;
     }
   }
 

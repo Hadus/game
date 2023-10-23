@@ -1,12 +1,12 @@
 
 <template>
-  <sup class="badge" v-if="budgeIndex >= 4" :class="`level${budgeIndex <= 7 ? budgeIndex : 7}`">
+  <sup class="badge" v-if="budgeIndex >= 4" :class="className">
     {{ budgeIndex }}
   </sup>
 </template>
 
 <script setup lang="ts" name="MatchStatus">
-import { defineProps, defineEmits, ref, reactive } from 'vue';
+import { defineProps, computed } from 'vue';
 const { budgeIndex } = defineProps({
   budgeIndex: {
     type: Number,
@@ -14,6 +14,9 @@ const { budgeIndex } = defineProps({
   }
 });
 
+const className = computed(() => {
+  return 'color' + (budgeIndex);
+})
 </script>
 <style lang="less" scoped>
 @width: 18px;
@@ -27,22 +30,6 @@ sup.badge {
   line-height: @width;
   color: #fff;
   font-size: 12px;
-
-  &.level4 {
-    background-color: #79bbff;
-  }
-
-  &.level5 {
-    background-color: #f3d19e;
-  }
-
-  &.level6 {
-    background-color: #f89898;
-  }
-
-  &.level7 {
-    background-color: #c45656;
-  }
 }
 </style>
 <style lang="less"></style>
