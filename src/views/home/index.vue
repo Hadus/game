@@ -52,7 +52,7 @@ const handelSet = (num) => {
   })
   setTimeout(() => {
     loading.close();
-  }, 17000)
+  }, 10 * 1000)
 }
 /* 设置 end */
 /* 筛选 start */
@@ -73,8 +73,19 @@ const handelFocusMatch = (num: number) => {
   focusMatchNum_24.value++;
   if (num === 1) {
     focusMatchNum_1.value++;
+    audioPlay();
   }
 }
+// audio
+const isplayAudio = true;
+const audio = new Audio('src/assets/audio/preview.mp3');
+const audioPlay = () => {
+  audio.play();
+}
+const audioClose = () => {
+  audio.play();
+}
+
 // provide 给 MatchStatus 调用
 provide('handelFocusMatch', handelFocusMatch);
 
@@ -86,7 +97,6 @@ onMounted(() => {
     });
   });
   typeOptions.value = typeOptions_temp.value;
-  console.log(typeOptions)
 });
 </script>
 <style lang="less" scoped>
