@@ -4,15 +4,18 @@
       <span>（需关注的比赛：24小时内将开始 {{ focusMatchNum_24 }} 场， 1小时内将开始 {{ focusMatchNum_1 }} 场）</span>
     </h3>
     <div class="set">
-      连赢连输场次基数切换：
-      <el-select v-model="num" class="select-num">
-        <el-option v-for="item in numOptions" :key="item" :label="item" :value="item" :disabled="item == num">
-        </el-option>
-      </el-select>
+      <div>
+        连赢连输场次基数切换：
+        <el-select v-model="num" class="select-num">
+          <el-option v-for="item in numOptions" :key="item" :label="item" :value="item" :disabled="item == num">
+          </el-option>
+        </el-select>
+      </div>
       <div>
         <el-button type="primary" @click="handelSwitch(num)">切换</el-button>
       </div>
-      <div>上次同步：{{ MatchData.lastReloadTime }}
+      <div>
+        上次同步：{{ MatchData.lastReloadTime }}
         <el-tag>2023-10-10 10:10:10</el-tag>
       </div>
       <el-button type="primary" @click="handelSync()">数据同步</el-button>
@@ -35,7 +38,7 @@
 </template>
 
 <script setup lang="ts" name="home">
-import { onMounted, ref, reactive, provide, computed } from 'vue';
+import { onBeforeMount, onMounted, ref, reactive, provide, computed } from 'vue';
 import { ElLoading } from 'element-plus';
 
 import MatchBlock from './MatchBlock';
@@ -103,13 +106,6 @@ const handleChangeLeagueName = (league: object) => {
 let focusMatchNum_24 = ref<number>(0);
 let focusMatchNum_1 = ref<number>(0);
 
-const handelFocusMatch = (num: number) => {
-  focusMatchNum_24.value++;
-  if (num === 1) {
-    focusMatchNum_1.value++;
-    audioPlay();
-  }
-}
 // audio
 const isplayAudio = true;
 const audio = new Audio('src/assets/audio/preview.mp3');
@@ -117,15 +113,26 @@ const audioPlay = () => {
   audio.play();
 }
 const audioClose = () => {
-  audio.play();
+  audio.pause();
 }
 
 // provide 给 MatchStatus 调用
+const handelFocusMatch = (num: number) => {
+  focusMatchNum_24.value++;
+  if (num === 1) {
+    focusMatchNum_1.value++;
+    audioPlay();
+  }
+}
+
 provide('handelFocusMatch', handelFocusMatch);
 
-onMounted(() => {
+onBeforeMount(() => {
   // 调用：获取所有数据
-  // fetchAllData({});
+  fetchAllData({}).then();
+});
+
+onMounted(() => {
   dom_topList = document.querySelectorAll('.top')
 });
 </script>
@@ -162,6 +169,7 @@ onMounted(() => {
     border-bottom: @border;
 
     >div {
+      height: 100%;
       display: inline-block;
       margin-right: 20px;
     }
@@ -174,10 +182,11 @@ onMounted(() => {
     padding-bottom: 20px;
     text-align: right;
     margin-right: 20px;
-    background-color: #fff;
 
     >div {
-      background-color: #fff;
+      height: 100%;
+      display: inline-block;
+      margin-right: 20px;
     }
 
     /deep/.el-affix--fixed {
