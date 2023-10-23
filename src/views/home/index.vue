@@ -12,7 +12,7 @@
         </el-select>
       </div>
       <div>
-        <el-button type="primary" @click="handelSwitch(num)">切换</el-button>
+        <el-button type="primary" @click="handelSwitchNum(num)">切换</el-button>
       </div>
       <div>
         上次同步：{{ MatchData.lastReloadTime }}
@@ -49,10 +49,11 @@ import { fetchAllData, fetchSync } from '@/api';
 // 切换场次
 const num = ref('4');
 const numOptions = ['4', '5', '6', '7', '8', '9', '10+'];
-const handelSwitch = (num: string = '4') => {
+const handelSwitchNum = (num: string = '4') => {
+  console.log(num)
   fetchAllData({
     num,
-  });
+  }).then();
 };
 
 // 数据同步
