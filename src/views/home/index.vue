@@ -46,7 +46,7 @@ import { ElLoading } from 'element-plus';
 
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
-import MatchData from '@/mock/allData.json';
+import MatchData from '@/mock/allData';
 import { fetchAllData, fetchSync } from '@/api';
 
 /* 设置 start */
@@ -57,7 +57,11 @@ const handelSwitchNum = (num: string = '4') => {
   console.log(num)
   fetchAllData({
     num,
-  }).then();
+  }).then((res) => {
+
+  }).catch((err) => {
+    console.log(err)
+  });
 };
 
 // 数据同步
