@@ -86,6 +86,11 @@ const leagueOptions = computed(() => {
 
 let dom_topList = [];
 const handleChangeLeagueName = (league: object) => {
+  if (!league.index) {
+    const dom_scroll = document.querySelector('.scroll');
+    dom_scroll.scrollTo(0, 0);
+    return;
+  }
   const dom_league = dom_topList[league.index];
   dom_league.scrollIntoView({
     behavior: 'smooth',
@@ -144,7 +149,7 @@ onMounted(() => {
 
     >span {
       font-weight: normal;
-      font-size: 15px;
+      font-size: 14px;
     }
   }
 
