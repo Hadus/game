@@ -3,7 +3,8 @@
 
 # vite
 - import.meta
-  > import.meta.env: 打印环境信息
+  > import.meta.env: 打印环境信息(在app中)
+  > vite.config.js 打印不出
 - import.meta.glob
   ```js
     const routeModules = import.meta.glob('./*/index.ts', {
