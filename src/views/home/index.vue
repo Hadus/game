@@ -10,30 +10,32 @@
         </el-option>
       </el-select>
       <div>
-        <el-button type="primary" @click="handelSwitch({ num })">切换</el-button>
+        <el-button type="primary" @click="handelSwitch(num)">切换</el-button>
       </div>
       <div>上次同步：{{ MatchData.lastReloadTime }}
         <el-tag>2023-10-10 10:10:10</el-tag>
       </div>
-      <el-button type="primary" @click="handelSet({ type })">数据同步</el-button>
+      <el-button type="primary" @click="handelSync()">数据同步</el-button>
     </div>
     <div class="filter">
-      <div>
+      <el-affix>
         联赛类型选择：
-        <el-select v-model="type" clearable class="select-type">
-          <el-option v-for="item in typeOptions" :key="item" :label="item" :value="item" :disabled="item == type">
+        <el-select v-model="league" clearable class="select-type" @change="handleChangeLeagueName(league)"
+          value-key="index">
+          <el-option v-for="item in  leagueOptions " :key="item.index" :label="item.leagueName" :value="item"
+            :disabled="item.leagueName == league.leagueName">
           </el-option>
         </el-select>
-      </div>
+      </el-affix>
     </div>
     <div class="table">
-      <match-block :teamsData="teams" v-for="(teams, index) in MatchData" :key="index"></match-block>
+      <match-block :teamsData="teams" v-for="( teams, index ) in  MatchData " :key="index"></match-block>
     </div>
   </div>
 </template>
 
 <script setup lang="ts" name="home">
-import { onMounted, ref, reactive, provide, computed } from 'vue'
+import { onMounted, ref, reactive, provide, computed } from 'vue';
 import { ElLoading } from 'element-plus';
 
 import MatchBlock from './MatchBlock';
@@ -41,15 +43,24 @@ import MatchData from '@/mock/data.json';
 import { fetchAllData, fetchSync } from '@/api';
 
 /* 设置 start */
+// 切换场次
 const num = ref('4');
 const numOptions = ['4', '5', '6', '7', '8', '9', '10+'];
-const handelSet = (num) => {
+const handelSwitch = (num: string = '4') => {
+  fetchAllData({
+    num,
+  });
+};
+
+// 数据同步
+const handelSync = () => {
   const loading = ElLoading.service({
     lock: true,
     text: '数据同步中，请稍后...',
     background: 'rgba(0, 0, 0, 0.7)',
     customClass: 'loading'
   });
+
   // 调用：数据同步
   fetchSync().then((res) => {
     loading.close();
@@ -59,15 +70,30 @@ const handelSet = (num) => {
   }, 10 * 1000)
 }
 /* 设置 end */
+
 /* 筛选 start */
-const type = ref('');
-let typeOptions = ref([]);
-const handelSwitch = (num: string = '4') => {
-  fetchAllData({
-    num,
+// 切换联赛
+let league = ref({});
+
+const leagueOptions = computed(() => {
+  return MatchData.map((ele, index) => {
+    return {
+      leagueName: ele.leagueName,
+      index
+    };
   });
-};
+});
+
+let dom_topList = [];
+const handleChangeLeagueName = (league: object) => {
+  const dom_league = dom_topList[league.index];
+  dom_league.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+}
 /* 筛选 end */
+
 // 需要关注的比赛场次
 let focusMatchNum_24 = ref<number>(0);
 let focusMatchNum_1 = ref<number>(0);
@@ -95,12 +121,7 @@ provide('handelFocusMatch', handelFocusMatch);
 onMounted(() => {
   // 调用：获取所有数据
   // fetchAllData({});
-  const typeOptions_temp = computed(() => {
-    return MatchData.map(ele => {
-      return ele.leagueName;
-    });
-  });
-  typeOptions.value = typeOptions_temp.value;
+  dom_topList = document.querySelectorAll('.top')
 });
 </script>
 <style lang="less" scoped>
@@ -147,10 +168,23 @@ onMounted(() => {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: right;
+    margin-right: 20px;
+    background-color: #fff;
 
     >div {
-      display: inline-block;
-      margin-right: 20px;
+      background-color: #fff;
+    }
+
+    /deep/.el-affix--fixed {
+      height: 50px !important;
+      padding: 10px 0 !important;
+      background-color: #d1edc4;
+      width: 500px !important;
+      text-align: center;
+      font-size: 16px !important;
+      border-radius: 20px;
+      margin: 0 auto;
+      left: calc(50% - 250px);
     }
   }
 
@@ -162,7 +196,7 @@ onMounted(() => {
     width: 80px !important;
   }
 
-  /deep/.select-type .el-input {
+  /deep/.select-league .el-input {
     width: 120px !important;
   }
 }
