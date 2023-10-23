@@ -46,7 +46,7 @@ import { ElLoading } from 'element-plus';
 
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
-import MatchData from '@/mock/data.json';
+import MatchData from '@/mock/allData.json';
 import { fetchAllData, fetchSync } from '@/api';
 
 /* 设置 start */
