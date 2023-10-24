@@ -13,6 +13,9 @@
   - 更改 api 地址: .env.uat
 > prod: 生产环境
   - 更改 api 地址: .env.prod
+> 部署
+  - npm run build
+  - 会打包到 /dist 中
 
 # vite
 - import.meta
