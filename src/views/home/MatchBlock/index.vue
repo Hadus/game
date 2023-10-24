@@ -72,9 +72,11 @@ const handelSwitchFocus = (teamId: number, focusFlag: boolean) => {
     teamId,
     focusFlag
   }).then((res) => {
+    console.log(res);
     focusFlag = !focusFlag;
+  }).catch((error) => {
+    console.log(error);
   });
-  console.log(teamId);
 }
 </script>
 <style lang="less" scoped>

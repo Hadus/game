@@ -25,8 +25,7 @@
         联赛类型选择：
         <el-select v-model="league" clearable class="select-type" @change="handleChangeLeagueName(league)"
           value-key="index">
-          <el-option v-for="item in leagueOptions" :key="item.index" :label="item.leagueName" :value="item"
-            :disabled="item.leagueName == league.leagueName">
+          <el-option v-for="item in leagueOptions" :key="item.index" :label="item.leagueName" :value="item">
           </el-option>
         </el-select>
       </el-affix>
@@ -35,33 +34,47 @@
       <MatchStat />
     </div>
     <div class="table">
-      <match-block :teamsData="teams" v-for="( teams, index ) in  MatchData " :key="index" />
+      <match-block :teamsData="teams" v-for="( teams, index ) in MatchData" :key="index" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts" name="home">
-import { onBeforeMount, onMounted, ref, reactive, provide, computed } from 'vue';
-import { ElLoading } from 'element-plus';
+import { onMounted, ref, reactive, provide, computed } from 'vue';
+import { ElLoading, ElNotification } from 'element-plus';
 
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
-import MatchData from '@/mock/allData';
+// import MatchData from '@/mock/allData';
 import { fetchAllData, fetchSync } from '@/api';
+let MatchData = ref([]);
+let leagueOptions = ref([]);
+
+// 调用：获取所有数据
+const handelFetchAllData = (num: string = '4') => {
+  fetchAllData({ num }).then((res) => {
+    MatchData.value = res.data;
+    const leagueOptions_temp = computed(() => {
+      return MatchData.value.map((ele, index) => {
+        return {
+          leagueName: ele.leagueName,
+          index
+        };
+      });
+    });
+    leagueOptions.value = leagueOptions_temp.value;
+  }).catch((error) => {
+    console.log(error);
+  });
+}
+handelFetchAllData('4');
 
 /* 设置 start */
 // 切换场次
 const num = ref('4');
 const numOptions = ['4', '5', '6', '7', '8', '9', '10+'];
 const handelSwitchNum = (num: string = '4') => {
-  console.log(num)
-  fetchAllData({
-    num,
-  }).then((res) => {
-
-  }).catch((err) => {
-    console.log(err)
-  });
+  handelFetchAllData(num);
 };
 
 // 数据同步
@@ -75,11 +88,24 @@ const handelSync = () => {
 
   // 调用：数据同步
   fetchSync().then((res) => {
-    loading.close();
+    console.log(res)
+    // loading.close();
+    setTimeout(() => {
+      loading.close();
+      ElNotification({
+        title: '数据同步完成',
+        message: '时间：' + res.data.time,
+        type: 'success',
+      });
+    }, 5 * 1000)
+  }).catch((err) => {
+    console.log(err)
+    ElNotification({
+      title: '数据同步失败',
+      message: '',
+      type: 'error',
+    });
   });
-  setTimeout(() => {
-    loading.close();
-  }, 10 * 1000)
 }
 /* 设置 end */
 
@@ -87,17 +113,9 @@ const handelSync = () => {
 // 切换联赛
 let league = ref({});
 
-const leagueOptions = computed(() => {
-  return MatchData.map((ele, index) => {
-    return {
-      leagueName: ele.leagueName,
-      index
-    };
-  });
-});
-
-let dom_topList = [];
 const handleChangeLeagueName = (league: object) => {
+  const dom_topList = document.querySelectorAll('.top');
+
   if (!league.index) {
     const dom_scroll = document.querySelector('.scroll');
     dom_scroll.scrollTo(0, 0);
@@ -126,6 +144,7 @@ let focusMatchNum_1 = ref<number>(0);
 // audio
 const isplayAudio = true;
 const audio = new Audio('src/assets/audio/preview.mp3');
+audio.muted = true;
 const audioPlay = () => {
   audio.play();
 }
@@ -143,15 +162,6 @@ const handelFocusMatch = (num: number) => {
 }
 
 provide('handelFocusMatch', handelFocusMatch);
-
-onBeforeMount(() => {
-  // 调用：获取所有数据
-  fetchAllData({}).then();
-});
-
-onMounted(() => {
-  dom_topList = document.querySelectorAll('.top')
-});
 </script>
 <style lang="less" scoped>
 // 变量
