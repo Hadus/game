@@ -1,6 +1,10 @@
 # vue3-project
 > vue3 + vue-router + pina
 
+# 使用
+- npm i
+- npm start
+
 # env
 > dev: 开发使用
   - 使用mock数据
