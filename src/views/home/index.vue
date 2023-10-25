@@ -227,19 +227,18 @@ provide('handelFocusMatch', handelFocusMatch);
     height: 80px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-right: 20px;
     text-align: right;
     position: relative;
 
     >div {
       height: 100%;
       display: inline-block;
-      margin-right: 20px;
+      margin-right: 0px;
     }
 
     >.stat-today {
       position: absolute;
-      left: 10px;
+      left: 20px;
       top: 10px;
     }
 
