@@ -1,6 +1,6 @@
 <template>
   <div class="main-content scroll">
-    <h3>{{ MatchData.seasonName }} 盘路分析
+    <h3>{{ matchData.seasonName }} 盘路分析
       <span>（需关注的比赛：24小时内将开始 {{ focusMatchNum_24 }} 场， 1小时内将开始 {{ focusMatchNum_1 }} 场）</span>
     </h3>
     <!-- 设置 -->
@@ -17,7 +17,7 @@
       </div>
       <div>
         上次同步：
-        <el-tag>{{ MatchData.lastUpdateTime }}</el-tag>
+        <el-tag>{{ matchData.lastUpdateTime }}</el-tag>
       </div>
       <el-button type="primary" @click="handelSync()">数据同步</el-button>
     </div>
@@ -37,11 +37,11 @@
     </div>
     <!-- 统计 -->
     <div class="stat">
-      <MatchStat :stat="MatchData.detail" />
+      <MatchStat :data="matchData.data" />
     </div>
     <!-- 表格 -->
     <div class="table">
-      <match-block :teamsData="teams" v-for="( teams, index ) in MatchData.data" :key="index" />
+      <match-block :teamsData="teams" v-for="( teams, index ) in matchData.data" :key="index" />
     </div>
   </div>
 </template>
@@ -55,17 +55,17 @@ import MatchBlock from './MatchBlock';
 import { fetchGetData, fetchSync } from '@/api';
 
 
-let MatchData = ref({});
+let matchData = ref({});
 let leagueOptions = ref([]);
 
 // 调用：获取所有数据
 const handelFetchAllData = (num: string = '4') => {
   fetchGetData({ minConsecutiveNumber: num }).then((res) => {
     console.log(res)
-    MatchData.value = res.data;
-    const MatchDataList = MatchData.value.data;
+    matchData.value = res.data;
+    const matchDataList = matchData.value.data;
     const leagueOptions_temp = computed(() => {
-      return MatchDataList.map((ele, index) => {
+      return matchDataList.map((ele, index) => {
         return {
           leagueName: ele.leagueName,
           index

@@ -1,24 +1,24 @@
 <template>
   <div class="wrapper">
-    <div class="top">2023赛季 总体统计
+    <div class="top">赛季盘路汇总
       <el-button class="look-detail" type="primary" size="small" @click="handleLookDetail">查看详情</el-button>
     </div>
     <div class="bot">
       <div class="left">
-        <h3>连赢统计</h3>
+        <h3>累计连赢</h3>
         <div>
-          <el-table class="stat-table" :data="winList" border style="width: 100%">
+          <el-table class="stat-table" :data="[]" border style="width: 100%">
             <el-table-column prop="name" label="name" width="100" />
             <el-table-column prop="num" label="num" width="100" />
           </el-table>
         </div>
       </div>
       <div class="right">
-        <h3>连败统计</h3>
+        <h3>累计连败</h3>
         <div>
-          <el-table class="stat-table" :data="winList" border style="width: 100%">
-            <el-table-column prop="name" label="name" width="100" />
-            <el-table-column prop="num" label="num" width="100" />
+          <el-table class="stat-table" :data="[]" border style="width: 100%">
+            <el-table-column prop="demo" label="name" width="100" />
+            <el-table-column prop="demo" label="num" width="100" />
           </el-table>
         </div>
       </div>
@@ -56,21 +56,22 @@
 <script setup lang="ts" name="matchBlock">
 import { defineProps, ref, reactive } from 'vue';
 
-import { fetchFocusMatch } from '@/api';
-const { stat } = defineProps({
-  stat: {
+import { fetchDetail } from '@/api';
+const { data } = defineProps({
+  data: {
     type: Object,
     required: true
   }
 });
-
-const winList = [
-  { name: '4', num: 12 },
-];
-
+console.log(data)
 const detailDialogFlag = ref<boolean>(false);
 const handleLookDetail = () => {
   detailDialogFlag.value = true;
+  fetchDetail().then((res) => {
+    console.log(res)
+  }).catch((error) => {
+    console.log(error)
+  })
 }
 </script>
 <style lang="less" scoped>

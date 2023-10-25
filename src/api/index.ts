@@ -8,11 +8,11 @@ export const fetchTest = () => {
   });
 };
 // 获取数据
-export const fetchGetData = (params: object = {}) => {
+export const fetchGetData = (data: object = {}) => {
   return request({
     url: 'getData',
     method: 'post',
-    params
+    data
   });
 };
 // 数据同步
@@ -23,11 +23,11 @@ export const fetchSync = () => {
   });
 };
 // 是否关注比赛
-export const fetchRemoveFocus = (params = {}) => {
+export const fetchRemoveFocus = (data = {}) => {
   return request({
     url: 'removeFocus',
     method: 'post',
-    params
+    data
   });
 };
 // 查看统计详情
