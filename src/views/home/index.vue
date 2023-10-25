@@ -3,6 +3,7 @@
     <h3>{{ MatchData.seasonName }} 盘路分析
       <span>（需关注的比赛：24小时内将开始 {{ focusMatchNum_24 }} 场， 1小时内将开始 {{ focusMatchNum_1 }} 场）</span>
     </h3>
+    <!-- 设置 -->
     <div class="set">
       <div>
         连赢连输场次基数切换：
@@ -20,7 +21,11 @@
       </div>
       <el-button type="primary" @click="handelSync()">数据同步</el-button>
     </div>
+    <!-- 筛选 -->
     <div class="filter">
+      <div class="stat-today">
+        <MatchStatToday :winTeam="winTeam" :loseTeam="loseTeam" />
+      </div>
       <el-affix>
         联赛类型选择：
         <el-select v-model="league" clearable class="select-type" @change="handleChangeLeagueName(league)"
@@ -30,9 +35,11 @@
         </el-select>
       </el-affix>
     </div>
+    <!-- 统计 -->
     <div class="stat">
       <MatchStat :stat="MatchData.detail" />
     </div>
+    <!-- 表格 -->
     <div class="table">
       <match-block :teamsData="teams" v-for="( teams, index ) in MatchData.data" :key="index" />
     </div>
@@ -42,7 +49,7 @@
 <script setup lang="ts" name="home">
 import { onMounted, ref, reactive, provide, computed } from 'vue';
 import { ElLoading, ElNotification } from 'element-plus';
-
+import MatchStatToday from './MatchStatToday.vue';
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
 import { fetchGetData, fetchSync } from '@/api';
@@ -160,14 +167,22 @@ const audioClose = () => {
 }
 
 // provide 给 MatchStatus 调用
-const handelFocusMatch = (num: number) => {
+// 计算连赢和连败队伍数量
+let winTeam = ref<number>(0);
+let loseTeam = ref<number>(0);
+const handelMatchTeam = (isWin: boolean) => {
+  isWin ? winTeam.value++ : loseTeam.value++;
+}
+// 计算需要关注的比赛场次
+const handelFocusMatch = (startHour: number,) => {
   focusMatchNum_24.value++;
-  if (num === 1) {
+  if (startHour === 1) {
     focusMatchNum_1.value++;
     audioPlay();
   }
 }
 
+provide('handelMatchTeam', handelMatchTeam);
 provide('handelFocusMatch', handelFocusMatch);
 </script>
 <style lang="less" scoped>
@@ -195,8 +210,7 @@ provide('handelFocusMatch', handelFocusMatch);
   }
 
   >.set {
-    text-align: center;
-    min-height: 40px;
+    height: 80px;
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: right;
@@ -210,17 +224,23 @@ provide('handelFocusMatch', handelFocusMatch);
   }
 
   >.filter {
-    text-align: center;
-    min-height: 40px;
+    height: 80px;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: right;
     margin-right: 20px;
+    text-align: right;
+    position: relative;
 
     >div {
       height: 100%;
       display: inline-block;
       margin-right: 20px;
+    }
+
+    >.stat-today {
+      position: absolute;
+      left: 10px;
+      top: 10px;
     }
 
     /deep/.el-affix--fixed {

@@ -12,7 +12,7 @@
               <template #default="{ row }">
                 <p class="match-item" v-if="row.nextMatchTime">
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
-                  <match-status :nextMatchTimeStr="row.nextMatchTime" />
+                  <match-status :nextMatchTimeStr="row.nextMatchTime" isWin />
                   <el-switch v-model="row.unfocusTeam" style="--el-switch-on-color: #13ce66; float:right"
                     @change="handelSwitchFocus(row)" />
                 </p>

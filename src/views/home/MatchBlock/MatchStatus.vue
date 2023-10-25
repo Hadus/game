@@ -6,12 +6,20 @@
 
 <script setup lang="ts" name="MatchStatus">
 import { defineProps, ref, inject } from 'vue';
-const { nextMatchTimeStr } = defineProps({
+const { nextMatchTimeStr, isWin } = defineProps({
   nextMatchTimeStr: {
     type: String,
     required: true
+  },
+  isWin: {
+    type: Boolean,
+    required: false
   }
 });
+// 计算连赢和连败队伍数量
+const handelMatchTeam = inject<Function>('handelMatchTeam');
+handelMatchTeam(isWin);
+
 const handelFocusMatch = inject<Function>('handelFocusMatch');
 
 
@@ -28,11 +36,11 @@ if (gap <= 0) {
 } else if (gapHours <= 1) {
   className.value = 'pending warning';
   matchStatus.value = '预警中';
-  handelFocusMatch(1);
+  handelFocusMatch(1, isWin);
 } else if (gapHours <= 24) {
   className.value = 'pending';
   matchStatus.value = '即将开赛';
-  handelFocusMatch(24);
+  handelFocusMatch(24, isWin);
 } else if (gapHours > 24) {
   className.value = 'next';
   matchStatus.value = '下场比赛';
