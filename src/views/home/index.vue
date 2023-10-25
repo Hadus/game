@@ -45,7 +45,13 @@ import { ElLoading, ElNotification } from 'element-plus';
 
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
-import { fetchGetData, fetchSync } from '@/api';
+import { fetchTest, fetchGetData, fetchSync } from '@/api';
+fetchTest().then((res) => {
+  console.log(res)
+}).then((error) => {
+  console.log(error)
+});
+
 let MatchData = ref({});
 let leagueOptions = ref([]);
 

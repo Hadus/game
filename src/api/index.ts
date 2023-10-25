@@ -1,5 +1,12 @@
 import request from './request';
 
+// 测试接口
+export const fetchTest = () => {
+  return request({
+    url: 'get',
+    method: 'get'
+  });
+};
 // 获取数据
 export const fetchGetData = (params: object = {}) => {
   return request({
