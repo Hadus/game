@@ -37,7 +37,7 @@
     </div>
     <!-- 统计 -->
     <div class="stat">
-      <MatchStat :data="matchData.data" />
+      <MatchStat :data="matchData.detail" />
     </div>
     <!-- 表格 -->
     <div class="table">
@@ -53,7 +53,6 @@ import MatchStatToday from './MatchStatToday.vue';
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
 import { fetchGetData, fetchSync } from '@/api';
-
 
 let matchData = ref({});
 let leagueOptions = ref([]);

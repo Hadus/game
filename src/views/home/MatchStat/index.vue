@@ -7,18 +7,16 @@
       <div class="left">
         <h3>累计连赢</h3>
         <div>
-          <el-table class="stat-table" :data="[]" border style="width: 100%">
-            <el-table-column prop="name" label="name" width="100" />
-            <el-table-column prop="num" label="num" width="100" />
+          <el-table class="stat-table" :data="[data]" border style="width: 100%">
+            <el-table-column :prop="index" :label="index" width="100" v-for="(item, index) in data" :key="index" />
           </el-table>
         </div>
       </div>
       <div class="right">
         <h3>累计连败</h3>
         <div>
-          <el-table class="stat-table" :data="[]" border style="width: 100%">
-            <el-table-column prop="demo" label="name" width="100" />
-            <el-table-column prop="demo" label="num" width="100" />
+          <el-table class="stat-table" :data="[data]" border style="width: 100%">
+            <el-table-column :prop="index" :label="index" width="100" v-for="(item, index) in data" :key="index" />
           </el-table>
         </div>
       </div>
@@ -54,7 +52,7 @@
 </template>
 
 <script setup lang="ts" name="matchBlock">
-import { defineProps, ref, reactive } from 'vue';
+import { defineProps, ref, reactive, watch } from 'vue';
 
 import { fetchDetail } from '@/api';
 const { data } = defineProps({
@@ -63,7 +61,7 @@ const { data } = defineProps({
     required: true
   }
 });
-console.log(data)
+
 const detailDialogFlag = ref<boolean>(false);
 const handleLookDetail = () => {
   detailDialogFlag.value = true;
