@@ -13,8 +13,8 @@
                 <p class="match-item" v-if="row.nextMatchTime">
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" />
-                  <el-switch v-model="focusFlag" style="--el-switch-on-color: #13ce66; float:right"
-                    @change="handelSwitchFocus(row.teamId, focusFlag)" />
+                  <el-switch v-model="row.unfocusTeam" style="--el-switch-on-color: #13ce66; float:right"
+                    @change="handelSwitchFocus(row)" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
                   <match-budge :budgeIndex="row.matchDetails.length - index" />
@@ -36,8 +36,8 @@
                 <p class="match-item" v-if="row.nextMatchTime">
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" />
-                  <el-switch v-model="focusFlag" style="--el-switch-on-color: #13ce66; float:right"
-                    @change="handelSwitchFocus(row.teamId, focusFlag)" />
+                  <el-switch v-model="row.unfocusTeam" style="--el-switch-on-color: #13ce66; float:right"
+                    @change="handelSwitchFocus(row)" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
                   <match-budge :budgeIndex="row.matchDetails.length - index" />
@@ -57,7 +57,7 @@ import { defineProps, ref, reactive } from 'vue';
 import MatchStatus from './MatchStatus.vue';
 import MatchBudge from './MatchBudge.vue';
 
-import { fetchFocusMatch } from '@/api';
+import { fetchRemoveFocus } from '@/api';
 
 const { teamsData } = defineProps({
   teamsData: {
@@ -66,15 +66,14 @@ const { teamsData } = defineProps({
   }
 });
 const { matchesW: winList, matchesL: loseList } = teamsData;
-const focusFlag = ref(true);
-const handelSwitchFocus = (teamId: number, focusFlag: boolean) => {
-  fetchFocusMatch({
-    teamId,
-    focusFlag
+const handelSwitchFocus = (row) => {
+  fetchRemoveFocus({
+    teamId: row.teamId,
+    unfocusTeam: row.unfocusTeam
   }).then((res) => {
     console.log(res);
-    focusFlag = !focusFlag;
   }).catch((error) => {
+    row.unfocusTeam = !row.unfocusTeam;
     console.log(error);
   });
 }

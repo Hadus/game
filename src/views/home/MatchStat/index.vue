@@ -57,6 +57,12 @@
 import { defineProps, ref, reactive } from 'vue';
 
 import { fetchFocusMatch } from '@/api';
+const { stat } = defineProps({
+  stat: {
+    type: Object,
+    required: true
+  }
+});
 
 const winList = [
   { name: '4', num: 12 },

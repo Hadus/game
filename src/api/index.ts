@@ -1,9 +1,9 @@
 import request from './request';
 
 // 获取数据
-export const fetchAllData = (params: object = {}) => {
+export const fetchGetData = (params: object = {}) => {
   return request({
-    url: 'api/allData',
+    url: 'getData',
     method: 'post',
     params
   });
@@ -11,15 +11,22 @@ export const fetchAllData = (params: object = {}) => {
 // 数据同步
 export const fetchSync = () => {
   return request({
-    url: 'api/sync',
+    url: 'sync',
     method: 'get',
   });
 };
 // 是否关注比赛
-export const fetchFocusMatch = (params = {}) => {
+export const fetchRemoveFocus = (params = {}) => {
   return request({
-    url: 'api/focusMatch',
+    url: 'removeFocus',
     method: 'post',
     params
+  });
+};
+// 查看统计详情
+export const fetchDetail = () => {
+  return request({
+    url: 'detail',
+    method: 'get',
   });
 };

@@ -1,26 +1,34 @@
-import allDataJson from './allData.json';
+import allDataJson from './data.json';
 export default [{
+  url: '/getData',
   type: 'post',
-  url: '/api/allData',
-  response: ({body}) => {
+  response: (request) => {
+    allDataJson.minConsecutiveNumber = request.query.minConsecutiveNumber;
     return allDataJson
   }
 }, {
+  url: '/sync',
   type: 'get',
-  url: '/api/sync',
-  response: ({body}) => {
+  response: (res) => {
     return {
-      time: '2023-10-10 10:10:10',
-      allDataJson
+      time: '2023-01-01 01:01:01',
+      flag: true
     }
   }
 },{
+  url: '/removeFocus',
   type: 'post',
-  url: '/api/focusMatch',
+  response: (res) => {
+    return {
+      unfocusTeam: res.query.unfocusTeam,
+    }
+  }
+},{
+  url: '/detail',
+  type: 'get',
   response: ({body}) => {
     return {
-      time: '2023-10-10 10:10:10',
-      allDataJson
+      demo: 1
     }
   }
 }]

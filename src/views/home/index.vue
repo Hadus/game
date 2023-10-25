@@ -1,6 +1,6 @@
 <template>
   <div class="main-content scroll">
-    <h3>2023赛季 球队连赢连输分析
+    <h3>{{ MatchData.seasonName }} 盘路分析
       <span>（需关注的比赛：24小时内将开始 {{ focusMatchNum_24 }} 场， 1小时内将开始 {{ focusMatchNum_1 }} 场）</span>
     </h3>
     <div class="set">
@@ -15,8 +15,8 @@
         <el-button type="primary" @click="handelSwitchNum(num)">切换</el-button>
       </div>
       <div>
-        上次同步：{{ MatchData.lastReloadTime }}
-        <el-tag>2023-10-10 10:10:10</el-tag>
+        上次同步：
+        <el-tag>{{ MatchData.lastUpdateTime }}</el-tag>
       </div>
       <el-button type="primary" @click="handelSync()">数据同步</el-button>
     </div>
@@ -31,10 +31,10 @@
       </el-affix>
     </div>
     <div class="stat">
-      <MatchStat />
+      <MatchStat :stat="MatchData.detail" />
     </div>
     <div class="table">
-      <match-block :teamsData="teams" v-for="( teams, index ) in MatchData" :key="index" />
+      <match-block :teamsData="teams" v-for="( teams, index ) in MatchData.data" :key="index" />
     </div>
   </div>
 </template>
@@ -45,17 +45,17 @@ import { ElLoading, ElNotification } from 'element-plus';
 
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
-// import MatchData from '@/mock/allData';
-import { fetchAllData, fetchSync } from '@/api';
-let MatchData = ref([]);
+import { fetchGetData, fetchSync } from '@/api';
+let MatchData = ref({});
 let leagueOptions = ref([]);
 
 // 调用：获取所有数据
 const handelFetchAllData = (num: string = '4') => {
-  fetchAllData({ num }).then((res) => {
+  fetchGetData({ minConsecutiveNumber: num }).then((res) => {
     MatchData.value = res.data;
+    const MatchDataList = MatchData.value.data;
     const leagueOptions_temp = computed(() => {
-      return MatchData.value.map((ele, index) => {
+      return MatchDataList.map((ele, index) => {
         return {
           leagueName: ele.leagueName,
           index
@@ -67,7 +67,7 @@ const handelFetchAllData = (num: string = '4') => {
     console.log(error);
   });
 }
-handelFetchAllData('4');
+handelFetchAllData();
 
 /* 设置 start */
 // 切换场次
