@@ -45,12 +45,8 @@ import { ElLoading, ElNotification } from 'element-plus';
 
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
-import { fetchTest, fetchGetData, fetchSync } from '@/api';
-fetchTest().then((res) => {
-  console.log(res)
-}).then((error) => {
-  console.log(error)
-});
+import { fetchGetData, fetchSync } from '@/api';
+
 
 let MatchData = ref({});
 let leagueOptions = ref([]);
@@ -58,6 +54,7 @@ let leagueOptions = ref([]);
 // 调用：获取所有数据
 const handelFetchAllData = (num: string = '4') => {
   fetchGetData({ minConsecutiveNumber: num }).then((res) => {
+    console.log(res)
     MatchData.value = res.data;
     const MatchDataList = MatchData.value.data;
     const leagueOptions_temp = computed(() => {
@@ -84,7 +81,7 @@ const handelSwitchNum = (num: string = '4') => {
 };
 
 // 数据同步
-const handelSync = () => {
+async function handelSync() {
   const loading = ElLoading.service({
     lock: true,
     text: '数据同步中，请稍后...',
@@ -92,26 +89,30 @@ const handelSync = () => {
     customClass: 'loading'
   });
 
-  // 调用：数据同步
-  fetchSync().then((res) => {
-    console.log(res)
-    // loading.close();
-    setTimeout(() => {
+  try {
+    // 调用：数据同步
+    const res_sync = await fetchSync();
+    console.log(res_sync)
+    if (res_sync.data.flag) {
+      // 重新获取数据
+      handelFetchAllData();
       loading.close();
       ElNotification({
         title: '数据同步完成',
-        message: '时间：' + res.data.time,
+        message: '时间：' + res_sync.data.time,
         type: 'success',
       });
-    }, 5 * 1000)
-  }).catch((err) => {
+    } else {
+      throw {}
+    }
+  } catch (err) {
     console.log(err)
     ElNotification({
       title: '数据同步失败',
       message: '',
       type: 'error',
     });
-  });
+  }
 }
 /* 设置 end */
 
