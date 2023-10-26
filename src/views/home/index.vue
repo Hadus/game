@@ -28,7 +28,7 @@
       </div>
       <div>
         预警提醒：
-        <el-switch v-model="alertFlag" style="--el-switch-on-color: #13ce66;" />
+        <el-switch v-model="alertFlag" style="--el-switch-on-color: #13ce66;" @click="handleSwitchAlert()" />
       </div>
       <el-affix>
         联赛类型选择：
@@ -41,8 +41,8 @@
     </div>
     <!-- 统计 -->
     <div class="stat">
-      <MatchStat :homeSeasonSummary="matchData.homeSeasonSummary" :seasonSummaryW="matchData.seasonSummaryW"
-        :seasonSummaryL="matchData.seasonSummaryL" />
+      <MatchStat :homeSeasonSummaryW="matchData.homeSeasonSummaryW" :homeSeasonSummaryL="matchData.homeSeasonSummaryL"
+        :seasonSummaryW="matchData.seasonSummaryW" :seasonSummaryL="matchData.seasonSummaryL" />
     </div>
     <!-- 表格 -->
     <div class="table">
@@ -132,6 +132,9 @@ async function handelSync() {
 
 /* 筛选 start */
 let alertFlag = ref(false)
+const handleSwitchAlert = function () {
+  focusMatchNum_1 && (alertFlag ? audioPlay() : audioClose());
+}
 // 切换联赛
 let league = ref({});
 
@@ -185,12 +188,11 @@ const handelStatFocusMatch = (startHour: number,) => {
   focusMatchNum_24.value++;
   if (startHour === 1) {
     focusMatchNum_1.value++;
-    audioPlay();
   }
 }
 
 provide('handelStatMatchTeam', handelStatMatchTeam);
-provide('handelFocusMatch', handelStatFocusMatch);
+provide('handelStatFocusMatch', handelStatFocusMatch);
 </script>
 <style lang="less" scoped>
 // 变量
