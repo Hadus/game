@@ -8,7 +8,8 @@
         <h3>累计连赢</h3>
         <div>
           <el-table class="stat-table" :data="[data]" border style="width: 100%">
-            <el-table-column :prop="index" :label="index" width="100" v-for="(item, index) in data" :key="index" />
+            <el-table-column :prop="key" :label="index == 6 ? `${index + 4}+ 场` : `${index + 4} 场`"
+              v-for="(item, key, index) in  data   " :key="key" align="center" />
           </el-table>
         </div>
       </div>
@@ -16,7 +17,8 @@
         <h3>累计连败</h3>
         <div>
           <el-table class="stat-table" :data="[data]" border style="width: 100%">
-            <el-table-column :prop="index" :label="index" width="100" v-for="(item, index) in data" :key="index" />
+            <el-table-column :prop="key" :label="index == 6 ? `${index + 4}+ 场` : `${index + 4} 场`"
+              v-for="(item, key, index) in  data   " :key="key" align="center" />
           </el-table>
         </div>
       </div>
@@ -31,18 +33,18 @@
         <div class="left">
           <h3>连赢统计</h3>
           <div>
-            <el-table class="stat-table" :data="winList" border style="width: 100%">
-              <el-table-column prop="name" label="name" width="100" />
-              <el-table-column prop="num" label="num" width="100" />
+            <el-table class="stat-table" :data="[data]" border style="width: 100%">
+              <el-table-column :prop="key" :label="index == 6 ? `${index + 4}+ 场` : `${index + 4} 场`"
+                v-for="(item, key, index) in  data   " :key="key" align="center" />
             </el-table>
           </div>
         </div>
         <div class="right">
           <h3>连败统计</h3>
           <div>
-            <el-table class="stat-table" :data="winList" border style="width: 100%">
-              <el-table-column prop="name" label="name" width="100" />
-              <el-table-column prop="num" label="num" width="100" />
+            <el-table class="stat-table" :data="[data]" border style="width: 100%">
+              <el-table-column :prop="key" :label="index == 6 ? `${index + 4}+ 场` : `${index + 4} 场`"
+                v-for="(item, key, index) in  data   " :key="key" align="center" />
             </el-table>
           </div>
         </div>
