@@ -1,6 +1,6 @@
 <template>
   <div class="main-content scroll">
-    <h3>{{ matchData.curSeason }} 盘路分析
+    <h3>{{ matchData.curSeason }}赛季 盘路分析
       <span>（需关注的比赛：24小时内将开始 {{ focusMatchNum_24 }} 场， 1小时内将开始 {{ focusMatchNum_1 }} 场）</span>
     </h3>
     <!-- 设置 -->
@@ -46,7 +46,7 @@
     </div>
     <!-- 表格 -->
     <div class="table">
-      <match-block :teamsData="teams" v-for="( teams, index ) in matchData.data" :key="index" />
+      <match-block :teamsData="teams" v-for="(  teams, index  ) in  matchData.data " :key="index" />
     </div>
   </div>
 </template>
@@ -61,7 +61,6 @@ import { fetchGetData, fetchSync } from '@/api';
 
 let matchData = ref({});
 let leagueOptions = ref([]);
-
 // 调用：获取所有数据
 const handelFetchAllData = (num: string = '4') => {
   fetchGetData({ minConsecutiveNumber: num }).then((res) => {

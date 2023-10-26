@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="top">{{ curSeason }}赛季盘路汇总
+    <div class="top">{{ curSeason }}赛季 盘路汇总
       <el-button class="look-detail" type="primary" size="small" @click="handleLookDetail">查看详情</el-button>
     </div>
     <div class="bot">
@@ -26,13 +26,12 @@
     <el-dialog v-model="detailDialogFlag" width="90%" center>
       <template #header="{ titleId, titleClass }">
         <div class="dialog-header">
-          <h4 :id="titleId" :class="titleClass">赛季统计
+          <h4 :id="titleId" :class="titleClass">{{ curSeason }}赛季 盘路统计
             <el-select v-model="changeSeasonName" size="small" @change="handleChangeSeason()">
               <el-option v-for="item in seasonList" :key="item" :label="item" :value="item"
                 :disabled="item == changeSeasonName" />
             </el-select>
           </h4>
-
         </div>
       </template>
       <div class="bot">
@@ -78,24 +77,22 @@
 </template>
 
 <script setup lang="ts" name="matchBlock">
-import { defineProps, ref, reactive, watch } from 'vue';
+import { defineProps, ref, reactive, watch, computed } from 'vue';
 import data from '@/mock/detail'
 
 import { fetchDetail } from '@/api';
 const { curSeason, homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
   curSeason: {
     type: String,
-    required: true
   },
   homeSeasonSummaryW: {
     type: Object,
-    required: true
   },
   homeSeasonSummaryL: {
     type: Object,
-    required: true
   },
 });
+
 // 调用：获取统计数据
 const api_fetchDetail = (sensonName = '2023-2024') => {
   fetchDetail({ sensonName }).then((res) => {
@@ -110,11 +107,12 @@ const dialogData = ref({});
 const handleLookDetail = () => {
   detailDialogFlag.value = true;
   dialogData.value = data
-  api_fetchDetail('2023-2024');
+  // api_fetchDetail('2023-2024');
 }
 
 const seasonList = ref(['2023-2024', '2024-2025']);
-const changeSeasonName = ref(curSeason.value)
+let changeSeasonName = ref(seasonList.value[0])
+
 const handleChangeSeason = () => {
   api_fetchDetail(changeSeasonName.value)
 }
