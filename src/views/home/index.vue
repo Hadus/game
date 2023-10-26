@@ -1,6 +1,6 @@
 <template>
   <div class="main-content scroll">
-    <h3>{{ matchData.seasonName }} 盘路分析
+    <h3>{{ matchData.curSeason }} 盘路分析
       <span>（需关注的比赛：24小时内将开始 {{ focusMatchNum_24 }} 场， 1小时内将开始 {{ focusMatchNum_1 }} 场）</span>
     </h3>
     <!-- 设置 -->
@@ -41,7 +41,7 @@
     </div>
     <!-- 统计 -->
     <div class="stat">
-      <MatchStat :seasonName="matchData.seasonName" :homeSeasonSummaryW="matchData.homeSeasonSummaryW"
+      <MatchStat :curSeason="matchData.curSeason" :homeSeasonSummaryW="matchData.homeSeasonSummaryW"
         :homeSeasonSummaryL="matchData.homeSeasonSummaryL" />
     </div>
     <!-- 表格 -->

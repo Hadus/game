@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="top">{{ seasonName }}赛季盘路汇总
+    <div class="top">{{ curSeason }}赛季盘路汇总
       <el-button class="look-detail" type="primary" size="small" @click="handleLookDetail">查看详情</el-button>
     </div>
     <div class="bot">
@@ -82,8 +82,8 @@ import { defineProps, ref, reactive, watch } from 'vue';
 import data from '@/mock/detail'
 
 import { fetchDetail } from '@/api';
-const { seasonName, homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
-  seasonName: {
+const { curSeason, homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
+  curSeason: {
     type: String,
     required: true
   },
@@ -114,7 +114,7 @@ const handleLookDetail = () => {
 }
 
 const seasonList = ref(['2023-2024', '2024-2025']);
-const changeSeasonName = ref(seasonName.value)
+const changeSeasonName = ref(curSeason.value)
 const handleChangeSeason = () => {
   api_fetchDetail(changeSeasonName.value)
 }
