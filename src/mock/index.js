@@ -24,8 +24,8 @@ export default [{
     }
   }
 },{
-  url: '/detail',
-  type: 'get',
+  url: '/getSeasonSummary',
+  type: 'post',
   response: ({body}) => {
     return {
       demo: 1

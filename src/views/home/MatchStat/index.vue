@@ -26,7 +26,13 @@
     <el-dialog v-model="detailDialogFlag" width="90%" center>
       <template #header="{ titleId, titleClass }">
         <div class="dialog-header">
-          <h4 :id="titleId" :class="titleClass">统计</h4>
+          <h4 :id="titleId" :class="titleClass">赛季统计
+            <el-select v-model="seasonName" size="small" @change="handleChangeSeason()">
+              <el-option v-for="item in seasonList" :key="item" :label="item" :value="item"
+                :disabled="item == seasonName" />
+            </el-select>
+          </h4>
+
         </div>
       </template>
       <div class="bot">
@@ -37,6 +43,15 @@
               <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW"
                 :key="key" align="center" />
             </el-table>
+            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryW]" border style="width: 100%"
+              :show-header="false">
+              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW"
+                :key="key" align="center">
+                <template #default="{ row }">
+                  <p v-for="(item_inner, index) in row[key]">{{ item_inner.leagueName + '-' + item_inner.teamName }}</p>
+                </template>
+              </el-table-column>
+            </el-table>
           </div>
         </div>
         <div class="right">
@@ -45,6 +60,15 @@
             <el-table class="stat-table" :data="[homeSeasonSummaryL]" border style="width: 100%">
               <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL"
                 :key="key" align="center" />
+            </el-table>
+            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryL]" border style="width: 100%"
+              :show-header="false">
+              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL"
+                :key="key" align="center">
+                <template #default="{ row }">
+                  <p v-for="(item_inner, index) in row[key]">{{ item_inner.leagueName + '-' + item_inner.teamName }}</p>
+                </template>
+              </el-table-column>
             </el-table>
           </div>
         </div>
@@ -55,9 +79,10 @@
 
 <script setup lang="ts" name="matchBlock">
 import { defineProps, ref, reactive, watch } from 'vue';
+import data from '@/mock/detail'
 
 import { fetchDetail } from '@/api';
-const { homeSeasonSummaryW, homeSeasonSummaryL, seasonSummaryW, seasonSummaryL } = defineProps({
+const { homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
   homeSeasonSummaryW: {
     type: Object,
     required: true
@@ -66,24 +91,28 @@ const { homeSeasonSummaryW, homeSeasonSummaryL, seasonSummaryW, seasonSummaryL }
     type: Object,
     required: true
   },
-  seasonSummaryW: {
-    type: Object,
-    required: true
-  },
-  seasonSummaryL: {
-    type: Object,
-    required: true
-  }
 });
-
-const detailDialogFlag = ref<boolean>(false);
-const handleLookDetail = () => {
-  detailDialogFlag.value = true;
-  fetchDetail().then((res) => {
+// 调用：获取统计数据
+const api_fetchDetail = (sensonName = '2023-2024') => {
+  fetchDetail({ sensonName }).then((res) => {
     console.log(res)
+    dialogData.value = data
   }).catch((error) => {
     console.log(error)
   })
+}
+const detailDialogFlag = ref<boolean>(false);
+const dialogData = ref({});
+const handleLookDetail = () => {
+  detailDialogFlag.value = true;
+  dialogData.value = data
+  api_fetchDetail('2023-2024');
+}
+
+const seasonList = ref(['2023-2024', '2024-2025']);
+const seasonName = ref(seasonList.value[0])
+const handleChangeSeason = () => {
+  api_fetchDetail(seasonName.value)
 }
 </script>
 <style lang="less" scoped>
@@ -160,6 +189,15 @@ const handleLookDetail = () => {
 .stat-table {
   border: 1px solid #606266;
   width: 100%;
+}
+
+.stat-table-team {
+  border-top: 0 none;
+
+  p {
+    padding-left: 0 !important;
+    // border-bottom: @border;
+  }
 }
 
 /deep/.el-dialog__body {

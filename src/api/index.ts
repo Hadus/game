@@ -31,9 +31,10 @@ export const fetchRemoveFocus = (data = {}) => {
   });
 };
 // 查看统计详情
-export const fetchDetail = () => {
+export const fetchDetail = (data = {}) => {
   return request({
-    url: 'detail',
-    method: 'get',
+    url: 'getSeasonSummary',
+    method: 'post',
+    data
   });
 };
