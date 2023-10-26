@@ -17,10 +17,10 @@ const { nextMatchTimeStr, isWin } = defineProps({
   }
 });
 // 计算连赢和连败队伍数量
-const handelMatchTeam = inject<Function>('handelMatchTeam');
-handelMatchTeam(isWin);
+const handelStatMatchTeam = inject<Function>('handelStatMatchTeam');
+handelStatMatchTeam(isWin);
 
-const handelFocusMatch = inject<Function>('handelFocusMatch');
+const handelStatFocusMatch = inject<Function>('handelStatFocusMatch');
 
 
 let className = ref('');
@@ -36,11 +36,11 @@ if (gap <= 0) {
 } else if (gapHours <= 1) {
   className.value = 'pending warning';
   matchStatus.value = '预警中';
-  handelFocusMatch(1, isWin);
+  handelStatFocusMatch(1, isWin);
 } else if (gapHours <= 24) {
   className.value = 'pending';
   matchStatus.value = '即将开赛';
-  handelFocusMatch(24, isWin);
+  handelStatFocusMatch(24, isWin);
 } else if (gapHours > 24) {
   className.value = 'next';
   matchStatus.value = '下场比赛';

@@ -26,6 +26,10 @@
       <div class="stat-today">
         <MatchStatToday :winTeam="winTeam" :loseTeam="loseTeam" />
       </div>
+      <div>
+        预警提醒：
+        <el-switch v-model="alertFlag" style="--el-switch-on-color: #13ce66;" />
+      </div>
       <el-affix>
         联赛类型选择：
         <el-select v-model="league" clearable class="select-type" @change="handleChangeLeagueName(league)"
@@ -127,6 +131,7 @@ async function handelSync() {
 /* 设置 end */
 
 /* 筛选 start */
+let alertFlag = ref(false)
 // 切换联赛
 let league = ref({});
 
@@ -159,11 +164,10 @@ let focusMatchNum_24 = ref<number>(0);
 let focusMatchNum_1 = ref<number>(0);
 
 // audio
-const isplayAudio = true;
 const audio = new Audio('src/assets/audio/preview.mp3');
 audio.muted = true;
 const audioPlay = () => {
-  audio.play();
+  alertFlag && audio.play();
 }
 const audioClose = () => {
   audio.pause();
@@ -173,11 +177,11 @@ const audioClose = () => {
 // 计算连赢和连败队伍数量
 let winTeam = ref<number>(0);
 let loseTeam = ref<number>(0);
-const handelMatchTeam = (isWin: boolean) => {
+const handelStatMatchTeam = (isWin: boolean) => {
   isWin ? winTeam.value++ : loseTeam.value++;
 }
 // 计算需要关注的比赛场次
-const handelFocusMatch = (startHour: number,) => {
+const handelStatFocusMatch = (startHour: number,) => {
   focusMatchNum_24.value++;
   if (startHour === 1) {
     focusMatchNum_1.value++;
@@ -185,8 +189,8 @@ const handelFocusMatch = (startHour: number,) => {
   }
 }
 
-provide('handelMatchTeam', handelMatchTeam);
-provide('handelFocusMatch', handelFocusMatch);
+provide('handelStatMatchTeam', handelStatMatchTeam);
+provide('handelFocusMatch', handelStatFocusMatch);
 </script>
 <style lang="less" scoped>
 // 变量
@@ -236,7 +240,7 @@ provide('handelFocusMatch', handelFocusMatch);
     >div {
       height: 100%;
       display: inline-block;
-      margin-right: 0px;
+      margin-right: 20px;
     }
 
     >.stat-today {
