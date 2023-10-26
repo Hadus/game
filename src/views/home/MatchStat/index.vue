@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="top">赛季盘路汇总
+    <div class="top">{{ seasonName }}赛季盘路汇总
       <el-button class="look-detail" type="primary" size="small" @click="handleLookDetail">查看详情</el-button>
     </div>
     <div class="bot">
@@ -27,9 +27,9 @@
       <template #header="{ titleId, titleClass }">
         <div class="dialog-header">
           <h4 :id="titleId" :class="titleClass">赛季统计
-            <el-select v-model="seasonName" size="small" @change="handleChangeSeason()">
+            <el-select v-model="changeSeasonName" size="small" @change="handleChangeSeason()">
               <el-option v-for="item in seasonList" :key="item" :label="item" :value="item"
-                :disabled="item == seasonName" />
+                :disabled="item == changeSeasonName" />
             </el-select>
           </h4>
 
@@ -82,7 +82,11 @@ import { defineProps, ref, reactive, watch } from 'vue';
 import data from '@/mock/detail'
 
 import { fetchDetail } from '@/api';
-const { homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
+const { seasonName, homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
+  seasonName: {
+    type: String,
+    required: true
+  },
   homeSeasonSummaryW: {
     type: Object,
     required: true
@@ -110,9 +114,9 @@ const handleLookDetail = () => {
 }
 
 const seasonList = ref(['2023-2024', '2024-2025']);
-const seasonName = ref(seasonList.value[0])
+const changeSeasonName = ref(seasonName.value)
 const handleChangeSeason = () => {
-  api_fetchDetail(seasonName.value)
+  api_fetchDetail(changeSeasonName.value)
 }
 </script>
 <style lang="less" scoped>
