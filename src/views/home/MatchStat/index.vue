@@ -7,18 +7,18 @@
       <div class="left">
         <h3>累计连赢</h3>
         <div>
-          <el-table class="stat-table" :data="[data]" border style="width: 100%">
+          <el-table class="stat-table" :data="[homeSeasonSummary]" border style="width: 100%">
             <el-table-column :prop="key" :label="index == 6 ? `${index + 4}+ 场` : `${index + 4} 场`"
-              v-for="(item, key, index) in  data   " :key="key" align="center" />
+              v-for="(item, key, index) in  homeSeasonSummary" :key="key" align="center" />
           </el-table>
         </div>
       </div>
       <div class="right">
         <h3>累计连败</h3>
         <div>
-          <el-table class="stat-table" :data="[data]" border style="width: 100%">
+          <el-table class="stat-table" :data="[homeSeasonSummary]" border style="width: 100%">
             <el-table-column :prop="key" :label="index == 6 ? `${index + 4}+ 场` : `${index + 4} 场`"
-              v-for="(item, key, index) in  data   " :key="key" align="center" />
+              v-for="(item, key, index) in  homeSeasonSummary" :key="key" align="center" />
           </el-table>
         </div>
       </div>
@@ -33,18 +33,18 @@
         <div class="left">
           <h3>连赢统计</h3>
           <div>
-            <el-table class="stat-table" :data="[data]" border style="width: 100%">
+            <el-table class="stat-table" :data="[homeSeasonSummary]" border style="width: 100%">
               <el-table-column :prop="key" :label="index == 6 ? `${index + 4}+ 场` : `${index + 4} 场`"
-                v-for="(item, key, index) in  data   " :key="key" align="center" />
+                v-for="(item, key, index) in  homeSeasonSummary" :key="key" align="center" />
             </el-table>
           </div>
         </div>
         <div class="right">
           <h3>连败统计</h3>
           <div>
-            <el-table class="stat-table" :data="[data]" border style="width: 100%">
+            <el-table class="stat-table" :data="[homeSeasonSummary]" border style="width: 100%">
               <el-table-column :prop="key" :label="index == 6 ? `${index + 4}+ 场` : `${index + 4} 场`"
-                v-for="(item, key, index) in  data   " :key="key" align="center" />
+                v-for="(item, key, index) in  homeSeasonSummary" :key="key" align="center" />
             </el-table>
           </div>
         </div>
@@ -57,8 +57,16 @@
 import { defineProps, ref, reactive, watch } from 'vue';
 
 import { fetchDetail } from '@/api';
-const { data } = defineProps({
-  data: {
+const { homeSeasonSummary, seasonSummaryW, seasonSummaryL } = defineProps({
+  homeSeasonSummary: {
+    type: Object,
+    required: true
+  },
+  seasonSummaryW: {
+    type: Object,
+    required: true
+  },
+  seasonSummaryL: {
     type: Object,
     required: true
   }

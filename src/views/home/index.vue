@@ -37,7 +37,8 @@
     </div>
     <!-- 统计 -->
     <div class="stat">
-      <MatchStat :data="matchData.detail" />
+      <MatchStat :homeSeasonSummary="matchData.homeSeasonSummary" :seasonSummaryW="matchData.seasonSummaryW"
+        :seasonSummaryL="matchData.seasonSummaryL" />
     </div>
     <!-- 表格 -->
     <div class="table">
@@ -109,10 +110,13 @@ async function handelSync() {
         type: 'success',
       });
     } else {
-      throw {}
+      throw {
+
+      }
     }
   } catch (err) {
     console.log(err)
+    loading.close();
     ElNotification({
       title: '数据同步失败',
       message: '',
