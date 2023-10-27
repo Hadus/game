@@ -166,7 +166,7 @@ let focusMatchNum_24 = ref<number>(0);
 let focusMatchNum_1 = ref<number>(0);
 
 // audio
-const audio = new Audio('src/assets/audio/preview.mp3');
+const audio = new Audio('/audio/preview.mp3');
 audio.muted = true;
 const audioPlay = () => {
   alertFlag && audio.play();

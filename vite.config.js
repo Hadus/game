@@ -13,7 +13,7 @@ const resolve = (dir) => path.resolve(__dirname, dir);
 export default defineConfig(({ command, mode }) => {
 	return {
 		base: './',
-		// publicDir: resolve('static'), //静态资源文件夹, 会全部复制
+		// publicDir: resolve('/public'), //静态资源文件夹, 会全部复制
 		resolve: {
 			alias: {
 				"@": resolve("./src"),
