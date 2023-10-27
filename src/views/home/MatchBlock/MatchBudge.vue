@@ -1,18 +1,22 @@
 
 <template>
   <sup class="badge" v-if="budgeIndex >= 4" :class="className">
-    {{ budgeIndex }}
+    {{ nearFlag[budgeIndex] }}
   </sup>
 </template>
 
 <script setup lang="ts" name="MatchStatus">
-import { defineProps, computed } from 'vue';
+import { defineProps, computed, ref, reactive } from 'vue';
 const { budgeIndex } = defineProps({
   budgeIndex: {
     type: Number,
     required: true
   }
 });
+
+let nearFlag = reactive({
+  4: 0, 5: 1, 6: 3, 7: 7, 8: 15, 9: 31
+})
 
 const className = computed(() => {
   return 'color' + (budgeIndex);
