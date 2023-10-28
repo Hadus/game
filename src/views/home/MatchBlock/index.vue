@@ -7,7 +7,7 @@
         <div>
           <el-table class="match-table" :data="winList" border style="width: 100%">
             <el-table-column prop="teamName" label="球队" width="160" />
-            <el-table-column prop="consecutiveCount" label="连赢" width="100" />
+            <el-table-column prop="consecutiveCount" label="连赢" width="70" />
             <el-table-column label="近期比赛">
               <template #default="{ row, $index }">
                 <p class="match-item" v-if="row.nextMatchTime">
@@ -31,7 +31,7 @@
         <div>
           <el-table class="match-table" :data="loseList" border stripe style="width: 100%">
             <el-table-column prop="teamName" label="球队" width="160" />
-            <el-table-column prop="consecutiveCount" label="连赢" width="100" />
+            <el-table-column prop="consecutiveCount" label="连赢" width="70" />
             <el-table-column label="近期比赛">
               <template #default="{ row, $index }">
                 <p class="match-item" v-if="row.nextMatchTime">
