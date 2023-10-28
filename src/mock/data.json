@@ -1,290 +1,24 @@
 {
-  "seasonName": "2023赛季",
+  "status": 0,
+  "curSeason": "2023-2024",
+  "unFocusTeams": "",
+  "lastUpdateTime": "2023-10-28 20:48:49",
   "minConsecutiveNumber": "4",
-  "lastUpdateTime": "2023-11-11 11:11:11",
-  "detail": {
-    "w4": 4,
-    "w5": 5,
-    "w6": 6,
-    "w7": 7,
-    "w8": 8,
-    "w9": 9,
-    "w10p": 1
-  },
   "data": [
     {
-      "leagueId": 17,
-      "leagueName": "荷乙",
-      "matchesW": [
-        {
-          "unfocusTeam": true,
-          "teamId": 1093,
-          "teamName": "埃蒙",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 02:00",
-          "nextMatchInfo": "埃蒙 VS 海牙",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 02:00 | 埃蒙 VS 特尔斯达",
-            "2023-09-30 02:00 | 奥斯 VS 埃蒙",
-            "2023-09-23 02:00 | 布雷达 VS 埃蒙",
-            "2023-09-19 02:00 | 埃蒙 VS 乌德勒支青年队"
-          ]
-        },
-        {
-          "teamId": 233,
-          "teamName": "罗达JC",
-          "consecutiveCount": 6,
-          "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-22 02:00",
-          "nextMatchInfo": "罗达JC VS 威廉二世",
-          "nextConsecutiveFlag": "7",
-          "matchDetails": [
-            "2023-10-14 22:30 | 芬洛 VS 罗达JC",
-            "2023-10-07 02:00 | 罗达JC VS 阿尔克马尔青年队",
-            "2023-09-30 02:00 | 格拉夫夏普 VS 罗达JC",
-            "2023-09-23 02:00 | 罗达JC VS 邓伯什",
-            "2023-09-16 02:00 | 罗达JC VS 特尔斯达",
-            "2023-09-10 03:00 | 布雷达 VS 罗达JC"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 288,
-          "teamName": "坎布尔",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 02:00",
-          "nextMatchInfo": "马斯特里赫特 VS 坎布尔",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-15 22:45 | 坎布尔 VS 布雷达",
-            "2023-10-07 02:00 | 多德勒支 VS 坎布尔",
-            "2023-09-30 02:00 | 坎布尔 VS 埃因霍温青年队",
-            "2023-09-23 02:00 | 乌德勒支青年队 VS 坎布尔"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 5,
-      "leagueName": "比甲",
-      "matchesW": [
-        {
-          "teamId": 1317,
-          "teamName": "圣吉罗斯",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 02:45",
-          "nextMatchInfo": "圣吉罗斯 VS 欧本",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-09 01:15 | 圣图尔登 VS 圣吉罗斯",
-            "2023-10-01 19:30 | 圣吉罗斯 VS 沙勒罗瓦",
-            "2023-09-29 00:30 | 莫伦贝克 VS 圣吉罗斯",
-            "2023-09-24 22:00 | 色格拉布鲁日 VS 圣吉罗斯"
-          ]
-        }
-      ],
-      "matchesL": []
-    },
-    {
-      "leagueId": 25,
-      "leagueName": "日职联",
-      "matchesW": [
-        {
-          "teamId": 178,
-          "teamName": "新泻天鹅",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 12:00",
-          "nextMatchInfo": "新泻天鹅 VS 鸟栖沙岩",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-09-29 18:00 | 川崎前锋 VS 新泻天鹅",
-            "2023-09-23 13:00 | 新泻天鹅 VS 横滨FC",
-            "2023-09-17 18:00 | 大阪钢巴 VS 新泻天鹅",
-            "2023-09-02 17:00 | 新泻天鹅 VS 浦和红钻"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 181,
-          "teamName": "名古屋鲸八",
-          "consecutiveCount": 6,
-          "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-21 13:00",
-          "nextMatchInfo": "大阪钢巴 VS 名古屋鲸八",
-          "nextConsecutiveFlag": "7",
-          "matchDetails": [
-            "2023-09-30 18:00 | 广岛三箭 VS 名古屋鲸八",
-            "2023-09-23 15:00 | 名古屋鲸八 VS 札幌冈萨多",
-            "2023-09-16 18:00 | 福冈黄蜂 VS 名古屋鲸八",
-            "2023-09-02 17:00 | 名古屋鲸八 VS 横滨FC",
-            "2023-08-26 18:30 | 大阪樱花 VS 名古屋鲸八",
-            "2023-08-18 18:30 | 浦和红钻 VS 名古屋鲸八"
-          ]
-        },
-        {
-          "teamId": 207,
-          "teamName": "大阪钢巴",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 13:00",
-          "nextMatchInfo": "大阪钢巴 VS 名古屋鲸八",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-01 14:00 | FC东京 VS 大阪钢巴",
-            "2023-09-24 16:00 | 大阪钢巴 VS 浦和红钻",
-            "2023-09-17 18:00 | 大阪钢巴 VS 新泻天鹅",
-            "2023-09-02 12:00 | 札幌冈萨多 VS 大阪钢巴"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 273,
-      "leagueName": "澳洲甲",
-      "matchesW": [
-        {
-          "teamId": 2910,
-          "teamName": "中部海岸海员",
-          "consecutiveCount": 8,
-          "consecutiveFlag": "15",
-          "nextMatchTime": "2023-10-29 12:00",
-          "nextMatchInfo": "中部海岸海员 VS 麦克阿瑟FC",
-          "nextConsecutiveFlag": "31",
-          "matchDetails": [
-            "2023-06-03 17:50 | 墨尔本城 VS 中部海岸海员",
-            "2023-05-20 17:45 | 中部海岸海员 VS 阿德莱德联",
-            "2023-05-13 17:45 | 阿德莱德联 VS 中部海岸海员",
-            "2023-04-28 17:45 | 阿德莱德联 VS 中部海岸海员",
-            "2023-04-22 15:00 | 纽卡斯尔喷气机 VS 中部海岸海员",
-            "2023-04-15 15:00 | 中部海岸海员 VS 墨尔本城",
-            "2023-04-07 13:00 | 西部联 VS 中部海岸海员",
-            "2023-04-01 14:00 | 中部海岸海员 VS 布里斯班狮吼"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 2901,
-          "teamName": "墨尔本胜利",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 16:45",
-          "nextMatchInfo": "悉尼FC VS 墨尔本胜利",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-04-29 17:45 | 墨尔本胜利 VS 布里斯班狮吼",
-            "2023-04-15 17:45 | 西悉尼流浪者 VS 墨尔本胜利",
-            "2023-04-09 13:00 | 墨尔本胜利 VS 珀斯光荣",
-            "2023-04-05 17:00 | 墨尔本城 VS 墨尔本胜利"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 9,
-      "leagueName": "德乙",
-      "matchesW": [
-        {
-          "teamId": 1085,
-          "teamName": "圣保利",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 19:00",
-          "nextMatchInfo": "柏德博恩 VS 圣保利",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 02:30 | 圣保利 VS 纽伦堡",
-            "2023-10-01 02:30 | 柏林赫塔 VS 圣保利",
-            "2023-09-24 02:30 | 圣保利 VS 沙尔克04",
-            "2023-09-17 19:30 | 圣保利 VS 基尔高士丁"
-          ]
-        },
-        {
-          "teamId": 175,
-          "teamName": "凯泽斯劳滕",
-          "consecutiveCount": 6,
-          "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-22 02:30",
-          "nextMatchInfo": "杜塞尔多夫 VS 凯泽斯劳滕",
-          "nextConsecutiveFlag": "7",
-          "matchDetails": [
-            "2023-10-07 00:30 | 凯泽斯劳滕 VS 汉诺威96",
-            "2023-09-24 19:30 | 凯泽斯劳滕 VS 罗斯托克",
-            "2023-09-16 19:00 | 卡尔斯鲁厄 VS 凯泽斯劳滕",
-            "2023-09-03 02:30 | 凯泽斯劳滕 VS 纽伦堡",
-            "2023-08-26 00:30 | 柏德博恩 VS 凯泽斯劳滕",
-            "2023-08-19 00:30 | 凯泽斯劳滕 VS 埃弗斯堡"
-          ]
-        },
-        {
-          "teamId": 1076,
-          "teamName": "埃弗斯堡",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-29 20:30",
-          "nextMatchInfo": "马格德堡 VS 埃弗斯堡",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 19:30 | 基尔高士丁 VS 埃弗斯堡",
-            "2023-09-23 19:00 | 韦恩 VS 埃弗斯堡",
-            "2023-09-16 19:00 | 埃弗斯堡 VS 汉堡",
-            "2023-09-03 19:30 | 奥斯纳布鲁克 VS 埃弗斯堡"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 2760,
-          "teamName": "马格德堡",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-29 20:30",
-          "nextMatchInfo": "马格德堡 VS 埃弗斯堡",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 19:00 | 马格德堡 VS 卡尔斯鲁厄",
-            "2023-10-01 19:30 | 纽伦堡 VS 马格德堡",
-            "2023-09-23 00:30 | 马格德堡 VS 柏德博恩",
-            "2023-09-17 02:30 | 沙尔克04 VS 马格德堡"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 37,
+      "leagueId": 377,
       "leagueName": "英冠",
       "matchesW": [
         {
-          "teamId": 17,
-          "teamName": "米德尔斯堡",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "米德尔斯堡 VS 伯明翰",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 19:30 | 桑德兰 VS 米德尔斯堡",
-            "2023-10-04 02:45 | 米德尔斯堡 VS 卡迪夫城",
-            "2023-09-30 22:00 | 沃特福德 VS 米德尔斯堡",
-            "2023-09-23 22:00 | 米德尔斯堡 VS 南安普敦"
-          ]
-        },
-        {
           "teamId": 59,
           "teamName": "莱斯特城",
-          "consecutiveCount": 6,
-          "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "斯旺西 VS 莱斯特城",
-          "nextConsecutiveFlag": "7",
+          "consecutiveCount": 7,
+          "consecutiveFlag": "7",
+          "nextMatchTime": "2023-10-28 21:50",
+          "nextMatchInfo": "莱斯特城 VS 利兹联",
+          "nextConsecutiveFlag": "15",
           "matchDetails": [
+            "2023-10-21 22:00 | 斯旺西 VS 莱斯特城",
             "2023-10-07 22:00 | 莱斯特城 VS 斯托克城",
             "2023-10-05 02:45 | 莱斯特城 VS 普雷斯顿",
             "2023-10-01 19:00 | 布莱克本 VS 莱斯特城",
@@ -294,553 +28,95 @@
           ]
         },
         {
-          "teamId": 1194,
-          "teamName": "斯旺西",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "斯旺西 VS 莱斯特城",
-          "nextConsecutiveFlag": "1",
+          "teamId": 17,
+          "teamName": "米德尔斯堡",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-10-29 22:00",
+          "nextMatchInfo": "普利茅斯 VS 米德尔斯堡",
+          "nextConsecutiveFlag": "7",
           "matchDetails": [
-            "2023-10-07 22:00 | 普利茅斯 VS 斯旺西",
-            "2023-10-05 02:45 | 斯旺西 VS 诺维奇",
-            "2023-09-30 22:00 | 米尔沃尔 VS 斯旺西",
+            "2023-10-25 02:45 | 诺维奇 VS 米德尔斯堡",
+            "2023-10-21 22:00 | 米德尔斯堡 VS 伯明翰",
+            "2023-10-07 19:30 | 桑德兰 VS 米德尔斯堡",
+            "2023-10-04 02:45 | 米德尔斯堡 VS 卡迪夫城",
+            "2023-09-30 22:00 | 沃特福德 VS 米德尔斯堡",
+            "2023-09-23 22:00 | 米德尔斯堡 VS 南安普敦"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 336,
+          "teamName": "谢周三",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-10-29 21:00",
+          "nextMatchInfo": "谢周三 VS 罗瑟汉姆",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-26 02:45 | 普利茅斯 VS 谢周三",
+            "2023-10-21 22:00 | 沃特福德 VS 谢周三",
+            "2023-10-04 03:00 | 西布罗姆维奇 VS 谢周三",
+            "2023-09-30 03:00 | 谢周三 VS 桑德兰",
             "2023-09-23 22:00 | 斯旺西 VS 谢周三"
           ]
         }
-      ],
-      "matchesL": [
-        {
-          "teamId": 55,
-          "teamName": "普雷斯顿",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 19:30",
-          "nextMatchInfo": "普雷斯顿 VS 米尔沃尔",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 22:00 | 伊普斯维奇 VS 普雷斯顿",
-            "2023-10-05 02:45 | 莱斯特城 VS 普雷斯顿",
-            "2023-09-30 22:00 | 普雷斯顿 VS 西布罗姆维奇",
-            "2023-09-23 22:00 | 罗瑟汉姆 VS 普雷斯顿"
-          ]
-        }
       ]
     },
     {
-      "leagueId": 40,
-      "leagueName": "意乙",
-      "matchesW": [],
-      "matchesL": [
-        {
-          "teamId": 551,
-          "teamName": "摩德纳",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 20:00",
-          "nextMatchInfo": "巴里 VS 摩德纳",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 20:00 | 摩德纳 VS 巴勒莫",
-            "2023-09-30 20:00 | 摩德纳 VS 威尼斯",
-            "2023-09-23 20:00 | 摩德纳 VS 莱科",
-            "2023-09-16 20:00 | 费拉尔皮沙洛 VS 摩德纳"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 13,
-      "leagueName": "芬兰超",
+      "leagueId": 1017,
+      "leagueName": "丹麦超",
       "matchesW": [
         {
-          "teamId": 2395,
-          "teamName": "埃尔维斯",
+          "teamId": 1313,
+          "teamName": "维积利",
           "consecutiveCount": 4,
           "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 20:00",
-          "nextMatchInfo": "拉赫蒂 VS 埃尔维斯",
+          "nextMatchTime": "2023-10-29 21:00",
+          "nextMatchInfo": "维积利 VS 维堡",
           "nextConsecutiveFlag": "1",
           "matchDetails": [
-            "2023-10-06 23:00 | 埃尔维斯 VS 奥卢",
-            "2023-09-27 23:00 | 埃尔维斯 VS 玛丽港",
-            "2023-09-22 23:00 | 科特卡 VS 埃尔维斯",
-            "2023-09-15 23:00 | 哈卡 VS 埃尔维斯"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 8120,
-          "teamName": "科特卡",
-          "consecutiveCount": 7,
-          "consecutiveFlag": "7",
-          "nextMatchTime": "2023-10-21 20:00",
-          "nextMatchInfo": "科特卡 VS 玛丽港",
-          "nextConsecutiveFlag": "15",
-          "matchDetails": [
-            "2023-10-07 22:00 | 哈卡 VS 科特卡",
-            "2023-09-29 23:00 | 奥卢 VS 科特卡",
-            "2023-09-22 23:00 | 科特卡 VS 埃尔维斯",
-            "2023-09-15 23:00 | 拉赫蒂 VS 科特卡",
-            "2023-09-03 21:00 | 科特卡 VS 洪卡",
-            "2023-08-25 23:00 | VPS瓦萨 VS 科特卡",
-            "2023-08-21 23:00 | 科特卡 VS 哈卡"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 12,
-      "leagueName": "法乙",
-      "matchesW": [
-        {
-          "teamId": 215,
-          "teamName": "欧塞尔",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 21:00",
-          "nextMatchInfo": "卡昂 VS 欧塞尔",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 01:00 | 巴黎足球会 VS 欧塞尔",
-            "2023-10-01 01:00 | 欧塞尔 VS 罗德兹",
-            "2023-09-27 02:45 | 欧塞尔 VS 安尼茨",
-            "2023-09-23 21:00 | 特鲁瓦 VS 欧塞尔"
+            "2023-10-21 23:00 | 哥本哈根 VS 维积利",
+            "2023-10-08 20:00 | 维积利 VS 哈维德夫",
+            "2023-10-01 20:00 | 维积利 VS 洛斯查兰特",
+            "2023-09-23 01:00 | 利恩比 VS 维积利"
           ]
         },
         {
-          "teamId": 194,
-          "teamName": "阿雅克肖",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 01:00",
-          "nextMatchInfo": "阿雅克肖 VS 波城",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 01:00 | 圣埃蒂安 VS 阿雅克肖",
-            "2023-10-03 02:45 | 阿雅克肖 VS 巴斯蒂亚",
-            "2023-09-27 02:45 | 亚眠 VS 阿雅克肖",
-            "2023-09-24 01:00 | 阿雅克肖 VS 巴黎足球会"
-          ]
-        },
-        {
-          "teamId": 304,
-          "teamName": "昂热",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 01:00",
-          "nextMatchInfo": "昂热 VS 波尔多",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 01:00 | 亚眠 VS 昂热",
-            "2023-10-01 01:00 | 昂热 VS 康卡纽",
-            "2023-09-27 02:45 | 克维伊 VS 昂热",
-            "2023-09-24 01:00 | 昂热 VS 巴斯蒂亚"
-          ]
-        },
-        {
-          "teamId": 393,
-          "teamName": "格勒诺布尔",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 01:00",
-          "nextMatchInfo": "格勒诺布尔 VS 瓦朗谢纳",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 01:00 | 甘冈 VS 格勒诺布尔",
-            "2023-10-01 01:00 | 格勒诺布尔 VS 波尔多",
-            "2023-09-27 02:45 | 卡昂 VS 格勒诺布尔",
-            "2023-09-24 01:00 | 格勒诺布尔 VS 克维伊"
-          ]
-        },
-        {
-          "teamId": 330,
-          "teamName": "拉瓦勒",
-          "consecutiveCount": 8,
-          "consecutiveFlag": "15",
-          "nextMatchTime": "2023-10-24 02:45",
-          "nextMatchInfo": "拉瓦勒 VS 圣埃蒂安",
-          "nextConsecutiveFlag": "31",
-          "matchDetails": [
-            "2023-10-07 21:00 | 波尔多 VS 拉瓦勒",
-            "2023-10-01 01:00 | 拉瓦勒 VS 瓦朗谢纳",
-            "2023-09-27 02:45 | 巴黎足球会 VS 拉瓦勒",
-            "2023-09-24 01:00 | 拉瓦勒 VS 甘冈",
-            "2023-09-17 01:00 | 巴斯蒂亚 VS 拉瓦勒",
-            "2023-09-03 01:00 | 拉瓦勒 VS 卡昂",
-            "2023-08-27 01:00 | 克维伊 VS 拉瓦勒",
-            "2023-08-20 01:00 | 拉瓦勒 VS 罗德兹"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 382,
-          "teamName": "亚眠",
+          "teamId": 226,
+          "teamName": "兰德斯",
           "consecutiveCount": 5,
           "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-22 01:00",
-          "nextMatchInfo": "安尼茨 VS 亚眠",
+          "nextMatchTime": "2023-10-31 02:00",
+          "nextMatchInfo": "奥胡斯 VS 兰德斯",
           "nextConsecutiveFlag": "3",
           "matchDetails": [
-            "2023-10-08 01:00 | 亚眠 VS 昂热",
-            "2023-10-01 01:00 | 波城 VS 亚眠",
-            "2023-09-27 02:45 | 亚眠 VS 阿雅克肖",
-            "2023-09-24 01:00 | 亚眠 VS 瓦朗谢纳",
-            "2023-09-17 01:00 | 巴黎足球会 VS 亚眠"
-          ]
-        },
-        {
-          "teamId": 5003,
-          "teamName": "USL敦刻尔克",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 01:00",
-          "nextMatchInfo": "USL敦刻尔克 VS 巴黎足球会",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 01:00 | 康卡纽 VS USL敦刻尔克",
-            "2023-10-05 00:45 | 圣埃蒂安 VS USL敦刻尔克",
-            "2023-10-01 01:00 | 敦刻尔克 VS 克维伊",
-            "2023-09-24 01:00 | 敦刻尔克 VS 罗德兹"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 8,
-      "leagueName": "德甲",
-      "matchesW": [
-        {
-          "teamId": 155,
-          "teamName": "斯图加特",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-21 21:30",
-          "nextMatchInfo": "柏林联合 VS 斯图加特",
-          "nextConsecutiveFlag": "3",
-          "matchDetails": [
-            "2023-10-07 21:30 | 斯图加特 VS 沃尔夫斯堡",
-            "2023-09-30 21:30 | 科隆 VS 斯图加特",
-            "2023-09-23 02:30 | 斯图加特 VS 达姆斯塔特",
-            "2023-09-16 21:30 | 美因茨 VS 斯图加特",
-            "2023-09-02 21:30 | 斯图加特 VS 弗赖堡"
-          ]
-        },
-        {
-          "teamId": 165,
-          "teamName": "勒沃库森",
-          "consecutiveCount": 7,
-          "consecutiveFlag": "7",
-          "nextMatchTime": "2023-10-21 21:30",
-          "nextMatchInfo": "沃尔夫斯堡 VS 勒沃库森",
-          "nextConsecutiveFlag": "15",
-          "matchDetails": [
-            "2023-10-08 21:30 | 勒沃库森 VS 科隆",
-            "2023-09-30 21:30 | 美因茨 VS 勒沃库森",
-            "2023-09-24 21:30 | 勒沃库森 VS 海登海默",
-            "2023-09-16 02:30 | 拜仁慕尼黑 VS 勒沃库森",
-            "2023-09-02 21:30 | 勒沃库森 VS 达姆斯塔特",
-            "2023-08-27 00:30 | 门兴格拉德巴赫 VS 勒沃库森",
-            "2023-08-19 21:30 | 勒沃库森 VS RB莱比锡"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 1087,
-          "teamName": "柏林联合",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-21 21:30",
-          "nextMatchInfo": "柏林联合 VS 斯图加特",
-          "nextConsecutiveFlag": "3",
-          "matchDetails": [
-            "2023-10-07 21:30 | 多特蒙德 VS 柏林联合",
-            "2023-09-30 21:30 | 海登海默 VS 柏林联合",
-            "2023-09-23 21:30 | 柏林联合 VS 霍芬海姆",
-            "2023-09-16 21:30 | 沃尔夫斯堡 VS 柏林联合",
-            "2023-09-03 23:30 | 柏林联合 VS RB莱比锡"
-          ]
-        },
-        {
-          "teamId": 490,
-          "teamName": "科隆",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 21:30",
-          "nextMatchInfo": "科隆 VS 门兴格拉德巴赫",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 21:30 | 勒沃库森 VS 科隆",
-            "2023-09-30 21:30 | 科隆 VS 斯图加特",
-            "2023-09-24 00:30 | 云达不莱梅 VS 科隆",
-            "2023-09-16 21:30 | 科隆 VS 霍芬海姆"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 39,
-      "leagueName": "英甲",
-      "matchesW": [
-        {
-          "teamId": 36,
-          "teamName": "朴茨茅斯",
-          "consecutiveCount": 7,
-          "consecutiveFlag": "7",
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "朴茨茅斯 VS 卡利斯尔联",
-          "nextConsecutiveFlag": "15",
-          "matchDetails": [
-            "2023-10-07 22:00 | 朴茨茅斯 VS 维尔港",
-            "2023-10-04 02:45 | 朴茨茅斯 VS 韦康比流浪者",
-            "2023-09-30 22:00 | 维冈竞技 VS 朴茨茅斯",
-            "2023-09-23 22:00 | 朴茨茅斯 VS 林肯城",
-            "2023-09-20 02:45 | 巴恩斯利 VS 朴茨茅斯",
-            "2023-09-16 22:00 | 德比郡 VS 朴茨茅斯",
-            "2023-09-02 22:00 | 朴茨茅斯 VS 彼得堡联"
-          ]
-        },
-        {
-          "teamId": 1201,
-          "teamName": "牛津联队",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "牛津联队 VS 布莱克浦",
-          "nextConsecutiveFlag": "3",
-          "matchDetails": [
-            "2023-10-07 19:30 | 牛津联队 VS 布里斯托流浪",
-            "2023-10-04 02:45 | 牛津联队 VS 谢斯伯利",
-            "2023-09-30 22:00 | 斯蒂文尼奇 VS 牛津联队",
-            "2023-09-23 22:00 | 牛津联队 VS 埃克塞特城",
-            "2023-09-16 22:00 | 弗利特伍德 VS 牛津联队"
-          ]
-        },
-        {
-          "teamId": 1381,
-          "teamName": "伯顿",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "伯顿 VS 布里斯托流浪",
-          "nextConsecutiveFlag": "3",
-          "matchDetails": [
-            "2023-10-14 22:00 | 林肯城 VS 伯顿",
-            "2023-10-10 03:00 | 伯顿 VS 剑桥联",
-            "2023-10-04 02:45 | 伯顿 VS 维冈竞技",
-            "2023-09-30 22:00 | 雷丁 VS 伯顿",
-            "2023-09-20 02:45 | 维尔港 VS 伯顿"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 61,
-          "teamName": "维冈竞技",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "埃克塞特城 VS 维冈竞技",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 22:00 | 斯蒂文尼奇 VS 维冈竞技",
-            "2023-10-04 02:45 | 伯顿 VS 维冈竞技",
-            "2023-09-30 22:00 | 维冈竞技 VS 朴茨茅斯",
-            "2023-09-23 22:00 | 布里斯托流浪 VS 维冈竞技"
-          ]
-        },
-        {
-          "teamId": 66,
-          "teamName": "雷丁",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "查尔顿 VS 雷丁",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 22:00 | 莱顿东方 VS 雷丁",
-            "2023-10-04 02:45 | 北安普敦 VS 雷丁",
-            "2023-09-30 22:00 | 雷丁 VS 伯顿",
-            "2023-09-23 22:00 | 布莱克浦 VS 雷丁"
-          ]
-        },
-        {
-          "teamId": 1356,
-          "teamName": "埃克塞特城",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "埃克塞特城 VS 维冈竞技",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 22:00 | 埃克塞特城 VS 巴恩斯利",
-            "2023-10-04 02:45 | 查尔顿 VS 埃克塞特城",
-            "2023-09-30 22:00 | 埃克塞特城 VS 北安普敦",
-            "2023-09-23 22:00 | 牛津联队 VS 埃克塞特城"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 35,
-      "leagueName": "英乙",
-      "matchesW": [
-        {
-          "teamId": 359,
-          "teamName": "斯托克港",
-          "consecutiveCount": 6,
-          "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "斯托克港 VS 格林斯比",
-          "nextConsecutiveFlag": "7",
-          "matchDetails": [
-            "2023-10-14 22:00 | 哈洛贾特 VS 斯托克港",
-            "2023-10-04 02:45 | 斯托克港 VS 格兰森林流浪",
-            "2023-09-30 22:00 | 阿克灵顿 VS 斯托克港",
-            "2023-09-23 22:00 | 斯托克港 VS 雷克斯汉姆",
-            "2023-09-16 22:00 | 米尔顿凯恩斯 VS 斯托克港",
-            "2023-09-09 22:00 | AFC温布尔登 VS 斯托克港"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 334,
-          "teamName": "米尔顿凯恩斯",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-21 22:00",
-          "nextMatchInfo": "阿克灵顿 VS 米尔顿凯恩斯",
-          "nextConsecutiveFlag": "3",
-          "matchDetails": [
-            "2023-10-14 22:00 | 米尔顿凯恩斯 VS 巴洛",
-            "2023-10-07 22:00 | 吉林汉姆 VS 米尔顿凯恩斯",
-            "2023-09-30 22:00 | 米尔顿凯恩斯 VS 哈洛贾特",
-            "2023-09-16 22:00 | 米尔顿凯恩斯 VS 斯托克港",
-            "2023-09-02 22:00 | 克鲁 VS 米尔顿凯恩斯"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 33,
-      "leagueName": "西乙",
-      "matchesW": [
-        {
-          "teamId": 4732,
-          "teamName": "奥维多",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 22:15",
-          "nextMatchInfo": "亚摩勒比塔 VS 奥维多",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-14 03:00 | 奥维多 VS 阿尔巴切特",
-            "2023-10-08 03:00 | 莱加内斯 VS 奥维多",
-            "2023-10-05 01:00 | 奥维多 VS 韦斯卡",
-            "2023-10-01 20:00 | 埃登斯 VS 奥维多"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 14211,
-          "teamName": "亚摩勒比塔",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-21 22:15",
-          "nextMatchInfo": "亚摩勒比塔 VS 奥维多",
-          "nextConsecutiveFlag": "3",
-          "matchDetails": [
-            "2023-10-16 00:30 | 莱加内斯 VS 亚摩勒比塔",
-            "2023-10-08 20:00 | 亚摩勒比塔 VS 埃瓦尔",
-            "2023-10-06 03:30 | 费罗尔竞技 VS 亚摩勒比塔",
-            "2023-10-02 00:30 | 亚摩勒比塔 VS 卡塔赫纳",
-            "2023-09-24 20:00 | 比利亚雷亚尔B队 VS 亚摩勒比塔"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 10,
-      "leagueName": "俄超",
-      "matchesW": [
-        {
-          "teamId": 10112,
-          "teamName": "克拉斯诺达尔",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-21 23:59",
-          "nextMatchInfo": "巴蒂卡 VS 克拉斯诺达尔",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 23:59 | 克拉斯诺达尔 VS 罗斯托夫",
-            "2023-09-30 21:30 | 喀山鲁宾 VS 克拉斯诺达尔",
-            "2023-09-24 23:59 | 克拉斯诺达尔 VS 乌拉尔",
-            "2023-09-03 01:00 | 克拉斯诺达尔 VS 莫斯科斯巴达"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 2451,
-          "teamName": "索契",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-22 17:00",
-          "nextMatchInfo": "乌拉尔 VS 索契",
-          "nextConsecutiveFlag": "3",
-          "matchDetails": [
-            "2023-10-07 19:00 | 索契 VS 圣彼得堡泽尼特",
-            "2023-10-01 19:00 | 沃罗涅日火炬 VS 索契",
-            "2023-09-23 19:00 | 苏维埃之翼 VS 索契",
-            "2023-09-03 18:00 | 奥伦堡加索维克 VS 索契",
-            "2023-08-28 01:00 | 索契 VS 莫斯科火车头"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 22,
-      "leagueName": "挪超",
-      "matchesW": [
-        {
-          "teamId": 498,
-          "teamName": "布兰",
-          "consecutiveCount": 6,
-          "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-21 23:59",
-          "nextMatchInfo": "布兰 VS 莫尔德",
-          "nextConsecutiveFlag": "7",
-          "matchDetails": [
-            "2023-10-09 01:15 | 瓦勒伦加 VS 布兰",
-            "2023-10-01 21:00 | 利勒斯特罗姆 VS 布兰",
-            "2023-09-17 23:00 | 斯塔贝克 VS 布兰",
-            "2023-09-03 23:00 | 布兰 VS 萨普斯堡",
-            "2023-08-20 23:00 | 布兰 VS 奥勒松",
-            "2023-08-06 23:00 | 汉坎 VS 布兰"
+            "2023-10-22 23:59 | 兰德斯 VS 布隆德比",
+            "2023-10-08 23:59 | 米迪兰特 VS 兰德斯",
+            "2023-10-01 20:00 | 兰德斯 VS 锡尔克堡",
+            "2023-09-24 22:00 | 兰德斯 VS 奥胡斯",
+            "2023-09-17 20:00 | 维积利 VS 兰德斯"
           ]
         }
       ],
       "matchesL": []
     },
     {
-      "leagueId": 27,
+      "leagueId": 1323,
       "leagueName": "瑞士超",
       "matchesW": [],
       "matchesL": [
         {
           "teamId": 451,
           "teamName": "巴塞尔",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-22 02:30",
-          "nextMatchInfo": "巴塞尔 VS 塞尔维特",
-          "nextConsecutiveFlag": "3",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-10-29 21:15",
+          "nextMatchInfo": "洛桑 VS 巴塞尔",
+          "nextConsecutiveFlag": "7",
           "matchDetails": [
+            "2023-10-22 02:30 | 巴塞尔 VS 塞尔维特",
             "2023-10-08 22:30 | 年青人 VS 巴塞尔",
             "2023-10-01 22:30 | 巴塞尔 VS 乌契",
             "2023-09-24 20:15 | 伊韦尔东 VS 巴塞尔",
@@ -851,18 +127,19 @@
       ]
     },
     {
-      "leagueId": 16,
+      "leagueId": 1093,
       "leagueName": "荷甲",
       "matchesW": [
         {
           "teamId": 252,
           "teamName": "费耶诺德",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-22 03:00",
-          "nextMatchInfo": "费耶诺德 VS 维迪斯",
-          "nextConsecutiveFlag": "3",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-11-05 01:45",
+          "nextMatchInfo": "瓦尔韦克 VS 费耶诺德",
+          "nextConsecutiveFlag": "7",
           "matchDetails": [
+            "2023-10-22 03:00 | 费耶诺德 VS 维迪斯",
             "2023-10-08 18:15 | 泽沃勒 VS 费耶诺德",
             "2023-09-27 20:00 | 阿贾克斯 VS 费耶诺德",
             "2023-09-16 22:30 | 费耶诺德 VS 海伦芬",
@@ -875,12 +152,13 @@
         {
           "teamId": 253,
           "teamName": "阿贾克斯",
-          "consecutiveCount": 6,
-          "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-22 18:15",
-          "nextMatchInfo": "乌德勒支 VS 阿贾克斯",
-          "nextConsecutiveFlag": "7",
+          "consecutiveCount": 7,
+          "consecutiveFlag": "7",
+          "nextMatchTime": "2023-10-29 21:30",
+          "nextMatchInfo": "埃因霍温 VS 阿贾克斯",
+          "nextConsecutiveFlag": "15",
           "matchDetails": [
+            "2023-10-22 18:15 | 乌德勒支 VS 阿贾克斯",
             "2023-10-08 20:30 | 阿贾克斯 VS 艾克马亚",
             "2023-10-01 03:00 | 瓦尔韦克 VS 阿贾克斯",
             "2023-09-27 20:00 | 阿贾克斯 VS 费耶诺德",
@@ -888,334 +166,170 @@
             "2023-09-03 20:30 | 福图纳锡塔德 VS 阿贾克斯",
             "2023-08-19 22:30 | SBV精英 VS 阿贾克斯"
           ]
-        },
-        {
-          "teamId": 414,
-          "teamName": "泽沃勒",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 20:30",
-          "nextMatchInfo": "SBV精英 VS 泽沃勒",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 18:15 | 泽沃勒 VS 费耶诺德",
-            "2023-10-01 20:30 | 赫拉克莱斯 VS 泽沃勒",
-            "2023-09-24 22:45 | 泽沃勒 VS 艾克马亚",
-            "2023-09-17 18:15 | 泽沃勒 VS 前进之鹰"
-          ]
         }
       ]
     },
     {
-      "leagueId": 21,
-      "leagueName": "美职联",
-      "matchesW": [],
-      "matchesL": [
-        {
-          "teamId": 5345,
-          "teamName": "多伦多FC",
-          "consecutiveCount": 6,
-          "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-22 06:00",
-          "nextMatchInfo": "多伦多FC VS 奥兰多城",
-          "nextConsecutiveFlag": "7",
-          "matchDetails": [
-            "2023-10-08 07:40 | 纽约红牛 VS 多伦多FC",
-            "2023-10-05 07:40 | 夏洛特FC VS 多伦多FC",
-            "2023-10-01 07:30 | 多伦多FC VS 辛辛那提",
-            "2023-09-25 01:10 | 纽约城 VS 多伦多FC",
-            "2023-09-21 07:40 | 国际迈阿密 VS 多伦多FC",
-            "2023-09-17 07:40 | 多伦多FC VS 温哥华白帽"
-          ]
-        },
-        {
-          "teamId": 47140,
-          "teamName": "国际迈阿密",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 06:00",
-          "nextMatchInfo": "夏洛特FC VS 国际迈阿密",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-19 08:00 | 国际迈阿密 VS 夏洛特FC",
-            "2023-10-08 07:40 | 国际迈阿密 VS 辛辛那提",
-            "2023-10-05 08:40 | 芝加哥火焰 VS 国际迈阿密",
-            "2023-10-01 08:30 | 国际迈阿密 VS 纽约城"
-          ]
-        },
-        {
-          "teamId": 311,
-          "teamName": "洛杉矶银河",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 09:00",
-          "nextMatchInfo": "洛杉矶银河 VS 达拉斯FC",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-15 10:30 | 洛杉矶银河 VS 皇家盐湖城",
-            "2023-10-08 08:30 | 明尼苏达联 VS 洛杉矶银河",
-            "2023-10-05 10:40 | 西雅图音速 VS 洛杉矶银河",
-            "2023-10-01 10:40 | 洛杉矶银河 VS 波特兰伐木者"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 284,
-      "leagueName": "日职乙",
+      "leagueId": 8575,
+      "leagueName": "比甲",
       "matchesW": [
         {
-          "teamId": 3162,
-          "teamName": "甲府风林",
+          "teamId": 118,
+          "teamName": "韦斯特鲁",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-10-29 23:00",
+          "nextMatchInfo": "韦斯特鲁 VS 圣吉罗斯",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-22 00:15 | 莫伦贝克 VS 韦斯特鲁",
+            "2023-10-08 00:15 | 韦斯特鲁 VS 科特赖克",
+            "2023-10-01 22:00 | 亨克 VS 韦斯特鲁",
+            "2023-09-23 02:45 | 标准列日 VS 韦斯特鲁"
+          ]
+        },
+        {
+          "teamId": 1317,
+          "teamName": "圣吉罗斯",
           "consecutiveCount": 5,
           "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-29 13:00",
-          "nextMatchInfo": "大宫松鼠 VS 甲府风林",
+          "nextMatchTime": "2023-10-29 23:00",
+          "nextMatchInfo": "韦斯特鲁 VS 圣吉罗斯",
           "nextConsecutiveFlag": "3",
           "matchDetails": [
-            "2023-10-08 13:00 | 町田泽维亚 VS 甲府风林",
-            "2023-09-30 13:00 | 甲府风林 VS 水户蜀葵",
-            "2023-09-24 12:00 | 清水鼓动 VS 甲府风林",
-            "2023-09-15 18:00 | 甲府风林 VS 东京绿茵",
-            "2023-09-09 17:00 | 甲府风林 VS 大分三神"
+            "2023-10-21 02:45 | 圣吉罗斯 VS 欧本",
+            "2023-10-09 01:15 | 圣图尔登 VS 圣吉罗斯",
+            "2023-10-01 19:30 | 圣吉罗斯 VS 沙勒罗瓦",
+            "2023-09-29 00:30 | 莫伦贝克 VS 圣吉罗斯",
+            "2023-09-24 22:00 | 色格拉布鲁日 VS 圣吉罗斯"
           ]
         }
       ],
       "matchesL": [
         {
-          "teamId": 4904,
-          "teamName": "枥木SC",
+          "teamId": 148,
+          "teamName": "布鲁日",
           "consecutiveCount": 4,
           "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 13:00",
-          "nextMatchInfo": "枥木SC VS 大分三神",
+          "nextMatchTime": "2023-11-06 01:30",
+          "nextMatchInfo": "圣吉罗斯 VS 布鲁日",
           "nextConsecutiveFlag": "1",
           "matchDetails": [
-            "2023-10-08 13:00 | 山形山神 VS 枥木SC",
-            "2023-10-01 13:00 | 枥木SC VS 秋田蓝色闪电",
-            "2023-09-24 18:00 | 熊本深红 VS 枥木SC",
-            "2023-09-16 18:00 | 枥木SC VS 千叶市原"
-          ]
-        },
-        {
-          "teamId": 9025,
-          "teamName": "金泽",
-          "consecutiveCount": 8,
-          "consecutiveFlag": "15",
-          "nextMatchTime": "2023-10-22 13:00",
-          "nextMatchInfo": "金泽 VS 山形山神",
-          "nextConsecutiveFlag": "31",
-          "matchDetails": [
-            "2023-10-08 13:00 | 金泽 VS 秋田蓝色闪电",
-            "2023-10-01 13:00 | 山口雷法 VS 金泽",
-            "2023-09-27 18:00 | 群马草津温泉 VS 金泽",
-            "2023-09-23 17:00 | 班迪特斯磐城 VS 金泽",
-            "2023-09-17 17:00 | 金泽 VS 清水鼓动",
-            "2023-09-09 17:00 | 水户蜀葵 VS 金泽",
-            "2023-09-02 18:00 | 金泽 VS 东京绿茵",
-            "2023-08-26 18:00 | 金泽 VS 德岛漩涡"
+            "2023-10-21 22:00 | 科特赖克 VS 布鲁日",
+            "2023-10-08 19:30 | 标准列日 VS 布鲁日",
+            "2023-10-02 00:30 | 布鲁日 VS 圣图尔登",
+            "2023-09-29 02:45 | 布鲁日 VS 亨克"
           ]
         }
       ]
     },
     {
-      "leagueId": 34,
-      "leagueName": "意甲",
+      "leagueId": 1420,
+      "leagueName": "意乙",
       "matchesW": [
         {
-          "teamId": 185,
-          "teamName": "博洛尼亚",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-22 21:00",
-          "nextMatchInfo": "博洛尼亚 VS 弗洛西诺尼",
-          "nextConsecutiveFlag": "3",
+          "teamId": 527,
+          "teamName": "阿斯科利",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-04 22:00",
+          "nextMatchInfo": "巴里 VS 阿斯科利",
+          "nextConsecutiveFlag": "1",
           "matchDetails": [
-            "2023-10-07 21:00 | 国际米兰 VS 博洛尼亚",
-            "2023-10-01 18:30 | 博洛尼亚 VS 恩波利",
-            "2023-09-24 23:59 | 博洛尼亚 VS 那不勒斯",
-            "2023-09-03 00:30 | 博洛尼亚 VS 卡利亚里",
-            "2023-08-28 00:30 | 尤文图斯 VS 博洛尼亚"
+            "2023-10-21 20:00 | 莱科 VS 阿斯科利",
+            "2023-09-30 20:00 | 布雷西亚 VS 阿斯科利",
+            "2023-09-27 02:30 | 阿斯科利 VS 特拉纳",
+            "2023-09-23 20:00 | 克雷莫纳 VS 阿斯科利"
           ]
         }
       ],
       "matchesL": [
         {
-          "teamId": 183,
-          "teamName": "卡利亚里",
+          "teamId": 513,
+          "teamName": "巴里",
           "consecutiveCount": 4,
           "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 21:00",
-          "nextMatchInfo": "萨勒尼塔纳 VS 卡利亚里",
+          "nextMatchTime": "2023-10-29 23:15",
+          "nextMatchInfo": "布雷西亚 VS 巴里",
           "nextConsecutiveFlag": "1",
           "matchDetails": [
-            "2023-10-08 23:59 | 卡利亚里 VS 罗马",
-            "2023-10-03 02:45 | 佛罗伦萨 VS 卡利亚里",
-            "2023-09-28 00:30 | 卡利亚里 VS AC米兰",
-            "2023-09-24 21:00 | 亚特兰大 VS 卡利亚里"
-          ]
-        },
-        {
-          "teamId": 562,
-          "teamName": "萨勒尼塔纳",
-          "consecutiveCount": 6,
-          "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-22 21:00",
-          "nextMatchInfo": "萨勒尼塔纳 VS 卡利亚里",
-          "nextConsecutiveFlag": "7",
-          "matchDetails": [
-            "2023-10-08 18:30 | 蒙扎 VS 萨勒尼塔纳",
-            "2023-10-01 02:45 | 萨勒尼塔纳 VS 国际米兰",
-            "2023-09-28 00:30 | 恩波利 VS 萨勒尼塔纳",
-            "2023-09-23 00:30 | 萨勒尼塔纳 VS 弗洛西诺尼",
-            "2023-09-19 00:30 | 萨勒尼塔纳 VS 都灵",
-            "2023-09-04 02:45 | 莱切 VS 萨勒尼塔纳"
+            "2023-10-21 20:00 | 巴里 VS 摩德纳",
+            "2023-10-01 22:15 | 巴里 VS 科莫",
+            "2023-09-28 02:30 | 帕尔马 VS 巴里",
+            "2023-09-24 22:15 | 巴里 VS 卡坦萨罗"
           ]
         }
       ]
     },
     {
-      "leagueId": 11,
-      "leagueName": "法甲",
+      "leagueId": 4174,
+      "leagueName": "挪超",
       "matchesW": [
         {
-          "teamId": 351,
-          "teamName": "蒙彼利埃",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 21:00",
-          "nextMatchInfo": "南特 VS 蒙彼利埃",
-          "nextConsecutiveFlag": "1",
+          "teamId": 498,
+          "teamName": "布兰",
+          "consecutiveCount": 7,
+          "consecutiveFlag": "7",
+          "nextMatchTime": "2023-10-29 23:59",
+          "nextMatchInfo": "桑德菲杰 VS 布兰",
+          "nextConsecutiveFlag": "15",
           "matchDetails": [
-            "2023-10-08 21:00 | 蒙彼利埃 VS 克莱蒙",
-            "2023-10-01 23:05 | 洛里昂 VS 蒙彼利埃",
-            "2023-09-24 23:05 | 蒙彼利埃 VS 雷恩",
-            "2023-09-17 21:00 | 斯特拉斯堡 VS 蒙彼利埃"
+            "2023-10-21 23:59 | 布兰 VS 莫尔德",
+            "2023-10-09 01:15 | 瓦勒伦加 VS 布兰",
+            "2023-10-01 21:00 | 利勒斯特罗姆 VS 布兰",
+            "2023-09-17 23:00 | 斯塔贝克 VS 布兰",
+            "2023-09-03 23:00 | 布兰 VS 萨普斯堡",
+            "2023-08-20 23:00 | 布兰 VS 奥勒松",
+            "2023-08-06 23:00 | 汉坎 VS 布兰"
           ]
         }
       ],
       "matchesL": [
         {
-          "teamId": 205,
-          "teamName": "里昂",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-23 02:45",
-          "nextMatchInfo": "里昂 VS 克莱蒙",
-          "nextConsecutiveFlag": "3",
+          "teamId": 495,
+          "teamName": "维京",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-10-29 23:59",
+          "nextMatchInfo": "斯托姆加斯特 VS 维京",
+          "nextConsecutiveFlag": "1",
           "matchDetails": [
-            "2023-10-08 21:00 | 里昂 VS 洛里昂",
-            "2023-10-01 19:00 | 兰斯 VS 里昂",
-            "2023-09-24 03:00 | 布雷斯特 VS 里昂",
-            "2023-09-18 02:45 | 里昂 VS 勒阿弗尔",
-            "2023-09-04 02:45 | 里昂 VS 巴黎圣日尔曼"
+            "2023-10-23 01:15 | 维京 VS 特罗姆瑟",
+            "2023-10-07 23:59 | 奥德格伦兰 VS 维京",
+            "2023-10-01 23:00 | 莫尔德 VS 维京",
+            "2023-09-24 23:00 | 维京 VS 桑德菲杰"
           ]
         }
       ]
     },
     {
-      "leagueId": 7,
-      "leagueName": "丹麦超",
-      "matchesW": [
-        {
-          "teamId": 226,
-          "teamName": "兰德斯",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 23:59",
-          "nextMatchInfo": "兰德斯 VS 布隆德比",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 23:59 | 米迪兰特 VS 兰德斯",
-            "2023-10-01 20:00 | 兰德斯 VS 锡尔克堡",
-            "2023-09-24 22:00 | 兰德斯 VS 奥胡斯",
-            "2023-09-17 20:00 | 维积利 VS 兰德斯"
-          ]
-        }
-      ],
-      "matchesL": [
-        {
-          "teamId": 231,
-          "teamName": "洛斯查兰特",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-22 22:00",
-          "nextMatchInfo": "维堡 VS 洛斯查兰特",
-          "nextConsecutiveFlag": "3",
-          "matchDetails": [
-            "2023-10-08 20:00 | 洛斯查兰特 VS 欧登塞",
-            "2023-10-01 20:00 | 维积利 VS 洛斯查兰特",
-            "2023-09-26 01:00 | 洛斯查兰特 VS 哈维德夫",
-            "2023-09-16 22:00 | 洛斯查兰特 VS 哥本哈根",
-            "2023-09-03 20:00 | 利恩比 VS 洛斯查兰特"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 31,
-      "leagueName": "西甲",
-      "matchesW": [],
-      "matchesL": [
-        {
-          "teamId": 141,
-          "teamName": "阿尔梅里亚",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-22 22:15",
-          "nextMatchInfo": "赫罗纳 VS 阿尔梅里亚",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-07 03:00 | 毕尔巴鄂竞技 VS 阿尔梅里亚",
-            "2023-10-01 20:00 | 阿尔梅里亚 VS 格拉纳达",
-            "2023-09-27 01:00 | 塞维利亚 VS 阿尔梅里亚",
-            "2023-09-02 04:00 | 阿尔梅里亚 VS 塞尔塔"
-          ]
-        },
-        {
-          "teamId": 107,
-          "teamName": "比利亚雷亚尔",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-23 00:30",
-          "nextMatchInfo": "比利亚雷亚尔 VS 阿拉维斯",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-08 20:00 | 比利亚雷亚尔 VS 拉斯帕尔马斯",
-            "2023-09-28 01:00 | 比利亚雷亚尔 VS 赫罗纳",
-            "2023-09-02 01:30 | 加的斯 VS 比利亚雷亚尔",
-            "2023-08-27 23:30 | 比利亚雷亚尔 VS 巴塞罗那"
-          ]
-        },
-        {
-          "teamId": 84,
-          "teamName": "巴塞罗那",
-          "consecutiveCount": 4,
-          "consecutiveFlag": null,
-          "nextMatchTime": "2023-10-23 03:00",
-          "nextMatchInfo": "巴塞罗那 VS 毕尔巴鄂竞技",
-          "nextConsecutiveFlag": "1",
-          "matchDetails": [
-            "2023-10-09 03:00 | 格拉纳达 VS 巴塞罗那",
-            "2023-09-30 03:00 | 巴塞罗那 VS 塞维利亚",
-            "2023-09-27 03:30 | 马洛卡 VS 巴塞罗那",
-            "2023-09-24 00:30 | 巴塞罗那 VS 塞尔塔"
-          ]
-        }
-      ]
-    },
-    {
-      "leagueId": 30,
+      "leagueId": 17885,
       "leagueName": "土超",
-      "matchesW": [],
+      "matchesW": [
+        {
+          "teamId": 537,
+          "teamName": "费内巴切",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-10-29 23:59",
+          "nextMatchInfo": "佩迪卡斯堡 VS 费内巴切",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-22 23:59 | 费内巴切 VS 哈塔斯堡",
+            "2023-10-08 23:59 | 卡斯帕萨 VS 费内巴切",
+            "2023-10-01 21:00 | 费内巴切 VS 里泽斯堡",
+            "2023-09-29 01:00 | 费内巴切 VS 伊斯坦堡普野社希尔"
+          ]
+        }
+      ],
       "matchesL": [
         {
           "teamId": 1560,
           "teamName": "萨姆松珀",
           "consecutiveCount": 6,
           "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-22 23:59",
-          "nextMatchInfo": "萨姆松珀 VS 伊斯坦堡普野社希尔",
+          "nextMatchTime": "2023-11-04 21:00",
+          "nextMatchInfo": "萨姆松珀 VS 哈塔斯堡",
           "nextConsecutiveFlag": "7",
           "matchDetails": [
             "2023-10-08 18:30 | 里泽斯堡 VS 萨姆松珀",
@@ -1229,48 +343,162 @@
       ]
     },
     {
-      "leagueId": 4,
-      "leagueName": "巴西甲",
+      "leagueId": 151,
+      "leagueName": "德甲",
       "matchesW": [
         {
-          "teamId": 3820,
-          "teamName": "巴甘蒂诺",
+          "teamId": 165,
+          "teamName": "勒沃库森",
+          "consecutiveCount": 8,
+          "consecutiveFlag": "15",
+          "nextMatchTime": "2023-10-30 00:30",
+          "nextMatchInfo": "勒沃库森 VS 弗赖堡",
+          "nextConsecutiveFlag": "31",
+          "matchDetails": [
+            "2023-10-21 21:30 | 沃尔夫斯堡 VS 勒沃库森",
+            "2023-10-08 21:30 | 勒沃库森 VS 科隆",
+            "2023-09-30 21:30 | 美因茨 VS 勒沃库森",
+            "2023-09-24 21:30 | 勒沃库森 VS 海登海默",
+            "2023-09-16 02:30 | 拜仁慕尼黑 VS 勒沃库森",
+            "2023-09-02 21:30 | 勒沃库森 VS 达姆斯塔特",
+            "2023-08-27 00:30 | 门兴格拉德巴赫 VS 勒沃库森",
+            "2023-08-19 21:30 | 勒沃库森 VS RB莱比锡"
+          ]
+        },
+        {
+          "teamId": 155,
+          "teamName": "斯图加特",
           "consecutiveCount": 6,
           "consecutiveFlag": "3",
-          "nextMatchTime": "2023-10-23 05:30",
-          "nextMatchInfo": "巴甘蒂诺 VS 弗鲁米嫩塞",
+          "nextMatchTime": "2023-11-06 00:30",
+          "nextMatchInfo": "海登海默 VS 斯图加特",
           "nextConsecutiveFlag": "7",
           "matchDetails": [
-            "2023-10-09 05:30 | 巴拉纳竞技 VS 巴甘蒂诺",
-            "2023-10-02 05:30 | 巴甘蒂诺 VS 帕尔梅拉斯",
-            "2023-09-20 08:30 | 米内罗美洲 VS 巴甘蒂诺",
-            "2023-09-15 08:30 | 巴甘蒂诺 VS 格雷米奥",
-            "2023-09-04 05:30 | 克鲁塞罗 VS 巴甘蒂诺",
-            "2023-08-27 22:00 | 巴甘蒂诺 VS 奎尔巴"
+            "2023-10-21 21:30 | 柏林联合 VS 斯图加特",
+            "2023-10-07 21:30 | 斯图加特 VS 沃尔夫斯堡",
+            "2023-09-30 21:30 | 科隆 VS 斯图加特",
+            "2023-09-23 02:30 | 斯图加特 VS 达姆斯塔特",
+            "2023-09-16 21:30 | 美因茨 VS 斯图加特",
+            "2023-09-02 21:30 | 斯图加特 VS 弗赖堡"
           ]
         }
       ],
       "matchesL": [
         {
-          "teamId": 465,
-          "teamName": "帕尔梅拉斯",
-          "consecutiveCount": 5,
-          "consecutiveFlag": "1",
-          "nextMatchTime": "2023-10-23 05:30",
-          "nextMatchInfo": "科里蒂巴 VS 帕尔梅拉斯",
-          "nextConsecutiveFlag": "3",
+          "teamId": 1087,
+          "teamName": "柏林联合",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-11-04 22:30",
+          "nextMatchInfo": "柏林联合 VS 法兰克福",
+          "nextConsecutiveFlag": "7",
           "matchDetails": [
-            "2023-10-09 03:00 | 帕尔梅拉斯 VS 桑托斯",
-            "2023-10-02 05:30 | 巴甘蒂诺 VS 帕尔梅拉斯",
-            "2023-09-22 08:30 | 格雷米奥 VS 帕尔梅拉斯",
-            "2023-09-16 08:30 | 帕尔梅拉斯 VS 戈伊亚斯",
-            "2023-09-04 03:00 | 科林蒂安 VS 帕尔梅拉斯"
+            "2023-10-21 21:30 | 柏林联合 VS 斯图加特",
+            "2023-10-07 21:30 | 多特蒙德 VS 柏林联合",
+            "2023-09-30 21:30 | 海登海默 VS 柏林联合",
+            "2023-09-23 21:30 | 柏林联合 VS 霍芬海姆",
+            "2023-09-16 21:30 | 沃尔夫斯堡 VS 柏林联合",
+            "2023-09-03 23:30 | 柏林联合 VS RB莱比锡"
           ]
         }
       ]
     },
     {
-      "leagueId": 23,
+      "leagueId": 1672,
+      "leagueName": "希腊超",
+      "matchesW": [
+        {
+          "teamId": 1616,
+          "teamName": "潘塞莱科斯",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-10-30 01:30",
+          "nextMatchInfo": "帕纳辛纳科斯 VS 潘塞莱科斯",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-09-28 22:30 | 潘塞莱科斯 VS 帕斯基安尼纳",
+            "2023-09-24 01:00 | 潘塞莱科斯 VS 拉米亚",
+            "2023-09-17 23:00 | 基菲萨 VS 潘塞莱科斯",
+            "2023-08-27 02:30 | AEK雅典 VS 潘塞莱科斯"
+          ]
+        },
+        {
+          "teamId": 724,
+          "teamName": "塞萨洛尼基",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-10-31 01:30",
+          "nextMatchInfo": "AEK雅典 VS 塞萨洛尼基",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-22 23:30 | 塞萨洛尼基 VS 阿特罗米托斯",
+            "2023-10-02 00:30 | 帕纳辛纳科斯 VS 塞萨洛尼基",
+            "2023-09-28 01:30 | 塞萨洛尼基 VS 沃罗斯NFC",
+            "2023-09-25 01:30 | 帕斯基安尼纳 VS 塞萨洛尼基"
+          ]
+        },
+        {
+          "teamId": 568,
+          "teamName": "奥林匹亚科斯",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-10-31 03:30",
+          "nextMatchInfo": "OFI克里特 VS 奥林匹亚科斯",
+          "nextConsecutiveFlag": "7",
+          "matchDetails": [
+            "2023-10-02 01:40 | 帕斯基安尼纳 VS 奥林匹亚科斯",
+            "2023-09-28 01:30 | 奥林匹亚科斯 VS 阿里斯",
+            "2023-09-24 22:00 | 奥林匹亚科斯 VS 基菲萨",
+            "2023-09-18 02:30 | AEK雅典 VS 奥林匹亚科斯",
+            "2023-09-04 01:00 | 奥林匹亚科斯 VS 拉米亚",
+            "2023-08-28 02:30 | 奥林匹亚科斯 VS 阿特罗米托斯"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 4766,
+          "teamName": "帕斯基安尼纳",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-10-30 02:30",
+          "nextMatchInfo": "阿里斯 VS 帕斯基安尼纳",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-21 01:30 | 拉米亚 VS 帕斯基安尼纳",
+            "2023-10-02 01:40 | 帕斯基安尼纳 VS 奥林匹亚科斯",
+            "2023-09-28 22:30 | 潘塞莱科斯 VS 帕斯基安尼纳",
+            "2023-09-25 01:30 | 帕斯基安尼纳 VS 塞萨洛尼基"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 366,
+      "leagueName": "法甲",
+      "matchesW": [],
+      "matchesL": [
+        {
+          "teamId": 205,
+          "teamName": "里昂",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-10-30 03:45",
+          "nextMatchInfo": "马赛 VS 里昂",
+          "nextConsecutiveFlag": "7",
+          "matchDetails": [
+            "2023-10-23 02:45 | 里昂 VS 克莱蒙",
+            "2023-10-08 21:00 | 里昂 VS 洛里昂",
+            "2023-10-01 19:00 | 兰斯 VS 里昂",
+            "2023-09-24 03:00 | 布雷斯特 VS 里昂",
+            "2023-09-18 02:45 | 里昂 VS 勒阿弗尔",
+            "2023-09-04 02:45 | 里昂 VS 巴黎圣日尔曼"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 1006,
       "leagueName": "葡超",
       "matchesW": [],
       "matchesL": [
@@ -1296,63 +524,876 @@
       ]
     },
     {
-      "leagueId": 32,
-      "leagueName": "希腊超",
-      "matchesW": [],
+      "leagueId": 64730,
+      "leagueName": "美职业",
+      "matchesW": [
+        {
+          "teamId": 310,
+          "teamName": "纽约红牛",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-10-30 07:00",
+          "nextMatchInfo": "辛辛那提 VS 纽约红牛",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-26 07:30 | 纽约红牛 VS 夏洛特FC",
+            "2023-10-22 06:10 | 纳什威尔 VS 纽约红牛",
+            "2023-10-08 07:40 | 纽约红牛 VS 多伦多FC",
+            "2023-10-05 07:40 | 辛辛那提 VS 纽约红牛"
+          ]
+        },
+        {
+          "teamId": 16669,
+          "teamName": "奥兰多城",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-10-31 07:00",
+          "nextMatchInfo": "奥兰多城 VS 纳什威尔",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-22 06:20 | 多伦多FC VS 奥兰多城",
+            "2023-10-08 07:40 | 奥兰多城 VS 新英格兰革命",
+            "2023-10-05 08:40 | 纳什威尔 VS 奥兰多城",
+            "2023-10-01 07:30 | 奥兰多城 VS 蒙特利尔冲击"
+          ]
+        }
+      ],
       "matchesL": [
         {
-          "teamId": 3332,
-          "teamName": "帕纳多里高斯",
+          "teamId": 311,
+          "teamName": "洛杉矶银河",
           "consecutiveCount": 5,
           "consecutiveFlag": "1",
           "nextMatchTime": null,
           "nextMatchInfo": null,
           "nextConsecutiveFlag": null,
           "matchDetails": [
-            "2023-04-09 00:30 | 帕纳多里高斯 VS 伊奥尼科斯",
-            "2023-04-01 22:30 | 帕纳多里高斯 VS 拉米亚",
-            "2023-03-18 23:00 | 特里波利斯 VS 帕纳多里高斯",
-            "2023-03-13 01:00 | 帕纳多里高斯 VS 拉米亚",
-            "2023-03-07 01:30 | 帕纳辛纳科斯 VS 帕纳多里高斯"
+            "2023-10-22 09:10 | 洛杉矶银河 VS 达拉斯FC",
+            "2023-10-15 10:30 | 洛杉矶银河 VS 皇家盐湖城",
+            "2023-10-08 08:30 | 明尼苏达联 VS 洛杉矶银河",
+            "2023-10-05 10:40 | 西雅图音速 VS 洛杉矶银河",
+            "2023-10-01 10:40 | 洛杉矶银河 VS 波特兰伐木者"
+          ]
+        },
+        {
+          "teamId": 5345,
+          "teamName": "多伦多FC",
+          "consecutiveCount": 7,
+          "consecutiveFlag": "7",
+          "nextMatchTime": null,
+          "nextMatchInfo": null,
+          "nextConsecutiveFlag": null,
+          "matchDetails": [
+            "2023-10-22 06:20 | 多伦多FC VS 奥兰多城",
+            "2023-10-08 07:40 | 纽约红牛 VS 多伦多FC",
+            "2023-10-05 07:40 | 夏洛特FC VS 多伦多FC",
+            "2023-10-01 07:30 | 多伦多FC VS 辛辛那提",
+            "2023-09-25 01:10 | 纽约城 VS 多伦多FC",
+            "2023-09-21 07:40 | 国际迈阿密 VS 多伦多FC",
+            "2023-09-17 07:40 | 多伦多FC VS 温哥华白帽"
+          ]
+        },
+        {
+          "teamId": 47140,
+          "teamName": "国际迈阿密",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": null,
+          "nextMatchInfo": null,
+          "nextConsecutiveFlag": null,
+          "matchDetails": [
+            "2023-10-22 06:10 | 夏洛特FC VS 国际迈阿密",
+            "2023-10-19 08:00 | 国际迈阿密 VS 夏洛特FC",
+            "2023-10-08 07:40 | 国际迈阿密 VS 辛辛那提",
+            "2023-10-05 08:40 | 芝加哥火焰 VS 国际迈阿密",
+            "2023-10-01 08:30 | 国际迈阿密 VS 纽约城"
           ]
         }
       ]
     },
     {
-      "leagueId": 36,
+      "leagueId": 406,
+      "leagueName": "瑞典超",
+      "matchesW": [
+        {
+          "teamId": 2782,
+          "teamName": "天狼星",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-10-31 02:00",
+          "nextMatchInfo": "哈马比 VS 天狼星",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-21 23:30 | 天狼星 VS 布洛马波卡纳",
+            "2023-10-07 23:30 | 哥德堡 VS 天狼星",
+            "2023-09-26 01:00 | 瓦纳默 VS 天狼星",
+            "2023-09-16 21:00 | 天狼星 VS 瓦尔贝里"
+          ]
+        }
+      ],
+      "matchesL": []
+    },
+    {
+      "leagueId": 1744,
+      "leagueName": "法乙",
+      "matchesW": [
+        {
+          "teamId": 304,
+          "teamName": "昂热",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-10-31 03:45",
+          "nextMatchInfo": "圣埃蒂安 VS 昂热",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-22 01:00 | 昂热 VS 波尔多",
+            "2023-10-08 01:00 | 亚眠 VS 昂热",
+            "2023-10-01 01:00 | 昂热 VS 康卡纽",
+            "2023-09-27 02:45 | 克维伊 VS 昂热",
+            "2023-09-24 01:00 | 昂热 VS 巴斯蒂亚"
+          ]
+        },
+        {
+          "teamId": 194,
+          "teamName": "阿雅克肖",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-05 02:00",
+          "nextMatchInfo": "格勒诺布尔 VS 阿雅克肖",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-22 01:00 | 阿雅克肖 VS 波城",
+            "2023-10-08 01:00 | 圣埃蒂安 VS 阿雅克肖",
+            "2023-10-03 02:45 | 阿雅克肖 VS 巴斯蒂亚",
+            "2023-09-27 02:45 | 亚眠 VS 阿雅克肖",
+            "2023-09-24 01:00 | 阿雅克肖 VS 巴黎足球会"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 208,
+          "teamName": "波尔多",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-05 02:00",
+          "nextMatchInfo": "巴斯蒂亚 VS 波尔多",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-22 01:00 | 昂热 VS 波尔多",
+            "2023-10-07 21:00 | 波尔多 VS 拉瓦勒",
+            "2023-10-04 00:45 | 波尔多 VS 卡昂",
+            "2023-10-01 01:00 | 格勒诺布尔 VS 波尔多"
+          ]
+        },
+        {
+          "teamId": 366,
+          "teamName": "特鲁瓦",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-11-05 02:00",
+          "nextMatchInfo": "特鲁瓦 VS 卡昂",
+          "nextConsecutiveFlag": "7",
+          "matchDetails": [
+            "2023-10-22 01:00 | 特鲁瓦 VS 康卡纽",
+            "2023-09-30 21:00 | 特鲁瓦 VS 圣埃蒂安",
+            "2023-09-27 02:45 | 罗德兹 VS 特鲁瓦",
+            "2023-09-23 21:00 | 特鲁瓦 VS 欧塞尔",
+            "2023-09-03 01:00 | 特鲁瓦 VS 克维伊",
+            "2023-08-27 01:00 | 巴斯蒂亚 VS 特鲁瓦"
+          ]
+        },
+        {
+          "teamId": 382,
+          "teamName": "亚眠",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-05 02:00",
+          "nextMatchInfo": "USL敦刻尔克 VS 亚眠",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-08 01:00 | 亚眠 VS 昂热",
+            "2023-10-01 01:00 | 波城 VS 亚眠",
+            "2023-09-27 02:45 | 亚眠 VS 阿雅克肖",
+            "2023-09-24 01:00 | 亚眠 VS 瓦朗谢纳",
+            "2023-09-17 01:00 | 巴黎足球会 VS 亚眠"
+          ]
+        },
+        {
+          "teamId": 5003,
+          "teamName": "USL敦刻尔克",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-05 02:00",
+          "nextMatchInfo": "USL敦刻尔克 VS 亚眠",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-22 01:00 | USL敦刻尔克 VS 巴黎足球会",
+            "2023-10-08 01:00 | 康卡纽 VS USL敦刻尔克",
+            "2023-10-05 00:45 | 圣埃蒂安 VS USL敦刻尔克",
+            "2023-10-01 01:00 | USL敦刻尔克 VS 克维伊",
+            "2023-09-24 01:00 | USL敦刻尔克 VS 罗德兹"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 126,
+      "leagueName": "西甲",
+      "matchesW": [],
+      "matchesL": [
+        {
+          "teamId": 107,
+          "teamName": "比利亚雷亚尔",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-10-31 04:00",
+          "nextMatchInfo": "格拉纳达 VS 比利亚雷亚尔",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-23 00:30 | 比利亚雷亚尔 VS 阿拉维斯",
+            "2023-10-08 20:00 | 比利亚雷亚尔 VS 拉斯帕尔马斯",
+            "2023-09-28 01:00 | 比利亚雷亚尔 VS 赫罗纳",
+            "2023-09-02 01:30 | 加的斯 VS 比利亚雷亚尔",
+            "2023-08-27 23:30 | 比利亚雷亚尔 VS 巴塞罗那"
+          ]
+        },
+        {
+          "teamId": 114,
+          "teamName": "塞尔塔",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-05 01:30",
+          "nextMatchInfo": "塞尔塔 VS 塞维利亚",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-22 03:00 | 塞尔塔 VS 马德里竞技",
+            "2023-10-09 00:30 | 塞尔塔 VS 赫塔菲",
+            "2023-10-03 03:00 | 拉斯帕尔马斯 VS 塞尔塔",
+            "2023-09-29 01:00 | 塞尔塔 VS 阿拉维斯"
+          ]
+        },
+        {
+          "teamId": 84,
+          "teamName": "巴塞罗那",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-05 04:00",
+          "nextMatchInfo": "皇家社会 VS 巴塞罗那",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-23 03:00 | 巴塞罗那 VS 毕尔巴鄂竞技",
+            "2023-10-09 03:00 | 格拉纳达 VS 巴塞罗那",
+            "2023-09-30 03:00 | 巴塞罗那 VS 塞维利亚",
+            "2023-09-27 03:30 | 马洛卡 VS 巴塞罗那",
+            "2023-09-24 00:30 | 巴塞罗那 VS 塞尔塔"
+          ]
+        },
+        {
+          "teamId": 141,
+          "teamName": "阿尔梅里亚",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-05 21:00",
+          "nextMatchInfo": "阿拉维斯 VS 阿尔梅里亚",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-22 22:15 | 赫罗纳 VS 阿尔梅里亚",
+            "2023-10-07 03:00 | 毕尔巴鄂竞技 VS 阿尔梅里亚",
+            "2023-10-01 20:00 | 阿尔梅里亚 VS 格拉纳达",
+            "2023-09-27 01:00 | 塞维利亚 VS 阿尔梅里亚",
+            "2023-09-02 04:00 | 阿尔梅里亚 VS 塞尔塔"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 8371,
+      "leagueName": "德乙",
+      "matchesW": [
+        {
+          "teamId": 1076,
+          "teamName": "埃弗斯堡",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-04 01:30",
+          "nextMatchInfo": "埃弗斯堡 VS 圣保利",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-21 00:30 | 埃弗斯堡 VS 布伦斯维克",
+            "2023-10-08 19:30 | 基尔高士丁 VS 埃弗斯堡",
+            "2023-09-23 19:00 | 韦恩 VS 埃弗斯堡",
+            "2023-09-16 19:00 | 埃弗斯堡 VS 汉堡",
+            "2023-09-03 19:30 | 奥斯纳布鲁克 VS 埃弗斯堡"
+          ]
+        },
+        {
+          "teamId": 1720,
+          "teamName": "柏德博恩",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-05 20:30",
+          "nextMatchInfo": "卡尔斯鲁厄 VS 柏德博恩",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-21 19:00 | 柏德博恩 VS 圣保利",
+            "2023-10-08 19:30 | 布伦斯维克 VS 柏德博恩",
+            "2023-09-30 00:30 | 柏德博恩 VS 沙尔克04",
+            "2023-09-23 00:30 | 马格德堡 VS 柏德博恩"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 151,
+          "teamName": "沙尔克04",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-04 20:00",
+          "nextMatchInfo": "纽伦堡 VS 沙尔克04",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-22 19:30 | 卡尔斯鲁厄 VS 沙尔克04",
+            "2023-10-08 19:30 | 沙尔克04 VS 柏林赫塔",
+            "2023-09-30 00:30 | 柏德博恩 VS 沙尔克04",
+            "2023-09-24 02:30 | 圣保利 VS 沙尔克04"
+          ]
+        },
+        {
+          "teamId": 2760,
+          "teamName": "马格德堡",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-05 03:30",
+          "nextMatchInfo": "汉堡 VS 马格德堡",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-21 00:30 | 汉诺威96 VS 马格德堡",
+            "2023-10-07 19:00 | 马格德堡 VS 卡尔斯鲁厄",
+            "2023-10-01 19:30 | 纽伦堡 VS 马格德堡",
+            "2023-09-23 00:30 | 马格德堡 VS 柏德博恩",
+            "2023-09-17 02:30 | 沙尔克04 VS 马格德堡"
+          ]
+        },
+        {
+          "teamId": 1116,
+          "teamName": "布伦斯维克",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-05 20:30",
+          "nextMatchInfo": "汉诺威96 VS 布伦斯维克",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-21 00:30 | 埃弗斯堡 VS 布伦斯维克",
+            "2023-10-08 19:30 | 布伦斯维克 VS 柏德博恩",
+            "2023-09-30 19:00 | 罗斯托克 VS 布伦斯维克",
+            "2023-09-17 19:30 | 柏林赫塔 VS 布伦斯维克"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 5910,
+      "leagueName": "波兰超",
+      "matchesW": [
+        {
+          "teamId": 3159,
+          "teamName": "乔治罗尼亚",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-04 03:30",
+          "nextMatchInfo": "乔治罗尼亚 VS 史塔麦列克",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-24 23:59 | 莱克普斯纳 VS 乔治罗尼亚",
+            "2023-10-21 02:30 | 乔治罗尼亚 VS 卢宾扎格勒比",
+            "2023-10-08 21:00 | 克拉科维亚 VS 乔治罗尼亚",
+            "2023-10-02 02:00 | 乔治罗尼亚 VS 华沙莱吉亚",
+            "2023-09-17 18:30 | 乔治罗尼亚 VS 拉多麦科"
+          ]
+        }
+      ],
+      "matchesL": []
+    },
+    {
+      "leagueId": 1399,
+      "leagueName": "意甲",
+      "matchesW": [
+        {
+          "teamId": 185,
+          "teamName": "博洛尼亚",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-11-04 03:45",
+          "nextMatchInfo": "博洛尼亚 VS 拉齐奥",
+          "nextConsecutiveFlag": "7",
+          "matchDetails": [
+            "2023-10-22 21:00 | 博洛尼亚 VS 弗洛西诺尼",
+            "2023-10-07 21:00 | 国际米兰 VS 博洛尼亚",
+            "2023-10-01 18:30 | 博洛尼亚 VS 恩波利",
+            "2023-09-24 23:59 | 博洛尼亚 VS 那不勒斯",
+            "2023-09-03 00:30 | 博洛尼亚 VS 卡利亚里",
+            "2023-08-28 00:30 | 尤文图斯 VS 博洛尼亚"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 562,
+          "teamName": "萨勒尼塔纳",
+          "consecutiveCount": 7,
+          "consecutiveFlag": "7",
+          "nextMatchTime": "2023-11-04 22:00",
+          "nextMatchInfo": "萨勒尼塔纳 VS 那不勒斯",
+          "nextConsecutiveFlag": "15",
+          "matchDetails": [
+            "2023-10-22 21:00 | 萨勒尼塔纳 VS 卡利亚里",
+            "2023-10-08 18:30 | 蒙扎 VS 萨勒尼塔纳",
+            "2023-10-01 02:45 | 萨勒尼塔纳 VS 国际米兰",
+            "2023-09-28 00:30 | 恩波利 VS 萨勒尼塔纳",
+            "2023-09-23 00:30 | 萨勒尼塔纳 VS 弗洛西诺尼",
+            "2023-09-19 00:30 | 萨勒尼塔纳 VS 都灵",
+            "2023-09-04 02:45 | 莱切 VS 萨勒尼塔纳"
+          ]
+        },
+        {
+          "teamId": 558,
+          "teamName": "都灵",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-07 03:45",
+          "nextMatchInfo": "都灵 VS 萨索洛",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-21 23:59 | 都灵 VS 国际米兰",
+            "2023-10-07 23:59 | 尤文图斯 VS 都灵",
+            "2023-10-03 00:30 | 都灵 VS 维罗纳",
+            "2023-09-28 02:45 | 拉齐奥 VS 都灵"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 15512,
+      "leagueName": "日职乙",
+      "matchesW": [
+        {
+          "teamId": 1988,
+          "teamName": "大宫松鼠",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-04 13:00",
+          "nextMatchInfo": "清水鼓动 VS 大宫松鼠",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-22 13:00 | 藤枝MYFC VS 大宫松鼠",
+            "2023-10-07 13:00 | 大宫松鼠 VS 山口雷法",
+            "2023-09-30 17:00 | 大分三神 VS 大宫松鼠",
+            "2023-09-24 15:00 | 德岛漩涡 VS 大宫松鼠"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 9025,
+          "teamName": "金泽",
+          "consecutiveCount": 9,
+          "consecutiveFlag": "31",
+          "nextMatchTime": "2023-11-04 12:55",
+          "nextMatchInfo": "金泽 VS 大分三神",
+          "nextConsecutiveFlag": null,
+          "matchDetails": [
+            "2023-10-22 13:00 | 金泽 VS 山形山神",
+            "2023-10-08 13:00 | 金泽 VS 秋田蓝色闪电",
+            "2023-10-01 13:00 | 山口雷法 VS 金泽",
+            "2023-09-27 18:00 | 群马草津温泉 VS 金泽",
+            "2023-09-23 17:00 | 班迪特斯磐城 VS 金泽",
+            "2023-09-17 17:00 | 金泽 VS 清水鼓动",
+            "2023-09-09 17:00 | 水户蜀葵 VS 金泽",
+            "2023-09-02 18:00 | 金泽 VS 东京绿茵",
+            "2023-08-26 18:00 | 金泽 VS 德岛漩涡"
+          ]
+        },
+        {
+          "teamId": 4904,
+          "teamName": "枥木SC",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-05 13:00",
+          "nextMatchInfo": "东京绿茵 VS 枥木SC",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-08 13:00 | 山形山神 VS 枥木SC",
+            "2023-10-01 13:00 | 枥木SC VS 秋田蓝色闪电",
+            "2023-09-24 18:00 | 熊本深红 VS 枥木SC",
+            "2023-09-16 18:00 | 枥木SC VS 千叶市原"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 59,
       "leagueName": "英超",
+      "matchesW": [],
+      "matchesL": [
+        {
+          "teamId": 348,
+          "teamName": "伯恩茅斯",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-04 23:00",
+          "nextMatchInfo": "曼彻斯特城 VS 伯恩茅斯",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-21 22:00 | 伯恩茅斯 VS 狼队",
+            "2023-10-07 22:00 | 埃弗顿 VS 伯恩茅斯",
+            "2023-09-30 22:00 | 伯恩茅斯 VS 阿森纳",
+            "2023-09-24 21:00 | 布莱顿 VS 伯恩茅斯"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 2596,
+      "leagueName": "荷乙",
+      "matchesW": [
+        {
+          "teamId": 287,
+          "teamName": "多德勒支",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-05 21:30",
+          "nextMatchInfo": "格罗宁根 VS 多德勒支",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-24 02:00 | 赫尔蒙德 VS 多德勒支",
+            "2023-10-21 02:00 | 多德勒支 VS 阿贾克斯青年队",
+            "2023-10-07 02:00 | 多德勒支 VS 坎布尔",
+            "2023-09-30 02:00 | FC埃因霍温 VS 多德勒支",
+            "2023-09-19 02:00 | 奥斯 VS 多德勒支"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 236,
+          "teamName": "格罗宁根",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-05 21:30",
+          "nextMatchInfo": "格罗宁根 VS 多德勒支",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-24 02:00 | 格罗宁根 VS 埃蒙",
+            "2023-10-21 02:00 | 格拉夫夏普 VS 格罗宁根",
+            "2023-10-07 02:15 | 布雷达 VS 格罗宁根",
+            "2023-09-30 02:00 | 格罗宁根 VS 邓伯什"
+          ]
+        },
+        {
+          "teamId": 288,
+          "teamName": "坎布尔",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-07 03:00",
+          "nextMatchInfo": "奥斯 VS 坎布尔",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-21 02:00 | 马斯特里赫特 VS 坎布尔",
+            "2023-10-15 22:45 | 坎布尔 VS 布雷达",
+            "2023-10-07 02:00 | 多德勒支 VS 坎布尔",
+            "2023-09-30 02:00 | 坎布尔 VS 埃因霍温青年队",
+            "2023-09-23 02:00 | 乌德勒支青年队 VS 坎布尔"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 204,
+      "leagueName": "日职联",
+      "matchesW": [],
+      "matchesL": [
+        {
+          "teamId": 207,
+          "teamName": "大阪钢巴",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-11 19:00",
+          "nextMatchInfo": "大阪钢巴 VS 福冈黄蜂",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-21 13:00 | 大阪钢巴 VS 名古屋鲸八",
+            "2023-10-01 14:00 | FC东京 VS 大阪钢巴",
+            "2023-09-24 16:00 | 大阪钢巴 VS 浦和红钻",
+            "2023-09-17 18:00 | 大阪钢巴 VS 新泻天鹅",
+            "2023-09-02 12:00 | 札幌冈萨多 VS 大阪钢巴"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 1388,
+      "leagueName": "英甲",
+      "matchesW": [],
+      "matchesL": [
+        {
+          "teamId": 66,
+          "teamName": "雷丁",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-11-11 23:00",
+          "nextMatchInfo": "谢斯伯利 VS 雷丁",
+          "nextConsecutiveFlag": "7",
+          "matchDetails": [
+            "2023-10-25 03:00 | 雷丁 VS 弗利特伍德",
+            "2023-10-21 22:00 | 查尔顿 VS 雷丁",
+            "2023-10-07 22:00 | 莱顿东方 VS 雷丁",
+            "2023-10-04 02:45 | 北安普敦 VS 雷丁",
+            "2023-09-30 22:00 | 雷丁 VS 伯顿",
+            "2023-09-23 22:00 | 布莱克浦 VS 雷丁"
+          ]
+        },
+        {
+          "teamId": 1356,
+          "teamName": "埃克塞特城",
+          "consecutiveCount": 6,
+          "consecutiveFlag": "3",
+          "nextMatchTime": "2023-11-11 23:00",
+          "nextMatchInfo": "弗利特伍德 VS 埃克塞特城",
+          "nextConsecutiveFlag": "7",
+          "matchDetails": [
+            "2023-10-25 02:45 | 德比郡 VS 埃克塞特城",
+            "2023-10-21 22:00 | 埃克塞特城 VS 维冈竞技",
+            "2023-10-07 22:00 | 埃克塞特城 VS 巴恩斯利",
+            "2023-10-04 02:45 | 查尔顿 VS 埃克塞特城",
+            "2023-09-30 22:00 | 埃克塞特城 VS 北安普敦",
+            "2023-09-23 22:00 | 牛津联队 VS 埃克塞特城"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 1386,
+      "leagueName": "英乙",
+      "matchesW": [
+        {
+          "teamId": 359,
+          "teamName": "斯托克港",
+          "consecutiveCount": 8,
+          "consecutiveFlag": "15",
+          "nextMatchTime": "2023-11-11 23:00",
+          "nextMatchInfo": "斯文登 VS 斯托克港",
+          "nextConsecutiveFlag": "31",
+          "matchDetails": [
+            "2023-10-25 02:45 | 克鲁 VS 斯托克港",
+            "2023-10-21 22:00 | 斯托克港 VS 格林斯比",
+            "2023-10-14 22:00 | 哈洛贾特 VS 斯托克港",
+            "2023-10-04 02:45 | 斯托克港 VS 格兰森林流浪",
+            "2023-09-30 22:00 | 阿克灵顿 VS 斯托克港",
+            "2023-09-23 22:00 | 斯托克港 VS 雷克斯汉姆",
+            "2023-09-16 22:00 | 米尔顿凯恩斯 VS 斯托克港",
+            "2023-09-09 22:00 | AFC温布尔登 VS 斯托克港"
+          ]
+        },
+        {
+          "teamId": 1179,
+          "teamName": "阿克灵顿",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-11 23:00",
+          "nextMatchInfo": "克劳利 VS 阿克灵顿",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-25 02:45 | AFC温布尔登 VS 阿克灵顿",
+            "2023-10-21 22:00 | 阿克灵顿 VS 米尔顿凯恩斯",
+            "2023-10-14 22:00 | 格林斯比 VS 阿克灵顿",
+            "2023-10-07 22:00 | 阿克灵顿 VS 格兰森林流浪"
+          ]
+        },
+        {
+          "teamId": 1380,
+          "teamName": "莫雷坎比",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": "2023-11-11 23:00",
+          "nextMatchInfo": "格林斯比 VS 莫雷坎比",
+          "nextConsecutiveFlag": "3",
+          "matchDetails": [
+            "2023-10-25 02:45 | 莫雷坎比 VS 特兰米尔",
+            "2023-10-21 22:00 | 瑟顿联 VS 莫雷坎比",
+            "2023-10-07 22:00 | 科切斯特联 VS 莫雷坎比",
+            "2023-09-30 22:00 | 格兰森林流浪 VS 莫雷坎比",
+            "2023-09-23 22:00 | 莫雷坎比 VS 斯文登"
+          ]
+        },
+        {
+          "teamId": 11444,
+          "teamName": "索尔福德市",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-11 23:00",
+          "nextMatchInfo": "索尔福德市 VS 曼斯菲特",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-25 02:45 | 唐卡斯特 VS 索尔福德市",
+            "2023-10-07 22:00 | 索尔福德市 VS 克鲁",
+            "2023-10-04 02:45 | 瑟顿联 VS 索尔福德市",
+            "2023-09-30 22:00 | 索尔福德市 VS 纽波特"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 3427,
+          "teamName": "纽波特",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-11 23:00",
+          "nextMatchInfo": "纽波特 VS 米尔顿凯恩斯",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-25 02:45 | 诺茨郡 VS 纽波特",
+            "2023-10-21 02:45 | 纽波特 VS 沃尔索尔",
+            "2023-10-14 22:00 | 斯文登 VS 纽波特",
+            "2023-10-07 22:00 | 纽波特 VS 哈洛贾特"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 494,
+      "leagueName": "韩K联",
+      "matchesW": [
+        {
+          "teamId": 497,
+          "teamName": "仁川联队",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-12 13:00",
+          "nextMatchInfo": "仁川联队 VS 全北现代",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-20 18:30 | 浦项制铁 VS 仁川联队",
+            "2023-10-08 14:00 | 蔚山现代 VS 仁川联队",
+            "2023-09-30 18:00 | 仁川联队 VS 水原三星",
+            "2023-09-16 13:00 | 仁川联队 VS 济州联队"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 481,
+          "teamName": "浦项制铁",
+          "consecutiveCount": 4,
+          "consecutiveFlag": null,
+          "nextMatchTime": "2023-11-12 15:30",
+          "nextMatchInfo": "蔚山现代 VS 浦项制铁",
+          "nextConsecutiveFlag": "1",
+          "matchDetails": [
+            "2023-10-20 18:30 | 浦项制铁 VS 仁川联队",
+            "2023-10-08 14:00 | 水原三星 VS 浦项制铁",
+            "2023-09-30 13:00 | 浦项制铁 VS 蔚山现代",
+            "2023-09-24 18:00 | 大邱FC VS 浦项制铁"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 2400,
+      "leagueName": "芬超",
+      "matchesW": [
+        {
+          "teamId": 2395,
+          "teamName": "埃尔维斯",
+          "consecutiveCount": 5,
+          "consecutiveFlag": "1",
+          "nextMatchTime": null,
+          "nextMatchInfo": null,
+          "nextConsecutiveFlag": null,
+          "matchDetails": [
+            "2023-10-21 20:00 | 拉赫蒂 VS 埃尔维斯",
+            "2023-10-06 23:00 | 埃尔维斯 VS 奥卢",
+            "2023-09-27 23:00 | 埃尔维斯 VS 玛丽港",
+            "2023-09-22 23:00 | 科特卡 VS 埃尔维斯",
+            "2023-09-15 23:00 | 哈卡 VS 埃尔维斯"
+          ]
+        }
+      ],
+      "matchesL": [
+        {
+          "teamId": 8120,
+          "teamName": "科特卡",
+          "consecutiveCount": 8,
+          "consecutiveFlag": "15",
+          "nextMatchTime": null,
+          "nextMatchInfo": null,
+          "nextConsecutiveFlag": null,
+          "matchDetails": [
+            "2023-10-21 20:00 | 科特卡 VS 玛丽港",
+            "2023-10-07 22:00 | 哈卡 VS 科特卡",
+            "2023-09-29 23:00 | 奥卢 VS 科特卡",
+            "2023-09-22 23:00 | 科特卡 VS 埃尔维斯",
+            "2023-09-15 23:00 | 拉赫蒂 VS 科特卡",
+            "2023-09-03 21:00 | 科特卡 VS 洪卡",
+            "2023-08-25 23:00 | VPS瓦萨 VS 科特卡",
+            "2023-08-21 23:00 | 科特卡 VS 哈卡"
+          ]
+        }
+      ]
+    },
+    {
+      "leagueId": 6248,
+      "leagueName": "西乙",
       "matchesW": [],
       "matchesL": []
     },
     {
-      "leagueId": 29,
+      "leagueId": 72,
       "leagueName": "苏超",
       "matchesW": [],
       "matchesL": []
     },
     {
-      "leagueId": 15,
-      "leagueName": "韩K联",
+      "leagueId": 2006,
+      "leagueName": "俄超",
       "matchesW": [],
       "matchesL": []
     },
     {
-      "leagueId": 26,
-      "leagueName": "瑞典超",
-      "matchesW": [],
-      "matchesL": []
-    },
-    {
-      "leagueId": 1,
+      "leagueId": 1322,
       "leagueName": "爱超",
       "matchesW": [],
       "matchesL": []
     },
     {
-      "leagueId": 6,
-      "leagueName": "波兰超",
+      "leagueId": 5156,
+      "leagueName": "巴西甲",
+      "matchesW": [],
+      "matchesL": []
+    },
+    {
+      "leagueId": 51511,
+      "leagueName": "澳洲甲",
       "matchesW": [],
       "matchesL": []
     }
-  ]
+  ],
+  "homeSeasonSummaryW": {
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10+": 0
+  },
+  "homeSeasonSummaryL": {
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10+": 0
+  }
 }

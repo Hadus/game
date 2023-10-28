@@ -3,7 +3,6 @@ export default [{
   url: '/getData',
   type: 'post',
   response: (request) => {
-    allDataJson.minConsecutiveNumber = request.query.minConsecutiveNumber;
     return allDataJson
   }
 }, {

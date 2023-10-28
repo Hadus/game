@@ -136,7 +136,7 @@ async function handelSync() {
 /* 筛选 start */
 let alertFlag = ref(false)
 const handleSwitchAlert = function () {
-  focusMatchNum_1 && (alertFlag ? audioPlay() : audioClose());
+  !!focusMatchNum_1.value && (!!alertFlag.value ? audioPlay() : audioClose());
 }
 // 切换联赛
 let league = ref({});
@@ -157,23 +157,14 @@ const handleChangeLeagueName = (league: object) => {
 }
 /* 筛选 end */
 
-/* 统计 start */
-const statList = [
-  {
-    "leagueId": 36,
-    "leagueName": "英超",
-  }
-];
-/* 统计 end */
 // 需要关注的比赛场次
 let focusMatchNum_24 = ref<number>(0);
 let focusMatchNum_1 = ref<number>(0);
 
 // audio
 const audio = new Audio('/audio/preview.mp3');
-audio.muted = true;
 const audioPlay = () => {
-  alertFlag && audio.play();
+  audio.play();
 }
 const audioClose = () => {
   audio.pause();
