@@ -11,14 +11,15 @@
             <el-table-column label="近期比赛">
               <template #default="{ row, $index }">
                 <p class="match-item" v-if="row.nextMatchTime">
-                  <match-budge :budgeIndex="row.matchDetails.length + 1" />
+                  <match-budge :budgeIndex="row.matchDetails.length + 1" :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" isWin />
                   <el-switch v-model="row.unfocusTeam" style="--el-switch-on-color: #13ce66; float:right"
                     @change="handelSwitchFocus(row)" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
-                  <match-budge :budgeIndex="row.matchDetails.length - index" />
+                  <match-budge :budgeIndex="row.matchDetails.length - index"
+                    :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ match }}
                 </p>
               </template>
@@ -35,14 +36,15 @@
             <el-table-column label="近期比赛">
               <template #default="{ row, $index }">
                 <p class="match-item" v-if="row.nextMatchTime">
-                  <match-budge :budgeIndex="row.matchDetails.length + 1" />
+                  <match-budge :budgeIndex="row.matchDetails.length + 1" :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" />
                   <el-switch v-model="row.unfocusTeam" style="--el-switch-on-color: #13ce66; float:right"
                     @change="handelSwitchFocus(row)" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
-                  <match-budge :budgeIndex="row.matchDetails.length - index" />
+                  <match-budge :budgeIndex="row.matchDetails.length - index"
+                    :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ match }}
                 </p>
               </template>
@@ -61,7 +63,11 @@ import MatchBudge from './MatchBudge.vue';
 
 import { fetchRemoveFocus } from '@/api';
 
-const { teamsData } = defineProps({
+const { minConsecutiveNumber, teamsData } = defineProps({
+  minConsecutiveNumber: {
+    type: String,
+    required: true
+  },
   teamsData: {
     type: Object,
     required: true

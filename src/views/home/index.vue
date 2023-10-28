@@ -50,7 +50,8 @@
     </div>
     <!-- 表格 -->
     <div class="table">
-      <match-block :teamsData="teams" v-for="(  teams, index  ) in  matchData.data " :key="index" />
+      <match-block :minConsecutiveNumber="matchData.minConsecutiveNumber" :teamsData="teams"
+        v-for="(teams, index) in  matchData.data " :key="index" />
     </div>
   </div>
 </template>
@@ -106,7 +107,6 @@ async function handelSync() {
   try {
     // 调用：数据同步
     const res_sync = await fetchSync();
-    console.log(res_sync)
     if (res_sync.data.flag) {
       // 重新获取数据
       handelFetchAllData();
