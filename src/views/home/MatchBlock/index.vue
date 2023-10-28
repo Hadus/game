@@ -11,6 +11,7 @@
             <el-table-column label="近期比赛">
               <template #default="{ row, $index }">
                 <p class="match-item" v-if="row.nextMatchTime">
+                  <match-budge :budgeIndex="row.matchDetails.length + 1" />
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" isWin />
                   <el-switch v-model="row.unfocusTeam" style="--el-switch-on-color: #13ce66; float:right"
@@ -34,6 +35,7 @@
             <el-table-column label="近期比赛">
               <template #default="{ row, $index }">
                 <p class="match-item" v-if="row.nextMatchTime">
+                  <match-budge :budgeIndex="row.matchDetails.length + 1" />
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" />
                   <el-switch v-model="row.unfocusTeam" style="--el-switch-on-color: #13ce66; float:right"
@@ -53,7 +55,7 @@
 </template>
 
 <script setup lang="ts" name="matchBlock">
-import { defineProps, ref, reactive } from 'vue';
+import { defineProps, ref, reactive, computed } from 'vue';
 import MatchStatus from './MatchStatus.vue';
 import MatchBudge from './MatchBudge.vue';
 
@@ -65,7 +67,7 @@ const { teamsData } = defineProps({
     required: true
   }
 });
-const { matchesW: winList, matchesL: loseList } = teamsData;
+const { matchesW: winList, matchesL: loseList, unfocusTeam } = teamsData;
 const handelSwitchFocus = (row) => {
   fetchRemoveFocus({
     teamId: row.teamId,

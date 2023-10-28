@@ -1,6 +1,6 @@
 
 <template>
-  <sup class="badge" v-if="budgeIndex >= 4" :class="className">
+  <sup class="badge" v-if="budgeIndex > 4" :class="className">
     {{ nearFlag[budgeIndex] }}
   </sup>
 </template>

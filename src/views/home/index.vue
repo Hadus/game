@@ -1,7 +1,11 @@
 <template>
   <div class="main-content scroll">
     <h3>{{ matchData.curSeason }}赛季 盘路分析
-      <span>（需关注的比赛：24小时内将开始 {{ focusMatchNum_24 }} 场， 1小时内将开始 {{ focusMatchNum_1 }} 场）</span>
+      <span>（需关注的比赛：24小时内将开始
+        <span>{{ focusMatchNum_24 }}</span>
+        场， 1小时内将开始
+        <span class="alert-color">{{ focusMatchNum_1 }} </span> 场）
+      </span>
     </h3>
     <!-- 设置 -->
     <div class="set">
@@ -85,7 +89,7 @@ handelFetchAllData();
 /* 设置 start */
 // 切换场次
 const num = ref('4');
-const numOptions = ['4', '5', '6', '7', '8', '9', '10+'];
+const numOptions = ['4', '5', '6', '7', '8', '9'];
 const handelSwitchNum = (num: string = '4') => {
   handelFetchAllData(num);
 };
@@ -273,6 +277,22 @@ provide('handelStatFocusMatch', handelStatFocusMatch);
 
   /deep/.select-league .el-input {
     width: 120px !important;
+  }
+}
+
+.alert-color {
+  animation: alertColor 1.2s ease-in-out infinite;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+@keyframes alertColor {
+  0% {
+    color: #fff;
+  }
+
+  100% {
+    color: #f40;
   }
 }
 </style>
