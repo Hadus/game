@@ -1,7 +1,7 @@
 
 <template>
-  <sup class="badge" v-if="budgeIndex >= minConsecutiveNumber" :class="className">
-    {{ nearFlagList[budgeIndex - minConsecutiveNumber] }}
+  <sup class="badge" v-if="budgeIndex - 1 >= minConsecutiveNumber" :class="className">
+    {{ nearFlagList[budgeIndex - 1 - minConsecutiveNumber] }}
   </sup>
 </template>
 
