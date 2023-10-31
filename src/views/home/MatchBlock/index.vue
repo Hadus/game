@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="right">
-        <h3>连败</h3>
+        <h3>连输</h3>
         <div>
           <el-table class="match-table" :data="loseList" border stripe style="width: 100%">
             <el-table-column prop="teamName" label="球队" width="160" />

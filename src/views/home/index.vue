@@ -171,7 +171,7 @@ const audioClose = () => {
 }
 
 // provide 给 MatchStatus 调用
-// 计算连赢和连败队伍数量
+// 计算连赢和连输队伍数量
 let winTeam = ref<number>(0);
 let loseTeam = ref<number>(0);
 const handelStatMatchTeam = (isWin: boolean) => {

@@ -16,7 +16,7 @@ const { nextMatchTimeStr, isWin } = defineProps({
     required: false
   }
 });
-// 计算连赢和连败队伍数量
+// 计算连赢和连输队伍数量
 const handelStatMatchTeam = inject<Function>('handelStatMatchTeam');
 handelStatMatchTeam(isWin);
 

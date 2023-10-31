@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="top">
       <p>连赢队伍</p>
-      <p>连败队伍</p>
+      <p>连输队伍</p>
     </div>
     <div class="bot">
       <p>{{ winTeam }}</p>

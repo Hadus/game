@@ -1,7 +1,7 @@
 
 <template>
-  <sup class="badge" v-if="budgeIndex - 1 >= minConsecutiveNumber" :class="className">
-    {{ nearFlagList[budgeIndex - 1 - minConsecutiveNumber] }}
+  <sup class="badge" v-if="nearFlag >= 0" :class="className">
+    {{ nearFlagList[nearFlag] }}
   </sup>
 </template>
 
@@ -20,7 +20,10 @@ const { budgeIndex, minConsecutiveNumber } = defineProps({
 
 // {4: 0, 5: 1, 6: 3, 7: 7, 8: 15, 9: 31}
 let nearFlagList = reactive([1, 3, 7, 15, 31])
-
+const nearFlag = computed(() => {
+  let temp = budgeIndex - 1 - minConsecutiveNumber;
+  return temp <= nearFlagList.length ? temp : nearFlagList.length
+})
 const className = computed(() => {
   return 'color' + (budgeIndex);
 })

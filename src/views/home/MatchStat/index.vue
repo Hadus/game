@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="right">
-        <h3>累计连败</h3>
+        <h3>累计连输</h3>
         <div>
           <el-table class="stat-table" :data="[homeSeasonSummaryL]" border style="width: 100%">
             <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL" :key="key"
@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class="right">
-          <h3>累计连败</h3>
+          <h3>累计连输</h3>
           <div>
             <el-table class="stat-table" :data="[homeSeasonSummaryL]" border style="width: 100%">
               <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL"
