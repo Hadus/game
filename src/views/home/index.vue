@@ -46,7 +46,7 @@
     <!-- 统计 -->
     <div class="stat">
       <MatchStat :curSeason="matchData.curSeason" :homeSeasonSummaryW="matchData.homeSeasonSummaryW"
-        :homeSeasonSummaryL="matchData.homeSeasonSummaryL" />
+        :homeSeasonSummaryL="matchData.homeSeasonSummaryL" :supportedSeason="matchData.supportedSeason" />
     </div>
     <!-- 表格 -->
     <div class="table">

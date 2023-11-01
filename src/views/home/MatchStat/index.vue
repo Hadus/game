@@ -27,8 +27,8 @@
       <template #header="{ titleId, titleClass }">
         <div class="dialog-header">
           <h4 :id="titleId" :class="titleClass">{{ curSeason }}赛季 盘路统计
-            <el-select v-model="changeSeasonName" size="small" @change="handleChangeSeason()">
-              <el-option v-for="item in seasonList" :key="item" :label="item" :value="item"
+            <el-select v-model="changeSeasonName" size="small" @change="handleChangeSeason()" v-if="!!supportedSeason">
+              <el-option v-for="item in supportedSeason" :key="item" :label="item" :value="item"
                 :disabled="item == changeSeasonName" />
             </el-select>
           </h4>
@@ -91,9 +91,12 @@ import { defineProps, ref, reactive, watch, computed } from 'vue';
 import data from '@/mock/detail'
 
 import { fetchDetail } from '@/api';
-const { curSeason, homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
+const { curSeason, supportedSeason, homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
   curSeason: {
     type: String,
+  },
+  supportedSeason: {
+    type: Array,
   },
   homeSeasonSummaryW: {
     type: Object,
@@ -120,14 +123,11 @@ const handleLookDetail = () => {
   api_fetchDetail('2023-2024');
 }
 
-const seasonList = ref([
-  '2020-2021',
-  '2021-2022',
-  '2022-2023',
-  '2023-2024',
-]);
 
-let changeSeasonName = ref(seasonList.value[seasonList.value.length - 1])
+let changeSeasonName = computed(() => {
+  const length = supportedSeason.value.length
+  return !!length && supportedSeason.value[length - 1]
+})
 
 const handleChangeSeason = () => {
   api_fetchDetail(changeSeasonName.value)
