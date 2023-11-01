@@ -1,8 +1,8 @@
 
 <template>
-  <sup class="badge" v-if="nearFlag >= 0" :class="className">
-    {{ nearFlagList[nearFlag] }}
-  </sup>
+  <sup class="badge" v-if="(budgeIndex - minConsecutiveNumber) - 1 >= 0" :class="className">
+    {{ (budgeIndex - minConsecutiveNumber) <= nearFlagList.length ? nearFlagList[budgeIndex - minConsecutiveNumber - 1] :
+      nearFlagList[nearFlagList.length - 1] }} </sup>
 </template>
 
 <script setup lang="ts" name="MatchStatus">
@@ -17,13 +17,14 @@ const { budgeIndex, minConsecutiveNumber } = defineProps({
     required: true
   },
 });
-
+// length: 10  
+// index:       0 1 2 3 4 5 6 7 8 9
+// budgeIndex: 10 9 8 7 6 5 4 3 2 1
+// minConsecutiveNumber: 4
+// budgeIndex - minConsecutiveNumber:     6 5 4 3 2 1
+// budgeIndex - minConsecutiveNumber - 1: 5 4 3 2 1 0
 // {4: 0, 5: 1, 6: 3, 7: 7, 8: 15, 9: 31}
 let nearFlagList = reactive([1, 3, 7, 15, 31])
-const nearFlag = computed(() => {
-  let temp = budgeIndex - 1 - minConsecutiveNumber;
-  return temp <= nearFlagList.length ? temp : nearFlagList.length
-})
 const className = computed(() => {
   return 'color' + (budgeIndex);
 })
