@@ -33,7 +33,7 @@ export const fetchRemoveFocus = (data = {}) => {
 // 查看统计详情
 export const fetchDetail = (data = {}) => {
   return request({
-    url: 'getSeasonSummary',
+    url: 'getSummary',
     method: 'post',
     data
   });

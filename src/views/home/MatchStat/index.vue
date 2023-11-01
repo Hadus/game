@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <el-dialog v-model="detailDialogFlag" width="90%" center>
+    <el-dialog v-model="detailDialogFlag" width="100%" top="5vh" center>
       <template #header="{ titleId, titleClass }">
         <div class="dialog-header">
           <h4 :id="titleId" :class="titleClass">{{ curSeason }}赛季 盘路统计
@@ -47,7 +47,12 @@
               <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW"
                 :key="key" align="center">
                 <template #default="{ row }">
-                  <p v-for="(item_inner, index) in row[key]">{{ item_inner.leagueName + '-' + item_inner.teamName }}</p>
+                  <p v-for="(item_inner, index) in row[key]" class="item-inner">
+                    <span class="game-time">
+                      <el-tag size="small" type="info" effect="plain">{{ item_inner.lastMatchTime }}</el-tag>
+                    </span>
+                    {{ item_inner.leagueName + '-' + item_inner.teamName }}
+                  </p>
                 </template>
               </el-table-column>
             </el-table>
@@ -65,7 +70,12 @@
               <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL"
                 :key="key" align="center">
                 <template #default="{ row }">
-                  <p v-for="(item_inner, index) in row[key]">{{ item_inner.leagueName + '-' + item_inner.teamName }}</p>
+                  <p v-for="(item_inner, index) in row[key]" class="item-inner">
+                    <span class="game-time">
+                      <el-tag size="small" type="info" effect="plain">{{ item_inner.lastMatchTime }}</el-tag>
+                    </span>
+                    {{ item_inner.leagueName + '-' + item_inner.teamName }}
+                  </p>
                 </template>
               </el-table-column>
             </el-table>
@@ -94,8 +104,8 @@ const { curSeason, homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
 });
 
 // 调用：获取统计数据
-const api_fetchDetail = (sensonName = '2023-2024') => {
-  fetchDetail({ sensonName }).then((res) => {
+const api_fetchDetail = (senson = '2023-2024') => {
+  fetchDetail({ senson }).then((res) => {
     console.log(res)
     dialogData.value = data
   }).catch((error) => {
@@ -107,11 +117,17 @@ const dialogData = ref({});
 const handleLookDetail = () => {
   detailDialogFlag.value = true;
   dialogData.value = data
-  // api_fetchDetail('2023-2024');
+  api_fetchDetail('2023-2024');
 }
 
-const seasonList = ref(['2023-2024', '2024-2025']);
-let changeSeasonName = ref(seasonList.value[0])
+const seasonList = ref([
+  '2020-2021',
+  '2021-2022',
+  '2022-2023',
+  '2023-2024',
+]);
+
+let changeSeasonName = ref(seasonList.value[seasonList.value.length - 1])
 
 const handleChangeSeason = () => {
   api_fetchDetail(changeSeasonName.value)
@@ -220,6 +236,27 @@ const handleChangeSeason = () => {
   th>.cell {
     color: #606266;
     font-weight: bold;
+  }
+
+  td {
+    vertical-align: text-top;
+  }
+
+  td>.cell {
+    padding: 0 !important;
+  }
+
+  .item-inner {
+    font-size: 12px;
+    position: relative;
+    margin-top: 35px;
+    line-height: 16px;
+
+    .game-time {
+      position: absolute;
+      top: -21px;
+      left: 2px;
+    }
   }
 }
 </style>

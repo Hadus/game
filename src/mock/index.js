@@ -23,7 +23,7 @@ export default [{
     }
   }
 },{
-  url: '/getSeasonSummary',
+  url: '/getSummary',
   type: 'post',
   response: ({body}) => {
     return {

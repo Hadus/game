@@ -1,64 +1,2215 @@
 {
+  "status": 0,
+  "homeSeasonSummaryW": {
+    "4": 88,
+    "5": 39,
+    "6": 15,
+    "7": 12,
+    "8": 4,
+    "9": 0,
+    "10+": 3
+  },
+  "homeSeasonSummaryL": {
+    "4": 87,
+    "5": 28,
+    "6": 21,
+    "7": 10,
+    "8": 0,
+    "9": 0,
+    "10+": 2
+  },
   "seasonSummaryW": {
     "3": [],
     "4": [
       {
-        "leagueName": "英超",
-        "teamName": "水晶宫",
-        "leagueId": 36,
-        "teamId": 35,
-        "lastMatchTime": "2023-10-26 18:39:30"
+        "leagueId": 1,
+        "leagueName": "爱超",
+        "teamId": 312,
+        "teamName": "德利城",
+        "lastMatchTime": "2023-09-07 02:45"
       },
       {
-        "leagueName": "英甲",
-        "teamName": "水晶宫1",
+        "leagueId": 1,
+        "leagueName": "爱超",
+        "teamId": 329,
+        "teamName": "德罗赫达联",
+        "lastMatchTime": "2023-09-26 02:45"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 343,
+        "teamName": "米内罗竞技",
+        "lastMatchTime": "2023-10-01 08:00"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 349,
+        "teamName": "科林蒂安",
+        "lastMatchTime": "2023-10-20 08:30"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 350,
+        "teamName": "科里蒂巴",
+        "lastMatchTime": "2023-07-25 06:00"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 1973,
+        "teamName": "古亚巴",
+        "lastMatchTime": "2023-08-07 07:00"
+      },
+      {
+        "leagueId": 5,
+        "leagueName": "比甲",
+        "teamId": 156,
+        "teamName": "圣图尔登",
+        "lastMatchTime": "2023-10-02 00:30"
+      },
+      {
+        "leagueId": 5,
+        "leagueName": "比甲",
+        "teamId": 21829,
+        "teamName": "莫伦贝克",
+        "lastMatchTime": "2023-10-02 01:15"
+      },
+      {
+        "leagueId": 6,
+        "leagueName": "波兰超",
+        "teamId": 658,
+        "teamName": "克拉科维亚",
+        "lastMatchTime": "2023-08-26 21:00"
+      },
+      {
+        "leagueId": 6,
+        "leagueName": "波兰超",
+        "teamId": 1370,
+        "teamName": "史塔麦列克",
+        "lastMatchTime": "2023-09-24 02:00"
+      },
+      {
+        "leagueId": 6,
+        "leagueName": "波兰超",
+        "teamId": 3159,
+        "teamName": "乔治罗尼亚",
+        "lastMatchTime": "2023-08-27 23:30"
+      },
+      {
+        "leagueId": 7,
+        "leagueName": "丹麦超",
+        "teamId": 231,
+        "teamName": "洛斯查兰特",
+        "lastMatchTime": "2023-08-13 20:00"
+      },
+      {
+        "leagueId": 7,
+        "leagueName": "丹麦超",
+        "teamId": 248,
+        "teamName": "锡尔克堡",
+        "lastMatchTime": "2023-08-26 22:00"
+      },
+      {
+        "leagueId": 8,
+        "leagueName": "德甲",
+        "teamId": 99,
+        "teamName": "多特蒙德",
+        "lastMatchTime": "2023-10-07 21:30"
+      },
+      {
+        "leagueId": 8,
+        "leagueName": "德甲",
+        "teamId": 1078,
+        "teamName": "霍芬海姆",
+        "lastMatchTime": "2023-09-23 21:30"
+      },
+      {
+        "leagueId": 9,
+        "leagueName": "德乙",
+        "teamId": 160,
+        "teamName": "汉堡",
+        "lastMatchTime": "2023-09-03 19:30"
+      },
+      {
+        "leagueId": 9,
+        "leagueName": "德乙",
+        "teamId": 169,
+        "teamName": "汉诺威96",
+        "lastMatchTime": "2023-09-30 19:00"
+      },
+      {
+        "leagueId": 9,
+        "leagueName": "德乙",
+        "teamId": 1085,
+        "teamName": "圣保利",
+        "lastMatchTime": "2023-10-08 02:30"
+      },
+      {
+        "leagueId": 9,
+        "leagueName": "德乙",
+        "teamId": 2760,
+        "teamName": "马格德堡",
+        "lastMatchTime": "2023-09-02 19:00"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 395,
+        "teamName": "圣彼得堡泽尼特",
+        "lastMatchTime": "2023-09-17 21:30"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 10112,
+        "teamName": "克拉斯诺达尔",
+        "lastMatchTime": "2023-10-07 23:59"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 25289,
+        "teamName": "诺夫哥罗德",
+        "lastMatchTime": "2023-09-24 19:00"
+      },
+      {
+        "leagueId": 11,
+        "leagueName": "法甲",
+        "teamId": 214,
+        "teamName": "梅斯",
+        "lastMatchTime": "2023-09-17 03:00"
+      },
+      {
+        "leagueId": 11,
+        "leagueName": "法甲",
+        "teamId": 216,
+        "teamName": "图卢兹",
+        "lastMatchTime": "2023-10-08 21:00"
+      },
+      {
+        "leagueId": 11,
+        "leagueName": "法甲",
+        "teamId": 263,
+        "teamName": "南特",
+        "lastMatchTime": "2023-09-23 23:00"
+      },
+      {
+        "leagueId": 11,
+        "leagueName": "法甲",
+        "teamId": 306,
+        "teamName": "布雷斯特",
+        "lastMatchTime": "2023-10-01 21:00"
+      },
+      {
+        "leagueId": 11,
+        "leagueName": "法甲",
+        "teamId": 335,
+        "teamName": "勒阿弗尔",
+        "lastMatchTime": "2023-09-24 21:00"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 215,
+        "teamName": "欧塞尔",
+        "lastMatchTime": "2023-10-08 01:00"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 255,
+        "teamName": "圣埃蒂安",
+        "lastMatchTime": "2023-10-05 00:45"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 257,
+        "teamName": "卡昂",
+        "lastMatchTime": "2023-08-27 01:00"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 393,
+        "teamName": "格勒诺布尔",
+        "lastMatchTime": "2023-10-08 01:00"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 7165,
+        "teamName": "安尼茨",
+        "lastMatchTime": "2023-09-03 01:00"
+      },
+      {
+        "leagueId": 13,
+        "leagueName": "芬超",
+        "teamId": 397,
+        "teamName": "哈卡",
+        "lastMatchTime": "2023-09-15 23:00"
+      },
+      {
+        "leagueId": 15,
+        "leagueName": "韩K联",
+        "teamId": 488,
+        "teamName": "大田市民",
+        "lastMatchTime": "2023-10-08 14:00"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 250,
+        "teamName": "特温特",
+        "lastMatchTime": "2023-09-17 20:30"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 252,
+        "teamName": "费耶诺德",
+        "lastMatchTime": "2023-09-27 20:00"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 280,
+        "teamName": "前进之鹰",
+        "lastMatchTime": "2023-09-23 02:00"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 290,
+        "teamName": "马斯特里赫特",
+        "lastMatchTime": "2023-09-09 03:00"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 1093,
+        "teamName": "埃蒙",
+        "lastMatchTime": "2023-10-07 02:00"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 310,
+        "teamName": "纽约红牛",
+        "lastMatchTime": "2023-10-26 07:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 311,
+        "teamName": "洛杉矶银河",
+        "lastMatchTime": "2023-07-09 10:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 2071,
+        "teamName": "皇家盐湖城",
+        "lastMatchTime": "2023-07-16 09:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 5533,
+        "teamName": "温哥华白帽",
+        "lastMatchTime": "2023-09-17 07:40"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 31761,
+        "teamName": "亚特兰大联",
+        "lastMatchTime": "2023-09-24 07:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 64730,
+        "teamName": "圣路易斯城",
+        "lastMatchTime": "2023-10-01 08:40"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 496,
+        "teamName": "汉坎",
+        "lastMatchTime": "2023-07-23 23:00"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 496,
+        "teamName": "汉坎",
+        "lastMatchTime": "2023-09-24 23:00"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 507,
+        "teamName": "罗森博格",
+        "lastMatchTime": "2023-08-06 23:00"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 1282,
+        "teamName": "桑德菲杰",
+        "lastMatchTime": "2023-08-20 23:00"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 1285,
+        "teamName": "斯托姆加斯特",
+        "lastMatchTime": "2023-07-17 01:15"
+      },
+      {
+        "leagueId": 23,
+        "leagueName": "葡超",
+        "teamId": 4970,
+        "teamName": "法马利卡奥",
+        "lastMatchTime": "2023-10-01 01:00"
+      },
+      {
+        "leagueId": 25,
+        "leagueName": "日职联",
+        "teamId": 1547,
+        "teamName": "福冈黄蜂",
+        "lastMatchTime": "2023-09-30 14:00"
+      },
+      {
+        "leagueId": 26,
+        "leagueName": "瑞典超",
+        "teamId": 410,
+        "teamName": "哈马比",
+        "lastMatchTime": "2023-09-03 21:10"
+      },
+      {
+        "leagueId": 27,
+        "leagueName": "瑞士超",
+        "teamId": 449,
+        "teamName": "苏黎世",
+        "lastMatchTime": "2023-08-12 23:59"
+      },
+      {
+        "leagueId": 27,
+        "leagueName": "瑞士超",
+        "teamId": 1237,
+        "teamName": "卢森",
+        "lastMatchTime": "2023-09-24 22:30"
+      },
+      {
+        "leagueId": 29,
+        "leagueName": "苏超",
+        "teamId": 75,
+        "teamName": "马瑟韦尔",
+        "lastMatchTime": "2023-09-03 22:00"
+      },
+      {
+        "leagueId": 30,
+        "leagueName": "土超",
+        "teamId": 516,
+        "teamName": "加拉塔萨雷",
+        "lastMatchTime": "2023-09-24 01:00"
+      },
+      {
+        "leagueId": 31,
+        "leagueName": "西甲",
+        "teamId": 92,
+        "teamName": "毕尔巴鄂竞技",
+        "lastMatchTime": "2023-09-23 03:00"
+      },
+      {
+        "leagueId": 32,
+        "leagueName": "希腊超",
+        "teamId": 724,
+        "teamName": "塞萨洛尼基",
+        "lastMatchTime": "2023-10-22 23:30"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 100,
+        "teamName": "西班牙人",
+        "lastMatchTime": "2023-09-09 03:00"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 104,
+        "teamName": "桑坦德竞技",
+        "lastMatchTime": "2023-09-24 03:00"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 120,
+        "teamName": "费罗尔竞技",
+        "lastMatchTime": "2023-09-02 01:30"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 123,
+        "teamName": "瓦拉多利德",
+        "lastMatchTime": "2023-10-05 01:00"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 992,
+        "teamName": "莱加内斯",
+        "lastMatchTime": "2023-09-10 03:00"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 4732,
+        "teamName": "奥维多",
+        "lastMatchTime": "2023-10-14 03:00"
+      },
+      {
+        "leagueId": 34,
+        "leagueName": "意甲",
+        "teamId": 152,
+        "teamName": "国际米兰",
+        "lastMatchTime": "2023-09-16 23:59"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 48,
+        "teamName": "吉林汉姆",
+        "lastMatchTime": "2023-08-19 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 341,
+        "teamName": "唐卡斯特",
+        "lastMatchTime": "2023-09-23 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 341,
+        "teamName": "唐卡斯特",
+        "lastMatchTime": "2023-10-21 02:45"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 1380,
+        "teamName": "莫雷坎比",
+        "lastMatchTime": "2023-10-28 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 1840,
+        "teamName": "巴洛",
+        "lastMatchTime": "2023-09-30 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 3545,
+        "teamName": "AFC温布尔登",
+        "lastMatchTime": "2023-08-19 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 3545,
+        "teamName": "AFC温布尔登",
+        "lastMatchTime": "2023-10-07 22:00"
+      },
+      {
         "leagueId": 36,
-        "teamId": 35,
-        "lastMatchTime": "2023-10-26 18:39:30"
+        "leagueName": "英超",
+        "teamId": 25,
+        "teamName": "利物浦",
+        "lastMatchTime": "2023-09-24 21:00"
+      },
+      {
+        "leagueId": 36,
+        "leagueName": "英超",
+        "teamId": 49,
+        "teamName": "诺丁汉森林",
+        "lastMatchTime": "2023-09-02 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 32,
+        "teamName": "伯明翰",
+        "lastMatchTime": "2023-08-26 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 34,
+        "teamName": "诺维奇",
+        "lastMatchTime": "2023-08-26 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 65,
+        "teamName": "桑德兰",
+        "lastMatchTime": "2023-09-21 02:45"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 1194,
+        "teamName": "斯旺西",
+        "lastMatchTime": "2023-10-07 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 1188,
+        "teamName": "林肯城",
+        "lastMatchTime": "2023-09-02 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 1201,
+        "teamName": "牛津联队",
+        "lastMatchTime": "2023-08-26 22:00"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 163,
+        "teamName": "布雷西亚",
+        "lastMatchTime": "2023-09-27 02:30"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 511,
+        "teamName": "卡坦萨罗",
+        "lastMatchTime": "2023-09-04 00:30"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 527,
+        "teamName": "阿斯科利",
+        "lastMatchTime": "2023-10-21 20:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 199,
+        "teamName": "千叶市原",
+        "lastMatchTime": "2023-07-29 18:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 1988,
+        "teamName": "大宫松鼠",
+        "lastMatchTime": "2023-10-22 13:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 9024,
+        "teamName": "冈山绿雉",
+        "lastMatchTime": "2023-09-09 18:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 19176,
+        "teamName": "藤枝MYFC",
+        "lastMatchTime": "2023-09-30 12:00"
       }
     ],
-    "5": [],
-    "6": [],
-    "7": [],
-    "8": [],
+    "5": [
+      {
+        "leagueId": 5,
+        "leagueName": "比甲",
+        "teamId": 153,
+        "teamName": "安德莱赫特",
+        "lastMatchTime": "2023-09-04 00:30"
+      },
+      {
+        "leagueId": 6,
+        "leagueName": "波兰超",
+        "teamId": 3159,
+        "teamName": "乔治罗尼亚",
+        "lastMatchTime": "2023-10-24 23:59"
+      },
+      {
+        "leagueId": 7,
+        "leagueName": "丹麦超",
+        "teamId": 226,
+        "teamName": "兰德斯",
+        "lastMatchTime": "2023-10-22 23:59"
+      },
+      {
+        "leagueId": 7,
+        "leagueName": "丹麦超",
+        "teamId": 230,
+        "teamName": "布隆德比",
+        "lastMatchTime": "2023-09-17 23:59"
+      },
+      {
+        "leagueId": 8,
+        "leagueName": "德甲",
+        "teamId": 13201,
+        "teamName": "RB莱比锡",
+        "lastMatchTime": "2023-10-01 00:30"
+      },
+      {
+        "leagueId": 9,
+        "leagueName": "德乙",
+        "teamId": 1720,
+        "teamName": "柏德博恩",
+        "lastMatchTime": "2023-10-21 19:00"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 300,
+        "teamName": "苏维埃之翼",
+        "lastMatchTime": "2023-10-01 21:30"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 194,
+        "teamName": "阿雅克肖",
+        "lastMatchTime": "2023-10-22 01:00"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 304,
+        "teamName": "昂热",
+        "lastMatchTime": "2023-10-22 01:00"
+      },
+      {
+        "leagueId": 13,
+        "leagueName": "芬超",
+        "teamId": 383,
+        "teamName": "赫尔辛基",
+        "lastMatchTime": "2023-08-27 23:00"
+      },
+      {
+        "leagueId": 13,
+        "leagueName": "芬超",
+        "teamId": 1985,
+        "teamName": "洪卡",
+        "lastMatchTime": "2023-09-16 22:00"
+      },
+      {
+        "leagueId": 15,
+        "leagueName": "韩K联",
+        "teamId": 499,
+        "teamName": "水原三星",
+        "lastMatchTime": "2023-07-22 18:30"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 234,
+        "teamName": "艾克马亚",
+        "lastMatchTime": "2023-09-24 22:45"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 233,
+        "teamName": "罗达JC",
+        "lastMatchTime": "2023-10-07 02:00"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 277,
+        "teamName": "芬洛",
+        "lastMatchTime": "2023-09-16 02:00"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 1092,
+        "teamName": "FC埃因霍温",
+        "lastMatchTime": "2023-09-26 02:00"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 4073,
+        "teamName": "休斯敦迪纳摩",
+        "lastMatchTime": "2023-09-03 10:30"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 505,
+        "teamName": "莫尔德",
+        "lastMatchTime": "2023-07-29 23:59"
+      },
+      {
+        "leagueId": 25,
+        "leagueName": "日职联",
+        "teamId": 209,
+        "teamName": "柏太阳神",
+        "lastMatchTime": "2023-09-17 17:30"
+      },
+      {
+        "leagueId": 25,
+        "leagueName": "日职联",
+        "teamId": 1547,
+        "teamName": "福冈黄蜂",
+        "lastMatchTime": "2023-08-12 18:00"
+      },
+      {
+        "leagueId": 27,
+        "leagueName": "瑞士超",
+        "teamId": 1228,
+        "teamName": "伊韦尔东",
+        "lastMatchTime": "2023-10-01 20:15"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 111,
+        "teamName": "萨拉戈萨",
+        "lastMatchTime": "2023-09-11 00:30"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 131,
+        "teamName": "埃瓦尔",
+        "lastMatchTime": "2023-10-08 20:00"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 6250,
+        "teamName": "比利亚雷亚尔B队",
+        "lastMatchTime": "2023-10-10 03:00"
+      },
+      {
+        "leagueId": 34,
+        "leagueName": "意甲",
+        "teamId": 158,
+        "teamName": "莱切",
+        "lastMatchTime": "2023-09-23 02:45"
+      },
+      {
+        "leagueId": 34,
+        "leagueName": "意甲",
+        "teamId": 1359,
+        "teamName": "弗洛西诺尼",
+        "lastMatchTime": "2023-09-29 00:30"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 359,
+        "teamName": "斯托克港",
+        "lastMatchTime": "2023-10-04 02:45"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 1179,
+        "teamName": "阿克灵顿",
+        "lastMatchTime": "2023-10-25 02:45"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 1186,
+        "teamName": "克劳利",
+        "lastMatchTime": "2023-09-30 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 1193,
+        "teamName": "格林斯比",
+        "lastMatchTime": "2023-09-09 19:30"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 64,
+        "teamName": "卡迪夫城",
+        "lastMatchTime": "2023-09-30 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 344,
+        "teamName": "哈德斯菲尔德",
+        "lastMatchTime": "2023-09-30 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 1201,
+        "teamName": "牛津联队",
+        "lastMatchTime": "2023-10-07 19:30"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 1397,
+        "teamName": "科莫",
+        "lastMatchTime": "2023-10-01 22:15"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 2953,
+        "teamName": "苏迪路",
+        "lastMatchTime": "2023-09-23 20:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 3165,
+        "teamName": "山形山神",
+        "lastMatchTime": "2023-08-19 18:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 3194,
+        "teamName": "水户蜀葵",
+        "lastMatchTime": "2023-09-16 17:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 11943,
+        "teamName": "山口雷法",
+        "lastMatchTime": "2023-07-09 17:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 25121,
+        "teamName": "班迪特斯磐城",
+        "lastMatchTime": "2023-07-22 18:00"
+      }
+    ],
+    "6": [
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 349,
+        "teamName": "科林蒂安",
+        "lastMatchTime": "2023-08-20 08:00"
+      },
+      {
+        "leagueId": 8,
+        "leagueName": "德甲",
+        "teamId": 155,
+        "teamName": "斯图加特",
+        "lastMatchTime": "2023-10-21 21:30"
+      },
+      {
+        "leagueId": 9,
+        "leagueName": "德乙",
+        "teamId": 175,
+        "teamName": "凯泽斯劳滕",
+        "lastMatchTime": "2023-10-07 00:30"
+      },
+      {
+        "leagueId": 15,
+        "leagueName": "韩K联",
+        "teamId": 491,
+        "teamName": "大邱FC",
+        "lastMatchTime": "2023-09-30 15:30"
+      },
+      {
+        "leagueId": 15,
+        "leagueName": "韩K联",
+        "teamId": 16584,
+        "teamName": "光州FC",
+        "lastMatchTime": "2023-09-17 13:00"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 254,
+        "teamName": "埃因霍温",
+        "lastMatchTime": "2023-09-28 00:45"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 5555,
+        "teamName": "波特兰伐木者",
+        "lastMatchTime": "2023-10-01 10:40"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 16669,
+        "teamName": "奥兰多城",
+        "lastMatchTime": "2023-09-17 07:30"
+      },
+      {
+        "leagueId": 30,
+        "leagueName": "土超",
+        "teamId": 519,
+        "teamName": "开塞利体育",
+        "lastMatchTime": "2023-09-24 22:00"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 113,
+        "teamName": "希洪竞技",
+        "lastMatchTime": "2023-10-05 03:30"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 67,
+        "teamName": "克鲁",
+        "lastMatchTime": "2023-10-04 02:45"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 17,
+        "teamName": "米德尔斯堡",
+        "lastMatchTime": "2023-10-25 02:45"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 346,
+        "teamName": "维尔港",
+        "lastMatchTime": "2023-09-16 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 1381,
+        "teamName": "伯顿",
+        "lastMatchTime": "2023-10-21 22:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 199,
+        "teamName": "千叶市原",
+        "lastMatchTime": "2023-10-01 13:00"
+      }
+    ],
+    "7": [
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 360,
+        "teamName": "戈伊亚斯",
+        "lastMatchTime": "2023-10-03 07:00"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 3820,
+        "teamName": "巴甘蒂诺",
+        "lastMatchTime": "2023-10-23 05:30"
+      },
+      {
+        "leagueId": 6,
+        "leagueName": "波兰超",
+        "teamId": 2894,
+        "teamName": "史拉斯科",
+        "lastMatchTime": "2023-10-01 02:00"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 495,
+        "teamName": "维京",
+        "lastMatchTime": "2023-08-13 23:00"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 498,
+        "teamName": "布兰",
+        "lastMatchTime": "2023-10-21 23:59"
+      },
+      {
+        "leagueId": 26,
+        "leagueName": "瑞典超",
+        "teamId": 413,
+        "teamName": "哥德堡",
+        "lastMatchTime": "2023-10-01 23:30"
+      },
+      {
+        "leagueId": 30,
+        "leagueName": "土超",
+        "teamId": 5917,
+        "teamName": "哈塔斯堡",
+        "lastMatchTime": "2023-10-08 23:59"
+      },
+      {
+        "leagueId": 31,
+        "leagueName": "西甲",
+        "teamId": 982,
+        "teamName": "赫罗纳",
+        "lastMatchTime": "2023-09-28 01:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 55,
+        "teamName": "普雷斯顿",
+        "lastMatchTime": "2023-09-20 02:45"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 59,
+        "teamName": "莱斯特城",
+        "lastMatchTime": "2023-10-21 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 36,
+        "teamName": "朴茨茅斯",
+        "lastMatchTime": "2023-10-07 22:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 3196,
+        "teamName": "德岛漩涡",
+        "lastMatchTime": "2023-09-16 18:00"
+      }
+    ],
+    "8": [
+      {
+        "leagueId": 1,
+        "leagueName": "爱超",
+        "teamId": 315,
+        "teamName": "谢尔伯恩",
+        "lastMatchTime": "2023-09-26 02:45"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 456,
+        "teamName": "瓦斯科达伽马",
+        "lastMatchTime": "2023-09-26 07:00"
+      },
+      {
+        "leagueId": 8,
+        "leagueName": "德甲",
+        "teamId": 165,
+        "teamName": "勒沃库森",
+        "lastMatchTime": "2023-10-21 21:30"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 330,
+        "teamName": "拉瓦勒",
+        "lastMatchTime": "2023-10-07 21:00"
+      }
+    ],
     "9": [],
-    "10+": []
-  },
-  "homeSeasonSummaryW": {
-    "4": 1,
-    "5": 0,
-    "6": 0,
-    "7": 0,
-    "8": 0,
-    "9": 0,
-    "10+": 0
-  },
-  "homeSeasonSummaryL": {
-    "4": 0,
-    "5": 1,
-    "6": 0,
-    "7": 0,
-    "8": 0,
-    "9": 0,
-    "10+": 0
+    "10+": [
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 467,
+        "teamName": "博塔弗戈",
+        "lastMatchTime": "2023-08-28 03:00"
+      },
+      {
+        "leagueId": 13,
+        "leagueName": "芬超",
+        "teamId": 2226,
+        "teamName": "VPS瓦萨",
+        "lastMatchTime": "2023-09-22 23:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 1613,
+        "teamName": "群马草津温泉",
+        "lastMatchTime": "2023-09-03 18:00"
+      }
+    ]
   },
   "seasonSummaryL": {
     "3": [],
-    "4": [],
-    "5": [
+    "4": [
       {
-        "leagueName": "英超",
-        "teamName": "水晶宫",
+        "leagueId": 1,
+        "leagueName": "爱超",
+        "teamId": 177,
+        "teamName": "沙姆洛克流浪",
+        "lastMatchTime": "2023-08-12 02:45"
+      },
+      {
+        "leagueId": 1,
+        "leagueName": "爱超",
+        "teamId": 1251,
+        "teamName": "斯莱戈流浪",
+        "lastMatchTime": "2023-09-02 02:45"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 354,
+        "teamName": "克鲁塞罗",
+        "lastMatchTime": "2023-09-04 05:30"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 369,
+        "teamName": "巴西国际",
+        "lastMatchTime": "2023-08-20 03:00"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 456,
+        "teamName": "瓦斯科达伽马",
+        "lastMatchTime": "2023-07-30 05:30"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 467,
+        "teamName": "博塔弗戈",
+        "lastMatchTime": "2023-10-03 07:00"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 469,
+        "teamName": "弗鲁米嫩塞",
+        "lastMatchTime": "2023-10-23 05:30"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 13219,
+        "teamName": "米内罗美洲",
+        "lastMatchTime": "2023-08-20 05:30"
+      },
+      {
+        "leagueId": 5,
+        "leagueName": "比甲",
+        "teamId": 164,
+        "teamName": "色格拉布鲁日",
+        "lastMatchTime": "2023-09-30 02:45"
+      },
+      {
+        "leagueId": 6,
+        "leagueName": "波兰超",
+        "teamId": 1234,
+        "teamName": "什切青",
+        "lastMatchTime": "2023-09-03 21:00"
+      },
+      {
+        "leagueId": 6,
+        "leagueName": "波兰超",
+        "teamId": 2345,
+        "teamName": "拉多麦科",
+        "lastMatchTime": "2023-10-01 21:00"
+      },
+      {
+        "leagueId": 7,
+        "leagueName": "丹麦超",
+        "teamId": 226,
+        "teamName": "兰德斯",
+        "lastMatchTime": "2023-08-20 22:00"
+      },
+      {
+        "leagueId": 8,
+        "leagueName": "德甲",
+        "teamId": 423,
+        "teamName": "法兰克福",
+        "lastMatchTime": "2023-09-30 21:30"
+      },
+      {
+        "leagueId": 8,
+        "leagueName": "德甲",
+        "teamId": 490,
+        "teamName": "科隆",
+        "lastMatchTime": "2023-10-08 21:30"
+      },
+      {
+        "leagueId": 8,
+        "leagueName": "德甲",
+        "teamId": 1080,
+        "teamName": "达姆斯塔特",
+        "lastMatchTime": "2023-09-23 02:30"
+      },
+      {
+        "leagueId": 9,
+        "leagueName": "德乙",
+        "teamId": 151,
+        "teamName": "沙尔克04",
+        "lastMatchTime": "2023-10-22 19:30"
+      },
+      {
+        "leagueId": 9,
+        "leagueName": "德乙",
+        "teamId": 487,
+        "teamName": "卡尔斯鲁厄",
+        "lastMatchTime": "2023-09-30 19:00"
+      },
+      {
+        "leagueId": 9,
+        "leagueName": "德乙",
+        "teamId": 1121,
+        "teamName": "奥斯纳布鲁克",
+        "lastMatchTime": "2023-09-17 19:30"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 411,
+        "teamName": "莫斯科斯巴达",
+        "lastMatchTime": "2023-09-03 01:00"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 416,
+        "teamName": "莫斯科迪纳摩",
+        "lastMatchTime": "2023-10-08 21:30"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 2450,
+        "teamName": "乌拉尔",
+        "lastMatchTime": "2023-09-24 23:59"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 2465,
+        "teamName": "沃罗涅日火炬",
+        "lastMatchTime": "2023-08-13 22:30"
+      },
+      {
+        "leagueId": 11,
+        "leagueName": "法甲",
+        "teamId": 211,
+        "teamName": "马赛",
+        "lastMatchTime": "2023-10-01 03:00"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 245,
+        "teamName": "巴斯蒂亚",
+        "lastMatchTime": "2023-10-03 02:45"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 257,
+        "teamName": "卡昂",
+        "lastMatchTime": "2023-10-01 01:00"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 5012,
+        "teamName": "康卡纽",
+        "lastMatchTime": "2023-09-03 01:00"
+      },
+      {
+        "leagueId": 15,
+        "leagueName": "韩K联",
+        "teamId": 484,
+        "teamName": "全北现代",
+        "lastMatchTime": "2023-09-16 13:00"
+      },
+      {
+        "leagueId": 15,
+        "leagueName": "韩K联",
+        "teamId": 741,
+        "teamName": "FC首尔",
+        "lastMatchTime": "2023-08-19 18:30"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 235,
+        "teamName": "海伦芬",
+        "lastMatchTime": "2023-09-24 03:00"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 237,
+        "teamName": "乌德勒支",
+        "lastMatchTime": "2023-09-03 18:15"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 241,
+        "teamName": "瓦尔韦克",
+        "lastMatchTime": "2023-09-03 02:00"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 246,
+        "teamName": "维迪斯",
+        "lastMatchTime": "2023-09-24 18:15"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 414,
+        "teamName": "泽沃勒",
+        "lastMatchTime": "2023-10-08 18:15"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 415,
+        "teamName": "福伦丹",
+        "lastMatchTime": "2023-09-17 02:00"
+      },
+      {
+        "leagueId": 16,
+        "leagueName": "荷甲",
+        "teamId": 2596,
+        "teamName": "阿尔梅勒城",
+        "lastMatchTime": "2023-09-02 22:30"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 232,
+        "teamName": "布雷达",
+        "lastMatchTime": "2023-10-03 02:00"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 258,
+        "teamName": "邓伯什",
+        "lastMatchTime": "2023-09-10 00:45"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 290,
+        "teamName": "马斯特里赫特",
+        "lastMatchTime": "2023-10-03 02:00"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 314,
+        "teamName": "华盛顿联",
+        "lastMatchTime": "2023-08-27 07:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 319,
+        "teamName": "芝加哥火焰",
+        "lastMatchTime": "2023-09-03 07:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 326,
+        "teamName": "圣何塞地震",
+        "lastMatchTime": "2023-07-02 10:40"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 4073,
+        "teamName": "休斯敦迪纳摩",
+        "lastMatchTime": "2023-07-13 08:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 25012,
+        "teamName": "纳什威尔",
+        "lastMatchTime": "2023-08-27 07:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 36878,
+        "teamName": "洛杉矶FC",
+        "lastMatchTime": "2023-07-09 10:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 51741,
+        "teamName": "夏洛特FC",
+        "lastMatchTime": "2023-10-01 07:30"
+      },
+      {
+        "leagueId": 23,
+        "leagueName": "葡超",
+        "teamId": 466,
+        "teamName": "里斯本竞技",
+        "lastMatchTime": "2023-09-04 03:30"
+      },
+      {
+        "leagueId": 23,
+        "leagueName": "葡超",
+        "teamId": 486,
+        "teamName": "埃斯托里尔",
+        "lastMatchTime": "2023-10-02 01:00"
+      },
+      {
+        "leagueId": 25,
+        "leagueName": "日职联",
+        "teamId": 209,
+        "teamName": "柏太阳神",
+        "lastMatchTime": "2023-07-16 18:00"
+      },
+      {
+        "leagueId": 26,
+        "leagueName": "瑞典超",
+        "teamId": 421,
+        "teamName": "佐加顿斯",
+        "lastMatchTime": "2023-10-22 21:00"
+      },
+      {
+        "leagueId": 26,
+        "leagueName": "瑞典超",
+        "teamId": 424,
+        "teamName": "哈尔姆斯塔德",
+        "lastMatchTime": "2023-08-19 21:00"
+      },
+      {
+        "leagueId": 26,
+        "leagueName": "瑞典超",
+        "teamId": 1526,
+        "teamName": "布洛马波卡纳",
+        "lastMatchTime": "2023-09-23 23:30"
+      },
+      {
+        "leagueId": 26,
+        "leagueName": "瑞典超",
+        "teamId": 4242,
+        "teamName": "瓦尔贝里",
+        "lastMatchTime": "2023-08-29 01:00"
+      },
+      {
+        "leagueId": 27,
+        "leagueName": "瑞士超",
+        "teamId": 447,
+        "teamName": "塞尔维特",
+        "lastMatchTime": "2023-09-28 02:30"
+      },
+      {
+        "leagueId": 27,
+        "leagueName": "瑞士超",
+        "teamId": 2601,
+        "teamName": "洛桑",
+        "lastMatchTime": "2023-09-30 23:59"
+      },
+      {
+        "leagueId": 30,
+        "leagueName": "土超",
+        "teamId": 1665,
+        "teamName": "加斯安泰普",
+        "lastMatchTime": "2023-09-16 22:00"
+      },
+      {
+        "leagueId": 31,
+        "leagueName": "西甲",
+        "teamId": 84,
+        "teamName": "巴塞罗那",
+        "lastMatchTime": "2023-10-09 03:00"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 123,
+        "teamName": "瓦拉多利德",
+        "lastMatchTime": "2023-09-11 03:00"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 4142,
+        "teamName": "卡塔赫纳",
+        "lastMatchTime": "2023-10-06 03:30"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 14211,
+        "teamName": "亚摩勒比塔",
+        "lastMatchTime": "2023-10-16 00:30"
+      },
+      {
+        "leagueId": 33,
+        "leagueName": "西乙",
+        "teamId": 17830,
+        "teamName": "安道尔FC",
+        "lastMatchTime": "2023-10-10 01:00"
+      },
+      {
+        "leagueId": 34,
+        "leagueName": "意甲",
+        "teamId": 523,
+        "teamName": "恩波利",
+        "lastMatchTime": "2023-09-18 02:45"
+      },
+      {
+        "leagueId": 34,
+        "leagueName": "意甲",
+        "teamId": 558,
+        "teamName": "都灵",
+        "lastMatchTime": "2023-10-21 23:59"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 376,
+        "teamName": "科切斯特联",
+        "lastMatchTime": "2023-10-21 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 1199,
+        "teamName": "曼斯菲特",
+        "lastMatchTime": "2023-10-07 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 3427,
+        "teamName": "纽波特",
+        "lastMatchTime": "2023-09-30 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 3427,
+        "teamName": "纽波特",
+        "lastMatchTime": "2023-10-25 02:45"
+      },
+      {
         "leagueId": 36,
-        "teamId": 35,
-        "lastMatchTime": "2023-10-26 18:39:30"
+        "leagueName": "英超",
+        "teamId": 31,
+        "teamName": "埃弗顿",
+        "lastMatchTime": "2023-09-02 19:30"
+      },
+      {
+        "leagueId": 36,
+        "leagueName": "英超",
+        "teamId": 348,
+        "teamName": "伯恩茅斯",
+        "lastMatchTime": "2023-10-21 22:00"
+      },
+      {
+        "leagueId": 36,
+        "leagueName": "英超",
+        "teamId": 365,
+        "teamName": "布伦特福德",
+        "lastMatchTime": "2023-09-24 00:30"
+      },
+      {
+        "leagueId": 36,
+        "leagueName": "英超",
+        "teamId": 372,
+        "teamName": "卢顿",
+        "lastMatchTime": "2023-09-16 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 21,
+        "teamName": "布莱克本",
+        "lastMatchTime": "2023-10-05 02:45"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 53,
+        "teamName": "沃特福德",
+        "lastMatchTime": "2023-10-05 02:45"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 57,
+        "teamName": "考文垂",
+        "lastMatchTime": "2023-09-26 03:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 336,
+        "teamName": "谢周三",
+        "lastMatchTime": "2023-08-26 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 23,
+        "teamName": "查尔顿",
+        "lastMatchTime": "2023-08-26 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 61,
+        "teamName": "维冈竞技",
+        "lastMatchTime": "2023-10-07 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 346,
+        "teamName": "维尔港",
+        "lastMatchTime": "2023-10-07 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 353,
+        "teamName": "彼得堡联",
+        "lastMatchTime": "2023-09-16 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 1181,
+        "teamName": "卡利斯尔联",
+        "lastMatchTime": "2023-08-26 22:00"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 1187,
+        "teamName": "剑桥联",
+        "lastMatchTime": "2023-10-21 22:00"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 513,
+        "teamName": "巴里",
+        "lastMatchTime": "2023-10-21 20:00"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 551,
+        "teamName": "摩德纳",
+        "lastMatchTime": "2023-10-07 20:00"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 3609,
+        "teamName": "莱科",
+        "lastMatchTime": "2023-10-21 20:00"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 11259,
+        "teamName": "费拉尔皮沙洛",
+        "lastMatchTime": "2023-09-03 00:30"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 3193,
+        "teamName": "仙台维加泰",
+        "lastMatchTime": "2023-09-23 17:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 4904,
+        "teamName": "枥木SC",
+        "lastMatchTime": "2023-10-08 13:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 9025,
+        "teamName": "金泽",
+        "lastMatchTime": "2023-07-09 18:00"
       }
     ],
-    "6": [],
-    "7": [],
+    "5": [
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 453,
+        "teamName": "圣保罗",
+        "lastMatchTime": "2023-10-19 08:30"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 1973,
+        "teamName": "古亚巴",
+        "lastMatchTime": "2023-09-16 07:00"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 2001,
+        "teamName": "福塔雷萨",
+        "lastMatchTime": "2023-08-06 05:30"
+      },
+      {
+        "leagueId": 5,
+        "leagueName": "比甲",
+        "teamId": 118,
+        "teamName": "韦斯特鲁",
+        "lastMatchTime": "2023-08-26 22:00"
+      },
+      {
+        "leagueId": 5,
+        "leagueName": "比甲",
+        "teamId": 122,
+        "teamName": "沙勒罗瓦",
+        "lastMatchTime": "2023-10-01 19:30"
+      },
+      {
+        "leagueId": 5,
+        "leagueName": "比甲",
+        "teamId": 148,
+        "teamName": "布鲁日",
+        "lastMatchTime": "2023-10-21 22:00"
+      },
+      {
+        "leagueId": 7,
+        "leagueName": "丹麦超",
+        "teamId": 231,
+        "teamName": "洛斯查兰特",
+        "lastMatchTime": "2023-10-08 20:00"
+      },
+      {
+        "leagueId": 8,
+        "leagueName": "德甲",
+        "teamId": 162,
+        "teamName": "美因茨",
+        "lastMatchTime": "2023-09-30 21:30"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 2451,
+        "teamName": "索契",
+        "lastMatchTime": "2023-10-07 19:00"
+      },
+      {
+        "leagueId": 10,
+        "leagueName": "俄超",
+        "teamId": 4091,
+        "teamName": "巴蒂卡",
+        "lastMatchTime": "2023-09-17 02:15"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 5003,
+        "teamName": "USL敦刻尔克",
+        "lastMatchTime": "2023-10-22 01:00"
+      },
+      {
+        "leagueId": 13,
+        "leagueName": "芬超",
+        "teamId": 2228,
+        "teamName": "奥卢",
+        "lastMatchTime": "2023-09-03 21:00"
+      },
+      {
+        "leagueId": 15,
+        "leagueName": "韩K联",
+        "teamId": 499,
+        "teamName": "水原三星",
+        "lastMatchTime": "2023-09-30 18:00"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 288,
+        "teamName": "坎布尔",
+        "lastMatchTime": "2023-10-21 02:00"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 323,
+        "teamName": "科罗拉多急流",
+        "lastMatchTime": "2023-09-03 09:30"
+      },
+      {
+        "leagueId": 23,
+        "leagueName": "葡超",
+        "teamId": 999,
+        "teamName": "查维斯",
+        "lastMatchTime": "2023-09-19 03:15"
+      },
+      {
+        "leagueId": 25,
+        "leagueName": "日职联",
+        "teamId": 206,
+        "teamName": "广岛三箭",
+        "lastMatchTime": "2023-08-05 18:00"
+      },
+      {
+        "leagueId": 25,
+        "leagueName": "日职联",
+        "teamId": 1989,
+        "teamName": "川崎前锋",
+        "lastMatchTime": "2023-09-02 18:00"
+      },
+      {
+        "leagueId": 25,
+        "leagueName": "日职联",
+        "teamId": 3195,
+        "teamName": "札幌冈萨多",
+        "lastMatchTime": "2023-08-19 18:00"
+      },
+      {
+        "leagueId": 26,
+        "leagueName": "瑞典超",
+        "teamId": 1518,
+        "teamName": "赫根",
+        "lastMatchTime": "2023-09-24 23:30"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 363,
+        "teamName": "特兰米尔",
+        "lastMatchTime": "2023-09-16 22:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 11444,
+        "teamName": "索尔福德市",
+        "lastMatchTime": "2023-09-23 22:00"
+      },
+      {
+        "leagueId": 36,
+        "leagueName": "英超",
+        "teamId": 27,
+        "teamName": "曼彻斯特联",
+        "lastMatchTime": "2023-09-16 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 30,
+        "teamName": "南安普敦",
+        "lastMatchTime": "2023-09-23 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 32,
+        "teamName": "伯明翰",
+        "lastMatchTime": "2023-09-30 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 55,
+        "teamName": "普雷斯顿",
+        "lastMatchTime": "2023-10-21 19:30"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 58,
+        "teamName": "斯托克城",
+        "lastMatchTime": "2023-09-24 19:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 336,
+        "teamName": "谢周三",
+        "lastMatchTime": "2023-10-26 02:45"
+      }
+    ],
+    "6": [
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 343,
+        "teamName": "米内罗竞技",
+        "lastMatchTime": "2023-07-30 08:00"
+      },
+      {
+        "leagueId": 7,
+        "leagueName": "丹麦超",
+        "teamId": 1313,
+        "teamName": "维积利",
+        "lastMatchTime": "2023-08-29 01:00"
+      },
+      {
+        "leagueId": 11,
+        "leagueName": "法甲",
+        "teamId": 202,
+        "teamName": "朗斯",
+        "lastMatchTime": "2023-09-24 21:00"
+      },
+      {
+        "leagueId": 15,
+        "leagueName": "韩K联",
+        "teamId": 4075,
+        "teamName": "济州联队",
+        "lastMatchTime": "2023-08-06 18:30"
+      },
+      {
+        "leagueId": 15,
+        "leagueName": "韩K联",
+        "teamId": 4075,
+        "teamName": "济州联队",
+        "lastMatchTime": "2023-10-08 14:00"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 279,
+        "teamName": "特尔斯达",
+        "lastMatchTime": "2023-09-16 02:00"
+      },
+      {
+        "leagueId": 17,
+        "leagueName": "荷乙",
+        "teamId": 7214,
+        "teamName": "阿贾克斯青年队",
+        "lastMatchTime": "2023-09-30 02:00"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 5528,
+        "teamName": "明尼苏达联",
+        "lastMatchTime": "2023-10-05 10:55"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 475,
+        "teamName": "斯塔贝克",
+        "lastMatchTime": "2023-08-06 23:00"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 498,
+        "teamName": "布兰",
+        "lastMatchTime": "2023-07-30 23:00"
+      },
+      {
+        "leagueId": 22,
+        "leagueName": "挪超",
+        "teamId": 2255,
+        "teamName": "萨普斯堡",
+        "lastMatchTime": "2023-08-12 23:59"
+      },
+      {
+        "leagueId": 25,
+        "leagueName": "日职联",
+        "teamId": 181,
+        "teamName": "名古屋鲸八",
+        "lastMatchTime": "2023-09-30 18:00"
+      },
+      {
+        "leagueId": 31,
+        "leagueName": "西甲",
+        "teamId": 107,
+        "teamName": "比利亚雷亚尔",
+        "lastMatchTime": "2023-10-23 00:30"
+      },
+      {
+        "leagueId": 34,
+        "leagueName": "意甲",
+        "teamId": 183,
+        "teamName": "卡利亚里",
+        "lastMatchTime": "2023-10-08 23:59"
+      },
+      {
+        "leagueId": 34,
+        "leagueName": "意甲",
+        "teamId": 187,
+        "teamName": "乌迪内斯",
+        "lastMatchTime": "2023-10-24 00:30"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 334,
+        "teamName": "米尔顿凯恩斯",
+        "lastMatchTime": "2023-10-21 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 1194,
+        "teamName": "斯旺西",
+        "lastMatchTime": "2023-09-17 02:45"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 1202,
+        "teamName": "切尔滕汉姆",
+        "lastMatchTime": "2023-10-04 02:45"
+      },
+      {
+        "leagueId": 39,
+        "leagueName": "英甲",
+        "teamId": 3902,
+        "teamName": "弗利特伍德",
+        "lastMatchTime": "2023-09-16 22:00"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 1390,
+        "teamName": "斯佩齐亚",
+        "lastMatchTime": "2023-09-27 02:30"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 198,
+        "teamName": "磐田喜悦",
+        "lastMatchTime": "2023-10-07 13:00"
+      }
+    ],
+    "7": [
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 350,
+        "teamName": "科里蒂巴",
+        "lastMatchTime": "2023-09-22 06:00"
+      },
+      {
+        "leagueId": 4,
+        "leagueName": "巴西甲",
+        "teamId": 465,
+        "teamName": "帕尔梅拉斯",
+        "lastMatchTime": "2023-10-20 06:00"
+      },
+      {
+        "leagueId": 12,
+        "leagueName": "法乙",
+        "teamId": 15372,
+        "teamName": "克维伊",
+        "lastMatchTime": "2023-09-27 02:45"
+      },
+      {
+        "leagueId": 13,
+        "leagueName": "芬超",
+        "teamId": 2395,
+        "teamName": "埃尔维斯",
+        "lastMatchTime": "2023-08-13 21:00"
+      },
+      {
+        "leagueId": 13,
+        "leagueName": "芬超",
+        "teamId": 14654,
+        "teamName": "塞那乔其",
+        "lastMatchTime": "2023-09-24 22:30"
+      },
+      {
+        "leagueId": 21,
+        "leagueName": "美职业",
+        "teamId": 5345,
+        "teamName": "多伦多FC",
+        "lastMatchTime": "2023-08-27 07:40"
+      },
+      {
+        "leagueId": 23,
+        "leagueName": "葡超",
+        "teamId": 468,
+        "teamName": "波尔图",
+        "lastMatchTime": "2023-10-09 01:00"
+      },
+      {
+        "leagueId": 35,
+        "leagueName": "英乙",
+        "teamId": 1863,
+        "teamName": "瑟顿联",
+        "lastMatchTime": "2023-09-16 22:00"
+      },
+      {
+        "leagueId": 37,
+        "leagueName": "英冠",
+        "teamId": 17,
+        "teamName": "米德尔斯堡",
+        "lastMatchTime": "2023-09-20 03:00"
+      },
+      {
+        "leagueId": 40,
+        "leagueName": "意乙",
+        "teamId": 556,
+        "teamName": "特拉纳",
+        "lastMatchTime": "2023-09-27 02:30"
+      }
+    ],
     "8": [],
     "9": [],
-    "10+": []
-  },
-  "status": 0
+    "10+": [
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 3193,
+        "teamName": "仙台维加泰",
+        "lastMatchTime": "2023-08-13 18:00"
+      },
+      {
+        "leagueId": 284,
+        "leagueName": "日职乙",
+        "teamId": 7541,
+        "teamName": "熊本深红",
+        "lastMatchTime": "2023-09-10 17:00"
+      }
+    ]
+  }
 }
