@@ -71,10 +71,6 @@ const props = defineProps({
   teamsData: {
     type: Object,
     required: true
-  },
-  unFocusTeams: {
-    type: Array,
-    required: true
   }
 });
 const { minConsecutiveNumber, teamsData, unFocusTeams } = toRefs(props)
