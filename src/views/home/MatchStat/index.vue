@@ -108,8 +108,8 @@ const props = defineProps({
 const { curSeason, supportedSeason, homeSeasonSummaryW, homeSeasonSummaryL } = toRefs(props);
 
 // 调用：获取统计数据
-const api_fetchDetail = (senson = '2023-2024') => {
-  fetchDetail({ senson }).then((res) => {
+const api_fetchDetail = (season = '2023-2024') => {
+  fetchDetail({ season }).then((res) => {
     dialogData.value = res.data
   }).catch((error) => {
     console.log(error)
