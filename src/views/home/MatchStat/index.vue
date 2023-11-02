@@ -87,11 +87,10 @@
 </template>
 
 <script setup lang="ts" name="matchBlock">
-import { defineProps, ref, reactive, watch, computed } from 'vue';
-import data from '@/mock/detail'
+import { defineProps, ref, reactive, watch, computed, toRefs } from 'vue';
 
 import { fetchDetail } from '@/api';
-const { curSeason, supportedSeason, homeSeasonSummaryW, homeSeasonSummaryL } = defineProps({
+const props = defineProps({
   curSeason: {
     type: String,
   },
@@ -106,28 +105,30 @@ const { curSeason, supportedSeason, homeSeasonSummaryW, homeSeasonSummaryL } = d
   },
 });
 
+const { curSeason, supportedSeason, homeSeasonSummaryW, homeSeasonSummaryL } = toRefs(props);
+
 // 调用：获取统计数据
 const api_fetchDetail = (senson = '2023-2024') => {
   fetchDetail({ senson }).then((res) => {
-    console.log(res)
-    dialogData.value = data
+    dialogData.value = res.data
   }).catch((error) => {
     console.log(error)
   })
 }
 const detailDialogFlag = ref<boolean>(false);
-const dialogData = ref({});
+let dialogData = ref({});
 const handleLookDetail = () => {
   detailDialogFlag.value = true;
-  dialogData.value = data
   api_fetchDetail('2023-2024');
 }
 
-
-let changeSeasonName = computed(() => {
-  const length = supportedSeason.value.length
-  return !!length && supportedSeason.value[length - 1]
-})
+let changeSeasonName = ref('')
+watch(
+  () => props.supportedSeason,
+  () => {
+    changeSeasonName.value = supportedSeason.value[0]
+  }
+)
 
 const handleChangeSeason = () => {
   api_fetchDetail(changeSeasonName.value)
