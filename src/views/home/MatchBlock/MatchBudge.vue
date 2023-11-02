@@ -1,8 +1,9 @@
 
 <template>
-  <sup class="badge" v-if="(budgeIndex - minConsecutiveNumber) - 1 >= 0" :class="className">
-    {{ (budgeIndex - minConsecutiveNumber) <= nearFlagList.length ? nearFlagList[budgeIndex - minConsecutiveNumber - 1] :
-      nearFlagList[nearFlagList.length - 1] }} </sup>
+  <sup class="badge"
+    v-if="(budgeIndex - minConsecutiveNumber) - 1 >= 0 && budgeIndex - minConsecutiveNumber <= nearFlagList.length"
+    :class="className">
+    {{ nearFlagList[budgeIndex - minConsecutiveNumber - 1] }} </sup>
 </template>
 
 <script setup lang="ts" name="MatchStatus">

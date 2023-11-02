@@ -71,9 +71,13 @@ const props = defineProps({
   teamsData: {
     type: Object,
     required: true
+  },
+  unFocusTeams: {
+    type: Array,
+    required: true
   }
 });
-const { minConsecutiveNumber, teamsData } = toRefs(props)
+const { minConsecutiveNumber, teamsData, unFocusTeams } = toRefs(props)
 
 const handelSwitchFocus = (row) => {
   fetchRemoveFocus({
