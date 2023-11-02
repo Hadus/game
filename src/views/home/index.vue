@@ -2,9 +2,9 @@
   <div class="main-content scroll">
     <h3>{{ matchData.curSeason }}赛季 盘路分析
       <span>（需关注的比赛：24小时内将开始
-        <span>{{ focusMatchNum_24 }}</span>
+        <span class="alert-color">{{ focusMatchNum_24 }}</span>
         场， 1小时内将开始
-        <span class="alert-color">{{ focusMatchNum_1 }} </span> 场）
+        <span class="alert-color alert-animation">{{ focusMatchNum_1 }} </span> 场）
       </span>
     </h3>
     <!-- 设置 -->
@@ -350,10 +350,16 @@ provide('handelStatFocusMatch', handelStatFocusMatch);
   }
 }
 
+@alertColor: #f40;
+
 .alert-color {
-  animation: alertColor 1.2s ease-in-out infinite;
   font-weight: 500;
   font-size: 15px;
+  // color: @alertColor;
+}
+
+.alert-animation {
+  animation: alertColor 1.2s ease-in-out infinite;
 }
 
 @keyframes alertColor {
@@ -362,7 +368,7 @@ provide('handelStatFocusMatch', handelStatFocusMatch);
   }
 
   100% {
-    color: #f40;
+    color: @alertColor;
   }
 }
 </style>
