@@ -14,8 +14,7 @@
                   <match-budge :budgeIndex="row.matchDetails.length + 1" :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" isWin />
-                  <el-switch v-model="row.unfocusTeam" style="--el-switch-on-color: #13ce66; float:right"
-                    @change="handelSwitchFocus(row)" />
+                  <MatchFocus :focusFlag="!unFocusTeams.includes(row.teamId)" :teamId="row.teamId" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
                   <match-budge :budgeIndex="row.matchDetails.length - index"
@@ -39,8 +38,7 @@
                   <match-budge :budgeIndex="row.matchDetails.length + 1" :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
                   <match-status :nextMatchTimeStr="row.nextMatchTime" />
-                  <el-switch v-model="row.unfocusTeam" style="--el-switch-on-color: #13ce66; float:right"
-                    @change="handelSwitchFocus(row)" />
+                  <MatchFocus :focusFlag="!unFocusTeams.includes(row.teamId)" :teamId="row.teamId" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails">
                   <match-budge :budgeIndex="row.matchDetails.length - index"
@@ -60,6 +58,7 @@
 import { defineProps, ref, reactive, toRefs, computed } from 'vue';
 import MatchStatus from './MatchStatus.vue';
 import MatchBudge from './MatchBudge.vue';
+import MatchFocus from './MatchFocus.vue';
 
 import { fetchRemoveFocus } from '@/api';
 
@@ -71,9 +70,13 @@ const props = defineProps({
   teamsData: {
     type: Object,
     required: true
+  },
+  unFocusTeams: {
+    type: String,
+    required: true
   }
 });
-const { minConsecutiveNumber, teamsData, unFocusTeams } = toRefs(props)
+const { minConsecutiveNumber, teamsData } = toRefs(props)
 
 const handelSwitchFocus = (row) => {
   fetchRemoveFocus({
