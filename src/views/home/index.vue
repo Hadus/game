@@ -23,7 +23,8 @@
         上次同步：
         <el-tag>{{ matchData.lastUpdateTime }}</el-tag>
       </div>
-      <el-button type="primary" @click="handelSync()">数据同步</el-button>
+      <el-button type="primary" @click="handelSync()" v-if="!syncingFlag">数据同步</el-button>
+      <el-button type="primary" loading disabled v-else>正在同步</el-button>
     </div>
     <!-- 筛选 -->
     <div class="filter">
@@ -62,12 +63,12 @@ import { ElLoading, ElNotification } from 'element-plus';
 import MatchStatToday from './MatchStatToday.vue';
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
-import { fetchGetData, fetchSync } from '@/api';
+import { fetchGetData, fetchSync, fetchGetSyncStatus } from '@/api';
 
 let matchData = ref({});
 let leagueOptions = ref([]);
 // 调用：获取所有数据
-const handelFetchAllData = (num: string = '4') => {
+const handelFetchAllData = (num: string = '4', isSync = false) => {
   fetchGetData({ minConsecutiveNumber: num }).then((res) => {
     console.log(res)
     matchData.value = res.data;
@@ -81,8 +82,18 @@ const handelFetchAllData = (num: string = '4') => {
       });
     });
     leagueOptions.value = leagueOptions_temp.value;
+    if (isSync) {
+      ElNotification({
+        title: '数据同步完成',
+        message: '',
+        type: 'success',
+      });
+    }
   }).catch((error) => {
     console.log(error);
+    if (isSync) {
+      syncFail()
+    }
   });
 }
 handelFetchAllData();
@@ -96,26 +107,125 @@ const handelSwitchNum = (num: string = '4') => {
 };
 
 // 数据同步
-async function handelSync() {
-  const loading = ElLoading.service({
-    lock: true,
-    text: '数据同步中，请稍后...',
-    background: 'rgba(0, 0, 0, 0.7)',
-    customClass: 'loading'
+let syncingFlag = ref(false)
+const syncFail = () => {
+  ElNotification({
+    title: '数据同步失败',
+    message: '',
+    type: 'error',
   });
+  syncingFlag.value = true
+}
 
+async function handelSync() {
+  syncingFlag.value = true
+  const time = 15
+  let timer;
+
+  // 1. 点击按钮调用获取同步状态接口，查看请求状态
+  const res_firstFetchGetSyncStatus = await fetchGetSyncStatus()
+  try {
+    if (res_firstFetchGetSyncStatus.status != 200) {
+      throw {}
+    }
+    // 0 同步成功
+    // 1 正在同步
+    // -1 同步失败
+    // 2 正在同步(之前点击过同步)
+    const firstStatus = res_firstFetchGetSyncStatus.data.status
+    if (firstStatus == 1 || firstStatus == 2) {
+      // 2. 点击按钮调用同步接口，请求后台同步数据
+      fetchSync()
+      timer = setInterval(() => {
+        // 3. 每过 time 调用获取同步状态接口，查看请求状态
+        fetchGetSyncStatus().then((res) => {
+          console.log(res)
+          const { status } = res.data
+          switch (status) {
+            case -1:
+              syncFail()
+              timer = null
+              break;
+            case 0:
+              handelFetchAllData()
+              syncingFlag.value = false
+              timer = null
+              break;
+            case 1:
+              ElNotification({
+                title: '数据同步中',
+                message: '',
+                type: 'warning',
+              });
+              syncingFlag.value = true
+              break;
+            default:
+              syncFail()
+              timer = null
+              break;
+          }
+        }).catch((error) => {
+          console.log(error)
+          syncFail()
+          timer = null
+        })
+      }, time * 1000)
+    }
+  } catch (err) {
+    console.log(err)
+    syncFail()
+    timer = null
+  }
+
+  // 2. 每过 time 调用获取同步状态接口，查看请求状态
+  // const timer = setInterval(() => {
+  // 0 同步成功
+  // 1 正在同步
+  // -1 同步失败
+  // 2 正在同步(之前点击过同步)
+
+  // switch (resSyncStatus) {
+  //   case -1:
+  //     syncingFlag.value = true
+  //     break;
+  //   case 0:
+  //     syncingFlag.value = false
+  //     break;
+  //   case 1:
+  //     syncingFlag.value = true
+  //     break;
+  //   default:
+  //     syncingFlag.value = true
+  //     break;
+  // }
+  // }, time * 1000)
+
+  // 调用：数据同步
+  // if (res_sync.data.flag) {
+  //   // 重新获取数据
+  //   handelFetchAllData();
+  //   ElNotification({
+  //     title: '数据同步完成',
+  //     message: '时间：' + res_sync.data.time,
+  //     type: 'success',
+  //   });
+  // } else {
+  //   ElNotification({
+  //     title: '数据同步失败',
+  //     message: '',
+  //     type: 'error',
+  //   });
+  // }
+
+}
+
+async function handelSyncStatus() {
   try {
     // 调用：数据同步
-    const res_sync = await fetchSync();
-    if (res_sync.data.flag) {
-      // 重新获取数据
-      handelFetchAllData();
-      loading.close();
-      ElNotification({
-        title: '数据同步完成',
-        message: '时间：' + res_sync.data.time,
-        type: 'success',
-      });
+    const res_syncStatus = await fetchGetSyncStatus();
+    if (res_syncStatus.data.flag) {
+
+
     } else {
       throw {
 
@@ -123,12 +233,6 @@ async function handelSync() {
     }
   } catch (err) {
     console.log(err)
-    loading.close();
-    ElNotification({
-      title: '数据同步失败',
-      message: '',
-      type: 'error',
-    });
   }
 }
 /* 设置 end */

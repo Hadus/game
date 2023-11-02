@@ -22,6 +22,13 @@ export const fetchSync = () => {
     method: 'get',
   });
 };
+// 同步状态
+export const fetchGetSyncStatus = () => {
+  return request({
+    url: 'getSyncStatus',
+    method: 'get',
+  });
+};
 // 是否关注比赛
 export const fetchRemoveFocus = (data = {}) => {
   return request({
