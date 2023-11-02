@@ -51,7 +51,7 @@
     <!-- 表格 -->
     <div class="table">
       <match-block :minConsecutiveNumber="matchData.minConsecutiveNumber" :teamsData="teams"
-        v-for="(teams, index) in  matchData.data " :key="index" />
+        v-for="(teams, index) in  matchData.data" :key="index" />
     </div>
   </div>
 </template>

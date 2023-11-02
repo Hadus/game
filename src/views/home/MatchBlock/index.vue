@@ -5,7 +5,7 @@
       <div class="left">
         <h3>连赢</h3>
         <div>
-          <el-table class="match-table" :data="winList" border style="width: 100%">
+          <el-table class="match-table" :data="teamsData.matchesW" border style="width: 100%">
             <el-table-column prop="teamName" label="球队" width="160" />
             <el-table-column prop="consecutiveCount" label="连赢" width="70" />
             <el-table-column label="近期比赛">
@@ -30,7 +30,7 @@
       <div class="right">
         <h3>连输</h3>
         <div>
-          <el-table class="match-table" :data="loseList" border stripe style="width: 100%">
+          <el-table class="match-table" :data="teamsData.matchesL" border stripe style="width: 100%">
             <el-table-column prop="teamName" label="球队" width="160" />
             <el-table-column prop="consecutiveCount" label="连赢" width="70" />
             <el-table-column label="近期比赛">
@@ -57,13 +57,13 @@
 </template>
 
 <script setup lang="ts" name="matchBlock">
-import { defineProps, ref, reactive, computed } from 'vue';
+import { defineProps, ref, reactive, toRefs, computed } from 'vue';
 import MatchStatus from './MatchStatus.vue';
 import MatchBudge from './MatchBudge.vue';
 
 import { fetchRemoveFocus } from '@/api';
 
-const { minConsecutiveNumber, teamsData } = defineProps({
+const props = defineProps({
   minConsecutiveNumber: {
     type: String,
     required: true
@@ -73,7 +73,8 @@ const { minConsecutiveNumber, teamsData } = defineProps({
     required: true
   }
 });
-const { matchesW: winList, matchesL: loseList, unfocusTeam } = teamsData;
+const { minConsecutiveNumber, teamsData } = toRefs(props)
+
 const handelSwitchFocus = (row) => {
   fetchRemoveFocus({
     teamId: row.teamId,
