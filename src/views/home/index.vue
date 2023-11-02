@@ -23,7 +23,7 @@
         上次同步：
         <el-tag>{{ matchData.lastUpdateTime }}</el-tag>
       </div>
-      <el-button type="primary" @click="handelSync()" v-if="!syncingFlag">数据同步</el-button>
+      <el-button type="primary" :icon="Refresh" @click="handelSync()" v-if="!syncingFlag">数据同步</el-button>
       <el-button type="primary" loading disabled v-else>正在同步</el-button>
     </div>
     <!-- 筛选 -->
@@ -60,6 +60,8 @@
 <script setup lang="ts" name="home">
 import { onMounted, ref, reactive, provide, computed } from 'vue';
 import { ElLoading, ElNotification } from 'element-plus';
+import { Refresh } from '@element-plus/icons-vue';
+
 import MatchStatToday from './MatchStatToday.vue';
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
@@ -70,7 +72,7 @@ let leagueOptions = ref([]);
 // 调用：获取所有数据
 const handelFetchAllData = (num: string = '4', isSync = false) => {
   fetchGetData({ minConsecutiveNumber: num }).then((res) => {
-    console.log(res)
+    console.log(res.data)
     matchData.value = res.data;
     const matchDataList = matchData.value.data;
     const leagueOptions_temp = computed(() => {
@@ -84,7 +86,7 @@ const handelFetchAllData = (num: string = '4', isSync = false) => {
     leagueOptions.value = leagueOptions_temp.value;
     if (isSync) {
       ElNotification({
-        title: '数据同步完成',
+        title: '数据同步成功！',
         message: '',
         type: 'success',
       });
@@ -110,113 +112,86 @@ const handelSwitchNum = (num: string = '4') => {
 let syncingFlag = ref(false)
 const syncFail = () => {
   ElNotification({
-    title: '数据同步失败',
+    title: '数据同步失败，请稍后重试...',
     message: '',
     type: 'error',
   });
   syncingFlag.value = true
 }
 
+const clearTimer = (timer) => {
+  clearInterval(timer)
+  timer = null
+}
+
 async function handelSync() {
   syncingFlag.value = true
-  const time = 15
-  let timer;
+  const time = 5
+  var timer = {};
 
   // 1. 点击按钮调用获取同步状态接口，查看请求状态
   const res_firstFetchGetSyncStatus = await fetchGetSyncStatus()
+  // console.log('1. 获取当前同步状态', res_firstFetchGetSyncStatus.data)
   try {
     if (res_firstFetchGetSyncStatus.status != 200) {
+      syncFail()
+      clearTimer(timer)
       throw {}
     }
+    // -1 同步失败
     // 0 同步成功
     // 1 正在同步
-    // -1 同步失败
     // 2 正在同步(之前点击过同步)
     const firstStatus = res_firstFetchGetSyncStatus.data.status
-    if (firstStatus == 1 || firstStatus == 2) {
+    if (firstStatus == 0 || firstStatus == -1) { // 可以请求同步
       // 2. 点击按钮调用同步接口，请求后台同步数据
+      // console.log('2. 请求同步')
       fetchSync()
-      timer = setInterval(() => {
-        // 3. 每过 time 调用获取同步状态接口，查看请求状态
-        fetchGetSyncStatus().then((res) => {
-          console.log(res)
-          const { status } = res.data
-          switch (status) {
-            case -1:
-              syncFail()
-              timer = null
-              break;
-            case 0:
-              handelFetchAllData()
-              syncingFlag.value = false
-              timer = null
-              break;
-            case 1:
-              ElNotification({
-                title: '数据同步中',
-                message: '',
-                type: 'warning',
-              });
-              syncingFlag.value = true
-              break;
-            default:
-              syncFail()
-              timer = null
-              break;
-          }
-        }).catch((error) => {
-          console.log(error)
-          syncFail()
-          timer = null
-        })
-      }, time * 1000)
+    } else if (firstStatus == 1 || firstStatus == 2) { // 同步中，不能请求同步
+      ElNotification({
+        title: res_firstFetchGetSyncStatus.data.msg,
+        message: '',
+        type: 'warning',
+      });
     }
+
+    timer = setInterval(() => {
+      // timer = setTimeout(() => {
+      // console.log('3. 进入循环')
+      // 4. 每过 time 调用获取同步状态接口，查看请求状态
+      fetchGetSyncStatus().then((res) => {
+        console.log('4. 定时获取同步状态', res.data)
+        const { status } = res.data
+        switch (status) {
+          case -1:
+            syncFail()
+            clearTimer(timer)
+            break;
+          case 0:
+            handelFetchAllData()
+            syncingFlag.value = false
+            clearTimer(timer)
+            break;
+          case 1:
+            break;
+          case 2:
+            break;
+          default:
+            syncFail()
+            clearTimer(timer)
+            break;
+        }
+      }).catch((error) => {
+        console.log(error)
+        syncFail()
+        clearTimer(timer)
+      })
+    }, time * 1000)
   } catch (err) {
     console.log(err)
     syncFail()
-    timer = null
+    clearTimer(timer)
   }
-
-  // 2. 每过 time 调用获取同步状态接口，查看请求状态
-  // const timer = setInterval(() => {
-  // 0 同步成功
-  // 1 正在同步
-  // -1 同步失败
-  // 2 正在同步(之前点击过同步)
-
-  // switch (resSyncStatus) {
-  //   case -1:
-  //     syncingFlag.value = true
-  //     break;
-  //   case 0:
-  //     syncingFlag.value = false
-  //     break;
-  //   case 1:
-  //     syncingFlag.value = true
-  //     break;
-  //   default:
-  //     syncingFlag.value = true
-  //     break;
-  // }
-  // }, time * 1000)
-
-  // 调用：数据同步
-  // if (res_sync.data.flag) {
-  //   // 重新获取数据
-  //   handelFetchAllData();
-  //   ElNotification({
-  //     title: '数据同步完成',
-  //     message: '时间：' + res_sync.data.time,
-  //     type: 'success',
-  //   });
-  // } else {
-  //   ElNotification({
-  //     title: '数据同步失败',
-  //     message: '',
-  //     type: 'error',
-  //   });
-  // }
-
 }
 
 async function handelSyncStatus() {
