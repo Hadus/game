@@ -46,8 +46,8 @@
     </div>
     <!-- 统计 -->
     <div class="stat">
-      <MatchStat :curSeason="matchData.curSeason" :homeSeasonSummaryW="matchData.homeSeasonSummaryW"
-        :homeSeasonSummaryL="matchData.homeSeasonSummaryL" :supportedSeason="matchData.supportedSeason" />
+      <MatchStat :curSeason="matchData.curSeason" :supportedSeason="matchData.supportedSeason"
+        :homeSeasonSummaryW="homeSeasonSummaryW" :homeSeasonSummaryL="homeSeasonSummaryL" />
     </div>
     <!-- 表格 -->
     <div class="table">
@@ -71,6 +71,8 @@ import { fetchGetData, fetchSync, fetchGetSyncStatus } from '@/api';
 const matchBlockKey = ref(1)
 let matchData = ref({});
 let leagueOptions = ref([]);
+const homeSeasonSummaryW = reactive([])
+const homeSeasonSummaryL = reactive([])
 
 // 需要关注的比赛场次
 const homeStore = useHomeStore()
@@ -91,6 +93,8 @@ const handelFetchAllData = (num: string = '4', isSync = false) => {
     console.log(res.data)
     matchData.value = res.data;
     const matchDataList = matchData.value.data;
+    homeSeasonSummaryW[0] = res.data.homeSeasonSummaryW
+    homeSeasonSummaryL[0] = res.data.homeSeasonSummaryL
     homeStore.handelSetUnFocusTeam(matchData.value.unFocusTeams)
 
     const leagueOptions_temp = computed(() => {

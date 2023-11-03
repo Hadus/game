@@ -7,18 +7,18 @@
       <div class="left">
         <h3>累计连赢</h3>
         <div>
-          <el-table class="stat-table" :data="[homeSeasonSummaryW]" border style="width: 100%">
-            <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW" :key="key"
-              align="center" />
+          <el-table class="stat-table" :data="homeSeasonSummaryW" border style="width: 100%">
+            <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW[0]"
+              :key="key" align="center" />
           </el-table>
         </div>
       </div>
       <div class="right">
         <h3>累计连输</h3>
         <div>
-          <el-table class="stat-table" :data="[homeSeasonSummaryL]" border style="width: 100%">
-            <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL" :key="key"
-              align="center" />
+          <el-table class="stat-table" :data="homeSeasonSummaryL" border style="width: 100%">
+            <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL[0]"
+              :key="key" align="center" />
           </el-table>
         </div>
       </div>
@@ -38,21 +38,18 @@
         <div class="left">
           <h3>累计连赢</h3>
           <div>
-            <el-table class="stat-table" :data="[homeSeasonSummaryW]" border style="width: 100%">
-              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW"
-                :key="key" align="center" />
-            </el-table>
-            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryW]" border style="width: 100%"
-              :show-header="false">
-              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW"
+            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryW]" border style="width: 100%">
+              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW[0]"
                 :key="key" align="center">
                 <template #default="{ row }">
-                  <p v-for="(item_inner, index) in row[key]" class="item-inner">
-                    <span class="game-time">
-                      <el-tag size="small" type="info" effect="plain">{{ item_inner.lastMatchTime }}</el-tag>
-                    </span>
-                    {{ item_inner.leagueName + '-' + item_inner.teamName }}
-                  </p>
+                  <div v-if="row && row[key]">
+                    <p v-for="(item_inner, index) in row[key]" class="item-inner">
+                      <span class="game-time">
+                        <el-tag size="small" type="info" effect="plain">{{ item_inner.lastMatchTime }}</el-tag>
+                      </span>
+                      {{ item_inner.leagueName + '-' + item_inner.teamName }}
+                    </p>
+                  </div>
                 </template>
               </el-table-column>
             </el-table>
@@ -61,21 +58,18 @@
         <div class="right">
           <h3>累计连输</h3>
           <div>
-            <el-table class="stat-table" :data="[homeSeasonSummaryL]" border style="width: 100%">
-              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL"
-                :key="key" align="center" />
-            </el-table>
-            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryL]" border style="width: 100%"
-              :show-header="false">
-              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL"
+            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryL]" border style="width: 100%">
+              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL[0]"
                 :key="key" align="center">
                 <template #default="{ row }">
-                  <p v-for="(item_inner, index) in row[key]" class="item-inner">
-                    <span class="game-time">
-                      <el-tag size="small" type="info" effect="plain">{{ item_inner.lastMatchTime }}</el-tag>
-                    </span>
-                    {{ item_inner.leagueName + '-' + item_inner.teamName }}
-                  </p>
+                  <div v-if="row && row[key]">
+                    <p v-for="(item_inner, index) in row[key]" class="item-inner">
+                      <span class="game-time">
+                        <el-tag size="small" type="info" effect="plain">{{ item_inner.lastMatchTime }}</el-tag>
+                      </span>
+                      {{ item_inner.leagueName + '-' + item_inner.teamName }}
+                    </p>
+                  </div>
                 </template>
               </el-table-column>
             </el-table>
@@ -87,7 +81,7 @@
 </template>
 
 <script setup lang="ts" name="matchBlock">
-import { defineProps, ref, reactive, watch, computed, toRefs } from 'vue';
+import { defineProps, ref, reactive, watch, computed, toRefs, toRef } from 'vue';
 
 import { fetchDetail } from '@/api';
 const props = defineProps({
@@ -98,10 +92,10 @@ const props = defineProps({
     type: Array,
   },
   homeSeasonSummaryW: {
-    type: Object,
+    type: Array,
   },
   homeSeasonSummaryL: {
-    type: Object,
+    type: Array,
   },
 });
 
@@ -211,8 +205,6 @@ const handleChangeSeason = () => {
 }
 
 .stat-table-team {
-  border-top: 0 none;
-
   p {
     padding-left: 0 !important;
     // border-bottom: @border;

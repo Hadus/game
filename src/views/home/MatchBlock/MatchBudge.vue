@@ -30,8 +30,6 @@ const className = computed(() => {
   return 'color' + (budgeIndex);
 })
 
-onMounted(() => {
-})
 </script>
 <style lang="less" scoped>
 @width: 18px;
