@@ -2,9 +2,9 @@
   <div class="main-content scroll">
     <h3>{{ matchData.curSeason }}赛季 盘路分析
       <span>（需关注的比赛：24小时内将开始
-        <span class="alert-color">{{ focusMatchNum_24 }}</span>
+        <span class="alert-color">{{ homeStore.focusMatch.focusMatchList_24.length }}</span>
         场， 1小时内将开始
-        <span class="alert-color alert-animation">{{ focusMatchNum_1 }} </span> 场）
+        <span class="alert-color alert-animation">{{ homeStore.focusMatch.focusMatchList_1.length }} </span> 场）
       </span>
     </h3>
     <!-- 设置 -->
@@ -61,6 +61,7 @@
 import { onMounted, ref, reactive, provide, computed } from 'vue';
 import { ElLoading, ElNotification } from 'element-plus';
 import { Refresh } from '@element-plus/icons-vue';
+import { useHomeStore } from '@/store/home';
 
 import MatchStatToday from './MatchStatToday.vue';
 import MatchStat from './MatchStat';
@@ -72,7 +73,7 @@ let matchData = ref({});
 let leagueOptions = ref([]);
 
 // 需要关注的比赛场次
-let focusMatchNum_24 = ref<number>(0);
+const homeStore = useHomeStore()
 let focusMatchNum_1 = ref<number>(0);
 
 // 计算连赢和连输队伍数量
@@ -81,14 +82,17 @@ let loseTeam = ref<number>(0);
 // 调用：获取所有数据
 const handelFetchAllData = (num: string = '4', isSync = false) => {
   fetchGetData({ minConsecutiveNumber: num }).then((res) => {
-    focusMatchNum_24.value = 0
-    focusMatchNum_1.value = 0
     winTeam.value = 0
     loseTeam.value = 0
+    homeStore.handleClearMatch()
+    homeStore.handelSetUnFocusTeam('')
+
     matchBlockKey.value++;
     console.log(res.data)
     matchData.value = res.data;
     const matchDataList = matchData.value.data;
+    homeStore.handelSetUnFocusTeam(matchData.value.unFocusTeams)
+
     const leagueOptions_temp = computed(() => {
       return matchDataList.map((ele, index) => {
         return {
@@ -248,15 +252,7 @@ const handelStatMatchTeam = (winTeamLength, loseTeamLength) => {
   winTeam.value += winTeamLength;
   loseTeam.value += loseTeamLength;
 }
-// 计算需要关注的比赛场次
-const handelStatFocusMatch = (startHour: number) => {
-  focusMatchNum_24.value++;
-  if (startHour === 1) {
-    focusMatchNum_1.value++;
-  }
-}
 provide('handelStatMatchTeam', handelStatMatchTeam);
-provide('handelStatFocusMatch', handelStatFocusMatch);
 </script>
 <style lang="less" scoped>
 // 变量

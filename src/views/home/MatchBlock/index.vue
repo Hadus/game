@@ -13,7 +13,7 @@
                 <p class="match-item" v-if="row.nextMatchTime">
                   <match-budge :budgeIndex="row.matchDetails.length + 1" :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
-                  <match-status :nextMatchTimeStr="row.nextMatchTime" isWin />
+                  <match-status :nextMatchTimeStr="row.nextMatchTime" isWin :teamId="row.teamId" />
                   <MatchFocus :focusFlag="!unFocusTeams.includes(row.teamId)" :teamId="row.teamId" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails" :key="index">
@@ -37,7 +37,7 @@
                 <p class="match-item" v-if="row.nextMatchTime">
                   <match-budge :budgeIndex="row.matchDetails.length + 1" :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ row.nextMatchTime + ' | ' + row.nextMatchInfo }}
-                  <match-status :nextMatchTimeStr="row.nextMatchTime" />
+                  <match-status :nextMatchTimeStr="row.nextMatchTime" :teamId="row.teamId" />
                   <MatchFocus :focusFlag="!unFocusTeams.includes(row.teamId)" :teamId="row.teamId" />
                 </p>
                 <p class="match-item" v-for="(match, index) in row.matchDetails" :key="index">

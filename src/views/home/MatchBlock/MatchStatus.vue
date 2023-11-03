@@ -6,7 +6,10 @@
 
 <script setup lang="ts" name="MatchStatus">
 import { defineProps, ref, inject } from 'vue';
-const { nextMatchTimeStr, isWin } = defineProps({
+import { useHomeStore } from '@/store/home';
+const homeStore = useHomeStore()
+
+const { nextMatchTimeStr, isWin, teamId } = defineProps({
   nextMatchTimeStr: {
     type: String,
     required: true
@@ -14,11 +17,12 @@ const { nextMatchTimeStr, isWin } = defineProps({
   isWin: {
     type: Boolean,
     required: false
-  }
+  },
+  teamId: {
+    type: Number,
+    required: true
+  },
 });
-// 计算需要关注的队伍
-const handelStatFocusMatch = inject<Function>('handelStatFocusMatch');
-
 
 let className = ref('');
 let matchStatus = ref('');
@@ -33,11 +37,11 @@ if (gap <= 0) {
 } else if (gapHours <= 1) {
   className.value = 'pending warning';
   matchStatus.value = '预警中';
-  handelStatFocusMatch(1, isWin);
+  homeStore.handleAddFocusMatch(1, teamId)
 } else if (gapHours <= 24) {
   className.value = 'pending';
   matchStatus.value = '即将开赛';
-  handelStatFocusMatch(24, isWin);
+  homeStore.handleAddFocusMatch(24, teamId)
 } else if (gapHours > 24) {
   className.value = 'next';
   matchStatus.value = '下场比赛';
