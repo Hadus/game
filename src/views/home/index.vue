@@ -52,7 +52,7 @@
     <!-- 表格 -->
     <div class="table">
       <match-block :minConsecutiveNumber="matchData.minConsecutiveNumber" :unFocusTeams="matchData.unFocusTeams"
-        :teamsData="teams" v-for="(teams, index) in  matchData.data" :key="index" />
+        :teamsData="teams" v-for="(teams, index) in  matchData.data" :key="matchBlockKey + '' + index" />
     </div>
   </div>
 </template>
@@ -66,12 +66,26 @@ import MatchStatToday from './MatchStatToday.vue';
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
 import { fetchGetData, fetchSync, fetchGetSyncStatus } from '@/api';
-
+// 强制刷新
+const matchBlockKey = ref(1)
 let matchData = ref({});
 let leagueOptions = ref([]);
+
+// 需要关注的比赛场次
+let focusMatchNum_24 = ref<number>(0);
+let focusMatchNum_1 = ref<number>(0);
+
+// 计算连赢和连输队伍数量
+let winTeam = ref<number>(0);
+let loseTeam = ref<number>(0);
 // 调用：获取所有数据
 const handelFetchAllData = (num: string = '4', isSync = false) => {
   fetchGetData({ minConsecutiveNumber: num }).then((res) => {
+    focusMatchNum_24.value = 0
+    focusMatchNum_1.value = 0
+    winTeam.value = 0
+    loseTeam.value = 0
+    matchBlockKey.value++;
     console.log(res.data)
     matchData.value = res.data;
     const matchDataList = matchData.value.data;
@@ -193,23 +207,6 @@ async function handelSync() {
     clearTimer(timer)
   }
 }
-
-async function handelSyncStatus() {
-  try {
-    // 调用：数据同步
-    const res_syncStatus = await fetchGetSyncStatus();
-    if (res_syncStatus.data.flag) {
-
-
-    } else {
-      throw {
-
-      }
-    }
-  } catch (err) {
-    console.log(err)
-  }
-}
 /* 设置 end */
 
 /* 筛选 start */
@@ -236,10 +233,6 @@ const handleChangeLeagueName = (league: object) => {
 }
 /* 筛选 end */
 
-// 需要关注的比赛场次
-let focusMatchNum_24 = ref<number>(0);
-let focusMatchNum_1 = ref<number>(0);
-
 // audio
 const audio = new Audio('/audio/preview.mp3');
 const audioPlay = () => {
@@ -251,19 +244,17 @@ const audioClose = () => {
 
 // provide 给 MatchStatus 调用
 // 计算连赢和连输队伍数量
-let winTeam = ref<number>(0);
-let loseTeam = ref<number>(0);
-const handelStatMatchTeam = (isWin: boolean) => {
-  isWin ? winTeam.value++ : loseTeam.value++;
+const handelStatMatchTeam = (winTeamLength, loseTeamLength) => {
+  winTeam.value += winTeamLength;
+  loseTeam.value += loseTeamLength;
 }
 // 计算需要关注的比赛场次
-const handelStatFocusMatch = (startHour: number,) => {
+const handelStatFocusMatch = (startHour: number) => {
   focusMatchNum_24.value++;
   if (startHour === 1) {
     focusMatchNum_1.value++;
   }
 }
-
 provide('handelStatMatchTeam', handelStatMatchTeam);
 provide('handelStatFocusMatch', handelStatFocusMatch);
 </script>

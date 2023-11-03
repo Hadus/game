@@ -16,7 +16,7 @@
                   <match-status :nextMatchTimeStr="row.nextMatchTime" isWin />
                   <MatchFocus :focusFlag="!unFocusTeams.includes(row.teamId)" :teamId="row.teamId" />
                 </p>
-                <p class="match-item" v-for="(match, index) in row.matchDetails">
+                <p class="match-item" v-for="(match, index) in row.matchDetails" :key="index">
                   <match-budge :budgeIndex="row.matchDetails.length - index"
                     :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ match }}
@@ -40,7 +40,7 @@
                   <match-status :nextMatchTimeStr="row.nextMatchTime" />
                   <MatchFocus :focusFlag="!unFocusTeams.includes(row.teamId)" :teamId="row.teamId" />
                 </p>
-                <p class="match-item" v-for="(match, index) in row.matchDetails">
+                <p class="match-item" v-for="(match, index) in row.matchDetails" :key="index">
                   <match-budge :budgeIndex="row.matchDetails.length - index"
                     :minConsecutiveNumber="minConsecutiveNumber" />
                   {{ match }}
@@ -55,13 +55,10 @@
 </template>
 
 <script setup lang="ts" name="matchBlock">
-import { defineProps, ref, reactive, toRefs, computed } from 'vue';
+import { defineProps, ref, reactive, toRefs, inject } from 'vue';
 import MatchStatus from './MatchStatus.vue';
 import MatchBudge from './MatchBudge.vue';
 import MatchFocus from './MatchFocus.vue';
-
-import { fetchRemoveFocus } from '@/api';
-
 const props = defineProps({
   minConsecutiveNumber: {
     type: String,
@@ -74,21 +71,12 @@ const props = defineProps({
   unFocusTeams: {
     type: String,
     required: true
-  }
+  },
 });
 const { minConsecutiveNumber, teamsData } = toRefs(props)
+const handelStatMatchTeam = inject<Function>('handelStatMatchTeam');
+handelStatMatchTeam(teamsData.value.matchesW.length, teamsData.value.matchesL.length)
 
-const handelSwitchFocus = (row) => {
-  fetchRemoveFocus({
-    teamId: row.teamId,
-    unfocusTeam: row.unfocusTeam
-  }).then((res) => {
-    console.log(res);
-  }).catch((error) => {
-    row.unfocusTeam = !row.unfocusTeam;
-    console.log(error);
-  });
-}
 </script>
 <style lang="less" scoped>
 // 变量
