@@ -38,7 +38,12 @@
         <div class="left">
           <h3>累计连赢</h3>
           <div>
-            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryW]" border style="width: 100%">
+            <el-table class="stat-table" :data="dialog_homeSeasonSummaryW" border style="width: 100%">
+              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW[0]"
+                :key="key" align="center" />
+            </el-table>
+            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryW]" border style="width: 100%"
+              :show-header="false">
               <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryW[0]"
                 :key="key" align="center">
                 <template #default="{ row }">
@@ -58,7 +63,12 @@
         <div class="right">
           <h3>累计连输</h3>
           <div>
-            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryL]" border style="width: 100%">
+            <el-table class="stat-table" :data="dialog_homeSeasonSummaryL" border style="width: 100%">
+              <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL[0]"
+                :key="key" align="center" />
+            </el-table>
+            <el-table class="stat-table stat-table-team" :data="[dialogData.seasonSummaryL]" border style="width: 100%"
+              :show-header="false">
               <el-table-column :prop="key" :label="`${key} 场`" v-for="(item, key, index) in  homeSeasonSummaryL[0]"
                 :key="key" align="center">
                 <template #default="{ row }">
@@ -105,12 +115,16 @@ const { curSeason, supportedSeason, homeSeasonSummaryW, homeSeasonSummaryL } = t
 const api_fetchDetail = (season = '2023-2024') => {
   fetchDetail({ season }).then((res) => {
     dialogData.value = res.data
+    dialog_homeSeasonSummaryW.value[0] = res.data.homeSeasonSummaryW
+    dialog_homeSeasonSummaryL.value[0] = res.data.homeSeasonSummaryL
   }).catch((error) => {
     console.log(error)
   })
 }
 const detailDialogFlag = ref<boolean>(false);
 let dialogData = ref({});
+const dialog_homeSeasonSummaryW = ref([])
+const dialog_homeSeasonSummaryL = ref([])
 const handleLookDetail = () => {
   detailDialogFlag.value = true;
   api_fetchDetail('2023-2024');
@@ -205,6 +219,8 @@ const handleChangeSeason = () => {
 }
 
 .stat-table-team {
+  border-top: 0 none;
+
   p {
     padding-left: 0 !important;
     // border-bottom: @border;
