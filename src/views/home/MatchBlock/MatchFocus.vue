@@ -27,7 +27,6 @@ const handelSwitchFocus = (focusFlag) => {
     teamId: teamId,
     unfocusTeam: !focusFlag
   }).then((res) => {
-    console.log(res);
     home.handleSwitchFocusMatch(teamId, focusFlag)
   }).catch((error) => {
     focusFlag.value = !focusFlag.value;

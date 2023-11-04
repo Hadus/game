@@ -35,7 +35,7 @@ if (gap <= 0) {
   className.value = 'going';
   matchStatus.value = '比赛中';
 } else if (gapHours <= 1) {
-  className.value = 'pending warning';
+  className.value = homeStore.unFocusTeams.includes(teamId) ? 'pending' : 'pending warning'
   matchStatus.value = '预警中';
   homeStore.handleAddFocusMatch(1, teamId)
 } else if (gapHours <= 24) {

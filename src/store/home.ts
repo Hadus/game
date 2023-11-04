@@ -22,7 +22,8 @@ export const useHomeStore = defineStore('user', {
     handleAddFocusMatch(hour: Boolean, teamId: number, focusFlag: boolean) {
       const list = this.focusMatch['focusMatchList_' + hour]
       const includsIndex = list.indexOf(teamId);
-      const isUnfocus = this.unFocusTeams.includes(teamId)
+      let isUnfocus = true
+      // isUnfocus =  this.unFocusTeams.includes(teamId)
       if (includsIndex != -1 || isUnfocus) return;
       list.push(teamId)
     },
