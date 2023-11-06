@@ -76,7 +76,6 @@ const homeSeasonSummaryL = reactive([])
 
 // 需要关注的比赛场次
 const homeStore = useHomeStore()
-let focusMatchNum_1 = ref<number>(0);
 
 // 计算连赢和连输队伍数量
 let winTeam = ref<number>(0);
@@ -220,7 +219,7 @@ async function handelSync() {
 /* 筛选 start */
 let alertFlag = ref(false)
 const handleSwitchAlert = function () {
-  !!focusMatchNum_1.value && (!!alertFlag.value ? audioPlay() : audioClose());
+  homeStore.focusMatch.focusMatchList_1.length && (!!alertFlag.value ? audioPlay() : audioClose());
 }
 // 切换联赛
 let league = ref({});
@@ -243,7 +242,9 @@ const handleChangeLeagueName = (league: object) => {
 
 // audio
 const audio = new Audio('/audio/preview.mp3');
+audio.loop = true;
 const audioPlay = () => {
+  audio.currentTime = 0;
   audio.play();
 }
 const audioClose = () => {

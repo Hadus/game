@@ -2,7 +2,7 @@
   "status": 0,
   "curSeason": "2023-2024",
   "unFocusTeams": "",
-  "lastUpdateTime": "2023-10-28 20:48:49",
+  "lastUpdateTime": "2023-11-6 22:48:49",
   "minConsecutiveNumber": "4",
   "data": [
     {
@@ -14,7 +14,7 @@
           "teamName": "莱斯特城",
           "consecutiveCount": 7,
           "consecutiveFlag": "7",
-          "nextMatchTime": "2023-10-28 21:50",
+          "nextMatchTime": "2023-11-06 22:30",
           "nextMatchInfo": "莱斯特城 VS 利兹联",
           "nextConsecutiveFlag": "15",
           "matchDetails": [
