@@ -59,9 +59,11 @@
 
 <script setup lang="ts" name="home">
 import { onMounted, ref, reactive, provide, computed } from 'vue';
-import { ElLoading, ElNotification, ElMessageBox } from 'element-plus';
+import { ElNotification, ElMessageBox } from 'element-plus';
 import { Refresh } from '@element-plus/icons-vue';
 import { useHomeStore } from '@/store/home';
+import config from '@/config'
+console.log(config)
 
 import MatchStatToday from './MatchStatToday.vue';
 import MatchStat from './MatchStat';
@@ -120,6 +122,11 @@ const handelFetchAllData = (num: string = '4', isSync = false) => {
   });
 }
 handelFetchAllData();
+
+setInterval(() => {
+  console.log(111)
+  handelFetchAllData()
+}, config.HOME.REFLESH_TIME * 1000)
 
 /* 设置 start */
 // 切换场次
