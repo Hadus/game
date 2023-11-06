@@ -4,7 +4,7 @@
 </template>
 
 <script setup lang="ts" name="matchFocus">
-import { defineProps, ref, reactive, toRefs } from 'vue';
+import { defineProps, ref, reactive, inject } from 'vue';
 import { useHomeStore } from '@/store/home';
 import { fetchRemoveFocus } from '@/api';
 
@@ -20,16 +20,17 @@ const { teamId, focusFlag } = defineProps({
 });
 
 const home = useHomeStore();
+const handleSwitchAlert = inject<Function>('handleSwitchAlert');
 
 const handelSwitchFocus = (focusFlag) => {
-  console.log(teamId, focusFlag)
   fetchRemoveFocus({
     teamId: teamId,
     unfocusTeam: !focusFlag
   }).then((res) => {
     home.handleSwitchFocusMatch(teamId, focusFlag)
+    handleSwitchAlert()
   }).catch((error) => {
-    focusFlag.value = !focusFlag.value;
+    focusFlag = !focusFlag;
     console.log(error);
   });
 }

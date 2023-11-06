@@ -63,8 +63,6 @@ import { ElNotification, ElMessageBox } from 'element-plus';
 import { Refresh } from '@element-plus/icons-vue';
 import { useHomeStore } from '@/store/home';
 import config from '@/config'
-console.log(config)
-
 import MatchStatToday from './MatchStatToday.vue';
 import MatchStat from './MatchStat';
 import MatchBlock from './MatchBlock';
@@ -226,8 +224,9 @@ async function handelSync() {
 /* 筛选 start */
 let alertFlag = ref(false)
 const handleSwitchAlert = function () {
-  homeStore.focusMatch.focusMatchList_1.length && (!!alertFlag.value ? audioPlay() : audioClose());
+  (homeStore.focusMatch.focusMatchList_1_real.length && !!alertFlag.value) ? audioPlay() : audioClose();
 }
+provide('handleSwitchAlert', handleSwitchAlert);
 // 切换联赛
 let league = ref({});
 
@@ -251,11 +250,11 @@ const handleChangeLeagueName = (league: object) => {
 const audio = new Audio('/audio/preview.mp3');
 audio.loop = true;
 const audioPlay = () => {
-  audio.currentTime = 0;
   audio.play();
 }
 const audioClose = () => {
   audio.pause();
+  audio.currentTime = 0;
 }
 
 // provide 给 MatchStatus 调用
