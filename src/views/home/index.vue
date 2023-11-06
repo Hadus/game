@@ -59,7 +59,7 @@
 
 <script setup lang="ts" name="home">
 import { onMounted, ref, reactive, provide, computed } from 'vue';
-import { ElLoading, ElNotification } from 'element-plus';
+import { ElLoading, ElNotification, ElMessageBox } from 'element-plus';
 import { Refresh } from '@element-plus/icons-vue';
 import { useHomeStore } from '@/store/home';
 
@@ -258,6 +258,23 @@ const handelStatMatchTeam = (winTeamLength, loseTeamLength) => {
   loseTeam.value += loseTeamLength;
 }
 provide('handelStatMatchTeam', handelStatMatchTeam);
+
+onMounted(() => {
+  ElMessageBox.confirm(
+    '是否打开预警提示音?',
+    '确认',
+    {
+      confirmButtonText: '是',
+      cancelButtonText: '否',
+      type: 'warning',
+    }
+  ).then(() => {
+    alertFlag.value = true
+    handleSwitchAlert()
+  }).catch(() => {
+
+  })
+})
 </script>
 <style lang="less" scoped>
 // 变量
