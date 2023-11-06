@@ -89,7 +89,6 @@ const handelFetchAllData = (num: string = '4', isSync = false) => {
     homeStore.handelSetUnFocusTeam('')
 
     matchBlockKey.value++;
-    console.log(res.data)
     matchData.value = res.data;
     const matchDataList = matchData.value.data;
     homeSeasonSummaryW[0] = res.data.homeSeasonSummaryW
@@ -122,7 +121,6 @@ const handelFetchAllData = (num: string = '4', isSync = false) => {
 handelFetchAllData();
 
 setInterval(() => {
-  console.log(111)
   handelFetchAllData()
 }, config.HOME.REFLESH_TIME * 1000)
 
