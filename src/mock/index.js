@@ -18,9 +18,7 @@ export default [{
   url: '/removeFocus',
   type: 'post',
   response: (res) => {
-    return {
-      unfocusTeam: res.query.unfocusTeam,
-    }
+   return res.body
   }
 },{
   url: '/getSummary',
