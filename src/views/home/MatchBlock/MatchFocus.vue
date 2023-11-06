@@ -23,15 +23,17 @@ const home = useHomeStore();
 const handleSwitchAlert = inject<Function>('handleSwitchAlert');
 
 const handelSwitchFocus = (focusFlag) => {
+  console.log(focusFlag)
   fetchRemoveFocus({
     teamId: teamId,
     unfocusTeam: !focusFlag
   }).then((res) => {
+    console.log(res)
     home.handleSwitchFocusMatch(teamId, focusFlag)
     handleSwitchAlert()
   }).catch((error) => {
-    focusFlag = !focusFlag;
     console.log(error);
+    focusFlag = !focusFlag;
   });
 }
 </script>

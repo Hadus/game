@@ -33,6 +33,7 @@ export const useHomeStore = defineStore('user', {
       if (hour == 1 && !this.unFocusTeams.includes(teamId)) {
         this.focusMatch.focusMatchList_1_real.push(teamId);
       }
+      console.log('1', this.focusMatch)
     },
     handleSwitchFocusMatch(teamId: number, focusFlag: boolean) {
       const list_1_real = this.focusMatch.focusMatchList_1_real;
@@ -44,6 +45,7 @@ export const useHomeStore = defineStore('user', {
         if (includsIndex_1_real != -1) list_1_real.splice(includsIndex_1_real, 1);
       }
       this.focusMatch.focusMatchList_1_real = list_1_real;
+      console.log('2', this.focusMatch)
     },
     handelSetUnFocusTeam(unFocusTeams: string) {
       this.unFocusTeams = unFocusTeams
