@@ -1,6 +1,5 @@
 <template>
-  <el-switch v-model="focusFlag" style="--el-switch-on-color: #13ce66; float:right"
-    @change="handelSwitchFocus(focusFlag)" />
+  <el-switch v-model="focusFlag_now" style="--el-switch-on-color: #13ce66; float:right" @change="handelSwitchFocus()" />
 </template>
 
 <script setup lang="ts" name="matchFocus">
@@ -19,21 +18,21 @@ const { teamId, focusFlag } = defineProps({
   },
 });
 
+const focusFlag_now = ref(focusFlag)
 const home = useHomeStore();
 const handleSwitchAlert = inject<Function>('handleSwitchAlert');
 
-const handelSwitchFocus = (focusFlag) => {
-  console.log(focusFlag)
+const handelSwitchFocus = () => {
+  console.log(focusFlag_now.value)
   fetchRemoveFocus({
     teamId: teamId,
-    unfocusTeam: !focusFlag
+    unfocusTeam: !focusFlag_now.value
   }).then((res) => {
-    console.log(res)
-    home.handleSwitchFocusMatch(teamId, focusFlag)
+    home.handleSwitchFocusMatch(teamId, focusFlag_now.value)
     handleSwitchAlert()
   }).catch((error) => {
     console.log(error);
-    focusFlag = !focusFlag;
+    focusFlag_now.value = !focusFlag_now.value;
   });
 }
 </script>
